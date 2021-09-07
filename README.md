@@ -36,15 +36,15 @@ hier je focus (kies uit responsive óf surface plane)
 <summary>uitwerken voor kick-off werkgroep</summary>
 
 ### Je opdracht:
-link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+https://www.nike.com/nl/en/w/shoes-y7ok
 
 #### Screenshot(s) van de eerste pagina (small screen): 
-hier de naam van de pagina  
-<img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+Overzicht schoenen pagina  
+![All-shoes](https://user-images.githubusercontent.com/82333022/132381212-39a2de0f-88de-49ed-ae9a-d6f18828e74e.jpg)
 
 #### Screenshot(s) van de tweede pagina (small screen):
-hier de naam van de pagina  
-<img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+Schoen Detail Pagina
+![shoe-detail](https://user-images.githubusercontent.com/82333022/132381245-5a3573a5-3455-4562-8bad-0aab52b075e4.jpeg)
  
 </details>
 
