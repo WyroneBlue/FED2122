@@ -60,7 +60,8 @@ https://www.nike.com/nl/en/w/shoes-y7ok
 #### Screenshot(s) van de tweede pagina (small screen):
 ##### Schoen Detail Pagina <Enter>
  ![shoe-detail](https://user-images.githubusercontent.com/82333022/132381245-5a3573a5-3455-4562-8bad-0aab52b075e4.jpeg)
- ![shoe-detail](https://user-images.githubusercontent.com/82333022/132382035-da15febe-32c0-4a46-a484-c2f08ef9ecbd.jpeg)
+ ![details](https://user-images.githubusercontent.com/82333022/132384039-d3f1e951-1142-4865-8c3b-ae3fcf0ab1bd.jpeg)
+
 
  
 </details>
