@@ -16,13 +16,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 <summary>uitwerken voor kick-off werkgroep</summary>
 
 ### Auteur:
-Sanne 't Hooft (vervangen door jouw naam)
+Ymaro Blue
 
 #### Je startniveau:
-hier je startniveau (kies uit zwart, rood óf blauw)
+Zwart
 
 #### Je focus:
-hier je focus (kies uit responsive óf surface plane)
+Responsive
  
 </details>
 
@@ -38,16 +38,29 @@ hier je focus (kies uit responsive óf surface plane)
 ### Je opdracht:
 https://www.nike.com/nl/en/w/shoes-y7ok
 
+### Verbetringen die ik wil toepassen
+ #### Overzicht Pagina 
+ - Header en footer goed namaken en responsive
+ - Pagina responsive
+ - filters scrollend aan de bovenkant toevoegen(mobiel)
+ - Meer filters werkend maken
+ 
+ #### Detail Pagina
+ - scrollende banner info
+ - Add to bag micro interactie bij het scrollen
+ - Als favoriet markeren
+ - (reviews en reviews schrijven ?)
+ 
 #### Screenshot(s) van de eerste pagina (small screen): 
-Overzicht schoenen pagina  <Enter>
-![All-shoes](https://user-images.githubusercontent.com/82333022/132381212-39a2de0f-88de-49ed-ae9a-d6f18828e74e.jpg)
-![filters](https://user-images.githubusercontent.com/82333022/132382012-467ff124-fecd-4a85-a4c3-30806a0e4675.jpeg)
+##### Overzicht schoenen pagina
+ ![All-shoes](https://user-images.githubusercontent.com/82333022/132381212-39a2de0f-88de-49ed-ae9a-d6f18828e74e.jpg)
+ ![filters](https://user-images.githubusercontent.com/82333022/132382012-467ff124-fecd-4a85-a4c3-30806a0e4675.jpeg)
 
 
 #### Screenshot(s) van de tweede pagina (small screen):
-Schoen Detail Pagina <Enter>
-![shoe-detail](https://user-images.githubusercontent.com/82333022/132381245-5a3573a5-3455-4562-8bad-0aab52b075e4.jpeg)
-![shoe-detail](https://user-images.githubusercontent.com/82333022/132382035-da15febe-32c0-4a46-a484-c2f08ef9ecbd.jpeg)
+##### Schoen Detail Pagina <Enter>
+ ![shoe-detail](https://user-images.githubusercontent.com/82333022/132381245-5a3573a5-3455-4562-8bad-0aab52b075e4.jpeg)
+ ![shoe-detail](https://user-images.githubusercontent.com/82333022/132382035-da15febe-32c0-4a46-a484-c2f08ef9ecbd.jpeg)
 
  
 </details>
