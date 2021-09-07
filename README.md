@@ -44,6 +44,7 @@ https://www.nike.com/nl/en/w/shoes-y7ok
  - Pagina responsive
  - filters scrollend aan de bovenkant toevoegen(mobiel)
  - Meer filters werkend maken
+ - (search toevoegen?)
  
  #### Detail Pagina
  - scrollende banner info
