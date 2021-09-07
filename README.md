@@ -44,13 +44,15 @@ https://www.nike.com/nl/en/w/shoes-y7ok
  - Pagina responsive
  - filters scrollend aan de bovenkant toevoegen(mobiel)
  - Meer filters werkend maken
- - (search toevoegen?)
+ - (search toevoegen?)*
  
  #### Detail Pagina
  - scrollende banner info
  - Add to bag micro interactie bij het scrollen
  - Als favoriet markeren
- - (reviews en reviews schrijven ?)
+ - (reviews en reviews schrijven ?)*
+ 
+ * Met genoeg tijd
  
 #### Screenshot(s) van de eerste pagina (small screen): 
 ##### Overzicht schoenen pagina
