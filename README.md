@@ -52,7 +52,7 @@ https://www.nike.com/nl/en/w/shoes-y7ok
  - Als favoriet markeren
  - (reviews en reviews schrijven ?)*
  
- * Met genoeg tijd
+ *Met genoeg tijd
  
 #### Screenshot(s) van de eerste pagina (small screen): 
 ##### Overzicht schoenen pagina
