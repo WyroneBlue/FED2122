@@ -78,14 +78,16 @@ https://www.nike.com/nl/en/w/shoes-y7ok
 <details>
 <summary>uitwerken na afloop 2e werkgroep</summary>
 
-### de hele pagina: 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+## Html verbeteringen
+ 
+### article 
+ ![article-breakdown](https://user-images.githubusercontent.com/82333022/132528635-26027941-0b2a-439d-bd37-a63227d9f708.jpg)
 
-### dynamisch deel (bijv menu): 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+### filter opties kleur
+ ![filter-breakdown](https://user-images.githubusercontent.com/82333022/132528650-6751a8f6-26a5-4ac0-974f-8b80a9984a4c.jpg)
 
-### wellicht nog een dynamisch deel (bijv filter): 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+### Footer
+ ![footer-breakdown](https://user-images.githubusercontent.com/82333022/132528673-8039aa44-b9c3-41e9-b879-e5c6bfd0958f.jpg)
 
 </details>
 
