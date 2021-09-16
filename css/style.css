@@ -464,17 +464,148 @@ header .logo img{
   height: auto;
 }
 
-header nav.hamburger{
+header .links{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 0;
+  padding: 36px 36px 150px;
+  background-color: white;
+  list-style: none;
+  overflow-y: scroll;
+  visibility: hidden;
+  -webkit-transition: width .25s, visibility 100ms;
+  transition: width .25s, visibility 100ms;
+  z-index: 9999999;
+}
+
+body.menu-open header .links{
+  position: fixed;
+  width: 320px;
+  visibility: visible;
+}
+
+header .links li{
+  list-style-type: none;
+}
+
+header .links ul:first-of-type{
+  margin-bottom: 40px;
+}
+
+header .links ul:first-of-type li a{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+header .links li a p{
+  line-height: 1.166667;
+  font-size: 24px;
+}
+
+header .links ul:nth-of-type(2) a{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+header .links ul:nth-of-type(2) a > img{
+  width: 30px;
+  height: 30px;
+}
+
+header .links ul:nth-of-type(2) a > p{
+  line-height: 1;
+  padding-left: 12px;
+  font-size: 16px;
+}
+
+header .links > section > p{
+  margin: 50px 0px;
+  font-size: 20px;
+  color: var(--filters-color);
+}
+
+header .links > section > section{
+  position: relative;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+header .links > section > section > a{
+  padding: 8px 24px;
+  border-radius: 20px;
+}
+
+header .links > section > section > a:first-of-type{
+  background-color: black;
+  color: white;
+  margin-right: 5px;
+}
+
+header .links > section > section > a:last-of-type{
+  border: 1px solid var(--section-color);
+}
+
+header .links ul:last-of-type{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+header .links ul:last-of-type a{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+header .links ul:last-of-type i{
+  font-size: 24px;
+}
+
+header .links ul:last-of-type p{
+  font-size: 16px;
+}
+
+body.menu-open{
+  overflow: hidden;
+}
+
+body.menu-open > section{
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1212125c;
+  backdrop-filter: blur(4px);
+  z-index: 99999;
+}
+
+header nav#hamburger{
   display: flex;
   justify-content: center;
   /* order: 3; */
   gap: 10px;
 }
 
-header nav.hamburger img{
+header nav#hamburger img{
   width: 35px;
   height: auto;
   background-color: transparent;
+}
+
+@media screen and (max-width: 374px){
+  header .links{
+    padding: 25px 25px 150px;
+  }
+
+  body.menu-open header .links{
+    width: 85%;
+  }
 }
 
 /*
