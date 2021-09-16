@@ -101,7 +101,17 @@ https://www.nike.com/nl/en/w/shoes-y7ok
 <summary>uitwerken voor 1e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Eigenlijk is alles wat ik wilde doen tot nu toe goed gegaan.
+ 
+Het aanpassen van de header/nav is nu responsive en ook echt overgenomen ipv een kleine versie van de desktop.
+| ![image](https://user-images.githubusercontent.com/82333022/133604939-c65d8adc-39f0-4e97-9d27-74543225b84c.png) | ![image](https://user-images.githubusercontent.com/82333022/133605679-f71a7c04-0c5c-48d7-a6ab-a449bc442e12.png) |
+
+ 
+En datzelfde geldt voor de footer, maar die is nog niet helemaal klaar, maar hij is wel responsive.
+| ![image](https://user-images.githubusercontent.com/82333022/133605805-7dba9600-a65f-4f72-ad7e-78dbac4f57fa.png) | ![image](https://user-images.githubusercontent.com/82333022/133605558-5007710f-3540-40d1-b472-192ed1839e5b.png) |
+
+
+
 
 
 ### Agenda voor meeting
