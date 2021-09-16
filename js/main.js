@@ -2,6 +2,8 @@ console.log('Hello World');
 
 var shoeSizes;
 var shoeColors;
+var banner = document.querySelector('#announcement-banner');
+var title = document.querySelector('#shoe-title');
 
 const deactivateAllSizes = function(){
     shoeSizes.forEach(button => {
@@ -33,6 +35,21 @@ const setColorActive = function(e){
         img.classList.toggle('active');
     }
 }
+
+const isInView = (el) => {
+    const box = el.getBoundingClientRect();
+    return box.top < window.innerHeight && box.bottom >= 0;
+}
+
+window.addEventListener('scroll', (e) => {
+    console.log(e);
+    let inView = isInView(banner);
+    if(!inView){
+        title.classList.add('sticky')
+    } else {
+        title.classList.remove('sticky')
+    }
+});
 
 window.addEventListener('DOMContentLoaded', function(){
     
