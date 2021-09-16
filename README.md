@@ -101,7 +101,7 @@ https://www.nike.com/nl/en/w/shoes-y7ok
 <summary>uitwerken voor 1e voortgang</summary>
 
 ### Stand van zaken
-Eigenlijk is alles wat ik wilde doen tot nu toe goed gegaan.
+Eigenlijk is alles wat ik wilde doen tot nu toe goed gegaan. Dus geen problemen
  
 Het aanpassen van de header/nav is nu responsive en ook echt overgenomen ipv een kleine versie van de desktop.
 | ![image](https://user-images.githubusercontent.com/82333022/133604939-c65d8adc-39f0-4e97-9d27-74543225b84c.png) | ![image](https://user-images.githubusercontent.com/82333022/133605679-f71a7c04-0c5c-48d7-a6ab-a449bc442e12.png) |
