@@ -4,6 +4,16 @@ var shoeSizes;
 var shoeColors;
 var banner = document.querySelector('#announcement-banner');
 var title = document.querySelector('#shoe-title');
+var hamburger = document.querySelector('#hamburger > img:last-of-type');
+var body = document.body;
+var blurSection = document.querySelector('body > section');
+console.log(body);
+var menuOpen = false;
+
+const toggleMobileMenu = function(){
+    body.classList.toggle('menu-open');
+    menuOpen = !menuOpen;
+}
 
 const deactivateAllSizes = function(){
     shoeSizes.forEach(button => {
@@ -41,6 +51,8 @@ const isInView = (el) => {
     return box.top < window.innerHeight && box.bottom >= 0;
 }
 
+hamburger.addEventListener('click', toggleMobileMenu);
+blurSection.addEventListener('click', toggleMobileMenu);
 window.addEventListener('scroll', (e) => {
     console.log(e);
     let inView = isInView(banner);
