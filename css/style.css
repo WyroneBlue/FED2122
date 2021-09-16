@@ -1,6 +1,8 @@
 /* CSS Document */
 *, *::after, *::before {
-  box-sizing:border-box;  
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root{
@@ -343,68 +345,68 @@ aside#cart-popup > section.buttons > button.primary{
 @media screen and (max-width: 1023px) {
 
   #mobile-heading{
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 0 10px;
   }
 
   #mobile-heading > section{
-      max-width: 75%;
+    max-width: 75%;
   }
 
   #mobile-heading h1, #mobile-heading h2{
-      margin: 10px 0;
+    margin: 10px 0;
   }
 
   #controls, #desktop-heading{
-      display: none !important;
+    display: none !important;
   }
 
   #detail main{
-      padding: 10px;
+    padding: 10px;
   }
 
   #detail main > section:nth-of-type(2){
-      width: 100%;
-      margin: 0;
+    width: 100%;
+    margin: 0;
   }
 
   #detail main {
-      display: block;
+    display: block;
   }
   
   #detail main > section:first-of-type{
-      position: relative;
-      flex-wrap: nowrap;
-      overflow-x: scroll;
-      width: 100%;
+    position: relative;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    width: 100%;
   }
 
   #detail main > section:first-of-type > figure > img{
-      width: 100%;
+    width: 100%;
   }
 
   #detail main > section:first-of-type > div > figure > img{
-      width: 100%;
+    width: 100%;
   }
 }
 
 @media screen and (max-width: 424px){
 
   #detail main > section:first-of-type > div{
-      display: flex;
-      flex-wrap: nowrap;
-      overflow-x: scroll;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
   }
   
   #detail main > section:first-of-type > div > figure{
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      flex-shrink: 0;
-      width: 100%;
-      margin-right: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    width: 100%;
+    margin-right: 20px;
   }
 
   #detail main > section:first-of-type > div > figure > img{
@@ -451,14 +453,31 @@ nav.joinus-signin {
   color: black;
 }
 
-.header {
+header {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin-top: 1em;
+  justify-content: space-between;
+  align-items: center;
+  margin: 14px;
+}
+header .logo img{
+  width: 60px;
+  height: auto;
 }
 
+header nav.hamburger{
+  display: flex;
+  justify-content: center;
+  /* order: 3; */
+  gap: 10px;
+}
 
+header nav.hamburger img{
+  width: 35px;
+  height: auto;
+  background-color: transparent;
+}
+
+/*
 header button {
   border: none;
   background-color: transparent;
@@ -474,8 +493,8 @@ header button img {
 .header ul:first-of-type {
   display: flex;
   flex-wrap: wrap;
-  /* margin-left: auto;
-  margin-right: auto; */
+  margin-left: auto;
+  margin-right: auto; 
 }
 
 .header ul li {
@@ -489,34 +508,83 @@ header a .logo {
   height: 55px;
   align-items: left;
   margin-left: 2em;
-}
-
-.search-wish-shopping{
-  display: block;
-  width: 300px;
-}
-.search-icon {
-  position: absolute;
-  right: 8em;
-}
-
-.wishlist-icon {
-  position: absolute;
-  right: 5em;
-}
-
-.shopping-bag-icon {
-  position: absolute;
-  right: 2em;
-}
+} */
 
 #overview main {
-  display:grid;
-  grid-template-columns: 15em 1fr;
+  /* display:grid; */
+  /* grid-template-columns: 15em 1fr; */
 }
 
-/* filter */
+#announcement-banner{
+  position: relative;
+  text-align: center;
+}
 
+#announcement-banner p{
+  background-color: var(--section-color);
+  padding: 10px 20px;
+}
+
+section#shoe-title.sticky{
+  position: sticky;
+  top: 0px;
+}
+
+section#shoe-title{
+  padding: 20px;
+  background-color: white;
+  z-index: 99;
+}
+
+section#shoe-title h1{
+  font-size: 20px;
+  /* margin-top: 10px; */
+}
+
+section#shoe-section h1 > span{
+  display: none;
+}
+
+#shoe-categories::-webkit-scrollbar {
+  display: none;
+}
+
+#shoe-categories{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  border-bottom: 1px solid var(--section-color);
+}
+
+#shoe-categories span{
+  padding: 15px;
+  flex-shrink: 0;
+}
+
+#shoe-categories span.active{
+  border-bottom: 3px solid var(--text-color);
+}
+
+#filter-buttons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+#filter-buttons p{
+  color: var(--filters-color);
+}
+
+#filter-buttons button{
+  border: 1px solid var(--section-color);
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+
+/* filter */
 .categories {
   padding-inline-start: .7em;
 }
@@ -672,23 +740,36 @@ button.kleurrood {
 }
 
 .mainsneakers img {
-  width: 100%;
-  height: 80%;
+  /* width: 100%; */
+  /* height: 80%; */
+  height: 150px;
+  width: auto;
 }
 
 .mainsneakers  {
-  display:grid;
-  grid-template-columns:1fr 1fr 1fr;
-  grid-gap: 1em;
-  padding: 1.75em;
-  margin-top: 0;
-  row-gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 #overview article {
   position: relative;
   text-align: left;
-  height: 35em;
+  width: 48%;
+  margin-bottom: 20px;
+
+  /* height: 35em; */
+}
+
+#overview article a{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+#overview article a img{
+  order: -1;
 }
 
 #overview article p:first-of-type {
@@ -696,7 +777,7 @@ button.kleurrood {
 }
 
 #overview h2 {
-  font-size: 1.7em;
+  font-size: 1em;
   margin-top: .2em;
   padding-right: 1em;
   font-weight: normal;
@@ -709,18 +790,30 @@ button.kleurrood {
 }
 
 /* footer */
-
 footer {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 50px;
+  padding: 20px;
   background-color: black;
   color: #919191;
   font-size: 1em;
   bottom: 0;
-  display: grid;
-  position: relative;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer > ul {
   display: flex;
+  gap: 20px;
+}
+
+footer > ul:first-of-type {
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 20px;
 }
 
 footer a {
@@ -730,65 +823,15 @@ footer a {
   border-bottom: none;
 }
 
-footer form {
-  position: absolute;
-  right: 0;
-  margin-right: 4.5em;
-  margin-top: 2em;
-}
-
-footer form input {
-  width: 300px;
-  height: 55px;
-  background-color: white;
-  padding-left: 20px;
-  font-family: 'PT Sans Narrow', sans-serif;
-  font-size: 1em;
-  margin-top: .5em;
-  outline: none;
-  border-radius: 5em;
- 
-}
-
-footer form input::placeholder {
-  color: black;
-}
-
-footer form button {
-  display: none;
-}
-
-#customer-service {
-  width: 50%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-#customer-service li {
-  list-style-type: none;
-  margin-top: .5em;
-  font-family: 'PT Sans Narrow', sans-serif;
-  font-size: 1em;
-  line-height: 25px;
-}
-
-.social-media {
-  display: flex;
-  position: absolute;
-  right: 0;
-  margin-right: 6em;
-  margin-top: 8em;
-}
-
-.social-media li{
-  list-style-type: none;
-  padding: .7em;
+.social-media{
+  margin-top: 20px;
 }
 
 .social-media li img {
   width: 30px;
   height: 30px;
-  background-color: grey;
+  background-color: var(--filters-color);
+  color: var(--text-color);
   border-radius: 50%;
   padding: .5em;
 }
