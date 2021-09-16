@@ -545,23 +545,23 @@ section#shoe-section h1 > span{
   display: none;
 }
 
-#shoe-categories::-webkit-scrollbar {
+section#shoe-section > section::-webkit-scrollbar {
   display: none;
 }
 
-#shoe-categories{
+section#shoe-section > section{
   display: flex;
   flex-wrap: nowrap;
   overflow-x: scroll;
   border-bottom: 1px solid var(--section-color);
 }
 
-#shoe-categories span{
+section#shoe-section > section span{
   padding: 15px;
   flex-shrink: 0;
 }
 
-#shoe-categories span.active{
+section#shoe-section > section span.active{
   border-bottom: 3px solid var(--text-color);
 }
 
