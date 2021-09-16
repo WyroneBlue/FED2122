@@ -143,11 +143,13 @@ const loadShoes = function(e){
     filteredShoes.forEach(shoe => {
         
         shoeHtml += `
-        <article onclick="goToDetail(this)" data-id="${shoe.id}">
-            <img src="${shoe.images[0]}" alt="">
-            <p>${shoe.msg ?? ''}</p>
-            <h2>${shoe.name}</h2>
-            <p>€ ${shoe.price}</p>
+        <article>
+            <a href="shoe.html?shoe_id=${shoe.id}">
+                <h2>${shoe.name}</h2>
+                <img src="${shoe.images[0]}" alt="">
+                <p>${shoe.msg ?? ''}</p>
+                <p>€ ${shoe.price}</p>
+            </a>
         </article>
         `;
     });
