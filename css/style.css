@@ -672,7 +672,12 @@ section#shoe-title h1{
   /* margin-top: 10px; */
 }
 
-section#shoe-section h1 > span{
+section#shoe-title h1{
+  font-size: 20px;
+  /* margin-top: 10px; */
+}
+
+section#shoe-title h1 > span{
   display: none;
 }
 
