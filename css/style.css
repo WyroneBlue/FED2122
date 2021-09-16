@@ -870,33 +870,50 @@ button.kleurrood {
   background-color: red;
 }
 
-.mainsneakers img {
-  /* width: 100%; */
-  /* height: 80%; */
-  height: 150px;
-  width: auto;
-}
 
-.mainsneakers  {
+.mainsneakers {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 5px;
+}
+
+.mainsneakers img {
+  height: auto;
+  width: 100%;
 }
 
 #overview article {
   position: relative;
   text-align: left;
-  width: 48%;
+  width: calc(100% / 2 - 5px);
   margin-bottom: 20px;
+}
 
-  /* height: 35em; */
+@media screen and (min-width: 960px) {
+  #overview article {
+    width: calc(100% / 3 - 5px);
+  }
+
+  section#shoe-title > h1 > span {
+    display: inline-block;
+  }
+  
+  section#filter-buttons > p > span {
+    display: none;
+  }
 }
 
 #overview article a{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 5px;
   height: 100%;
+  max-width: 592px;
+}
+
+#overview article a h2, #overview article a p{
+  padding-left: 10px;
 }
 
 #overview article a img{
@@ -910,14 +927,12 @@ button.kleurrood {
 #overview h2 {
   font-size: 1em;
   margin-top: .2em;
-  padding-right: 1em;
   font-weight: normal;
-  margin-bottom: .4em;
 }
 
 #overview article p {
   margin-bottom: 0;
-  line-height: 1em;
+  line-height: 1.25em;
 }
 
 /* footer */
