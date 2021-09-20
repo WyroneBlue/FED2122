@@ -161,7 +161,75 @@
             <p>
                 <span>618</span> Results
             </p>
-            <button>Filter</button>
+            <button>Filter <i class="fas fa-sliders-h"></i></button>
+        </section>
+        
+        <section id="filter-options">
+            <section>
+                <span>Filter</span>
+                <Button><i class="fas fa-times-circle"></i></Button>
+            </section>
+            <form action="/">
+                <section>
+                    <p>Sort By</p>
+                    <fieldset>
+                        <input type="radio" id="featured" name="sort-by" value="featured">
+                        <label for="featured">Featured</label><br>
+                    </fieldset>
+                    <fieldset>
+                        <input type="radio" id="newest" name="sort-by" value="newest">
+                        <label for="newest">Newest</label><br>
+                    </fieldset>
+                    <fieldset>
+                        <input type="radio" id="p-hl" name="sort-by" value="p-hl">
+                        <label for="p-hl">Price: High-Low</label>
+                    </fieldset>
+                    <fieldset>
+                        <input type="radio" id="p-lh" name="sort-by" value="p-lh">
+                        <label for="p-lh">Price: Low-High</label>
+                    </fieldset>
+                </section>
+
+                <section>
+                    <p>Gender</p>
+                    <fieldset>
+                        <input type="checkbox" id="men" name="men" value="men">
+                        <label for="men">Men</label><br>
+                    </fieldset>
+                    <fieldset>
+                        <input type="checkbox" id="women" name="women" value="women">
+                        <label for="women">Women</label><br>
+                    </fieldset>
+                    <fieldset>
+                        <input type="checkbox" id="unisex" name="unisex" value="unisex">
+                        <label for="unisex">Unisex</label>
+                    </fieldset>
+                </section>
+
+                <section>
+                    <p>Shop By Price</p>
+                    <fieldset>
+                        <input type="checkbox" id="0-50" name="0-50" value="0-50">
+                        <label for="men">€0 - €50</label><br>
+                    </fieldset>
+                    <fieldset>
+                        <input type="checkbox" id="50-100" name="50-100" value="50-100">
+                        <label for="women">€50 - €100</label><br>
+                    </fieldset>
+                    <fieldset>
+                        <input type="checkbox" id="100-150" name="100-150" value="100-150">
+                        <label for="unisex">€100 - €150</label>
+                    </fieldset>
+                    <fieldset>
+                        <input type="checkbox" id="150+" name="150+" value="150+">
+                        <label for="unisex">€150+</label>
+                    </fieldset>
+                </section>
+            </form>
+            <section>
+                <button>Clear(<span>1</span>)</button>
+                <button>Apply</button>
+            </section>
         </section>
         
         <section class="mainsneakers"></section>  
