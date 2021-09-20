@@ -5,14 +5,19 @@ var shoeColors;
 var banner = document.querySelector('#announcement-banner');
 var title = document.querySelector('#shoe-title');
 var hamburger = document.querySelector('#hamburger > img:last-of-type');
+var filterOpenButton = document.querySelector('#filter-buttons > button');
+var filterCloseButton = document.querySelector('#filter-options > section:first-of-type > button');
 var body = document.body;
 var blurSection = document.querySelector('body > section');
-console.log(body);
 var menuOpen = false;
 
 const toggleMobileMenu = function(){
     body.classList.toggle('menu-open');
     menuOpen = !menuOpen;
+}
+
+const toggleFilterMenu = function(){
+    body.classList.toggle('filter-open');
 }
 
 const deactivateAllSizes = function(){
@@ -53,6 +58,8 @@ const isInView = (el) => {
 
 hamburger.addEventListener('click', toggleMobileMenu);
 blurSection.addEventListener('click', toggleMobileMenu);
+filterOpenButton.addEventListener('click', toggleFilterMenu);
+filterCloseButton.addEventListener('click', toggleFilterMenu);
 window.addEventListener('scroll', (e) => {
     console.log(e);
     let inView = isInView(banner);
