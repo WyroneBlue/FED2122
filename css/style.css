@@ -571,7 +571,7 @@ header .links ul:last-of-type p{
   font-size: 16px;
 }
 
-body.menu-open{
+body.menu-open, body.filter-open{
   overflow: hidden;
 }
 
@@ -653,8 +653,11 @@ header a .logo {
 
 #announcement-banner p{
   background-color: var(--section-color);
+  box-shadow: 0 0 2px var(--filters-color);
   padding: 10px 20px;
 }
+
+
 
 section#shoe-title.sticky{
   position: sticky;
@@ -713,14 +716,75 @@ section#shoe-section > section span.active{
 }
 
 #filter-buttons button{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100px;
+  padding: 10px 20px;
   border: 1px solid var(--section-color);
   background-color: white;
   border-radius: 20px;
-  padding: 10px 20px;
+  font-size: 16px;
+}
+
+#filter-buttons button:active{
+  border: 1px solid var(--text-color);
 }
 
 
 /* filter */
+#filter-options{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 0;
+  padding: 20px;
+  background-color: white;
+  list-style: none;
+  overflow-y: scroll;
+  visibility: hidden;
+  -webkit-transition: width .25s, visibility 100ms;
+  transition: width .25s, visibility 100ms;
+  z-index: 9999999;
+}
+
+body.filter-open #filter-options{
+  position: fixed;
+  width: 100vw;
+  visibility: visible;
+}
+
+#filter-options > form > section{
+  padding: 10px  0 30px;
+  border-bottom: 1px solid var(--section-color);
+}
+
+#filter-options > section:first-of-type{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#filter-options > section:first-of-type > span{
+  font-size: 24px;
+}
+
+#filter-options > section:first-of-type > button{
+  position: fixed;
+  right: 20px;
+  font-size: 32px;
+  background-color: #0000;
+}
+
+#filter-options > form > section > p{
+  margin: 30px 0 20px;
+}
+
+#filter-options > form fieldset{
+  border: none;
+}
+
 .categories {
   padding-inline-start: .7em;
 }
