@@ -1021,6 +1021,18 @@ footer ul {
   list-style-type: none;
 }
 
+footer ul li span{
+  font-weight: 700;
+  color: white;
+}
+
+footer ul li ul{
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+
 footer > ul {
   display: flex;
   gap: 20px;
@@ -1028,7 +1040,7 @@ footer > ul {
 
 footer > ul:first-of-type {
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 40px;
 }
 
 footer a {
