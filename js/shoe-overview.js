@@ -129,9 +129,9 @@ const filterShoes = function(e){
 
     shoeHtml = '';
     filteredShoes = shoelist;
-    checkFilters();
-    filterSex();
-    filterPrice();
+    // checkFilters();
+    // filterSex();
+    // filterPrice();
     // filterSize();
     // filterColor();
     return filteredShoes;
@@ -156,8 +156,7 @@ const loadShoes = function(e){
     shoeContainer.innerHTML = shoeHtml;
 }
 
-filterContainer.addEventListener('change', loadShoes);
-window.addEventListener('DOMContentLoaded', loadShoes);
+// filterContainer.addEventListener('change', loadShoes);
 window.addEventListener('DOMContentLoaded', loadShoes);
 
 sizeButtons.forEach(btn => {
