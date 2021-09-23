@@ -156,7 +156,7 @@
                 <span>Under €100</span> 
             </section>
         </section>
-
+        
         <section id="filter-buttons">
             <p>
                 <span>618</span> Results
@@ -170,62 +170,119 @@
                 <Button><i class="fas fa-times-circle"></i></Button>
             </section>
             <form action="/">
-                <section>
-                    <p>Sort By</p>
-                    <fieldset>
+
+                <fieldset>
+                    <legend>Sort By</legend>
+                    
+                    <div>
                         <input type="radio" id="featured" name="sort-by" value="featured">
-                        <label for="featured">Featured</label><br>
-                    </fieldset>
-                    <fieldset>
+                        <label for="featured"><span>Featured</span></label>
+                        
                         <input type="radio" id="newest" name="sort-by" value="newest">
-                        <label for="newest">Newest</label><br>
-                    </fieldset>
-                    <fieldset>
+                        <label for="newest"><span>Newest</span></label>
+
                         <input type="radio" id="p-hl" name="sort-by" value="p-hl">
-                        <label for="p-hl">Price: High-Low</label>
-                    </fieldset>
-                    <fieldset>
+                        <label for="p-hl"><span>Price: High-Low</span></label>
+
                         <input type="radio" id="p-lh" name="sort-by" value="p-lh">
-                        <label for="p-lh">Price: Low-High</label>
-                    </fieldset>
-                </section>
+                        <label for="p-lh"><span>Price: Low-High</span></label>
+                    </div>
+                </fieldset>
 
-                <section>
-                    <p>Gender</p>
-                    <fieldset>
+                <fieldset>
+                    <legend>Gender</legend>
+
+                    <div>
                         <input type="checkbox" id="men" name="men" value="men">
-                        <label for="men">Men</label><br>
-                    </fieldset>
-                    <fieldset>
-                        <input type="checkbox" id="women" name="women" value="women">
-                        <label for="women">Women</label><br>
-                    </fieldset>
-                    <fieldset>
-                        <input type="checkbox" id="unisex" name="unisex" value="unisex">
-                        <label for="unisex">Unisex</label>
-                    </fieldset>
-                </section>
+                        <label for="men"><span>Men</span></label>
 
-                <section>
-                    <p>Shop By Price</p>
-                    <fieldset>
+                        <input type="checkbox" id="women" name="women" value="women">
+                        <label for="women"><span>Women</span></label>
+
+                        <input type="checkbox" id="unisex" name="unisex" value="unisex">
+                        <label for="unisex"><span>Unisex</span></label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Shop By Price</legend>
+
+                    <div>
                         <input type="checkbox" id="0-50" name="0-50" value="0-50">
-                        <label for="men">€0 - €50</label><br>
-                    </fieldset>
-                    <fieldset>
+                        <label for="0-50"><span>€0 - €50</span></label>
+                   
                         <input type="checkbox" id="50-100" name="50-100" value="50-100">
-                        <label for="women">€50 - €100</label><br>
-                    </fieldset>
-                    <fieldset>
+                        <label for="50-100"><span>€50 - €100</span></label>
+                    
                         <input type="checkbox" id="100-150" name="100-150" value="100-150">
-                        <label for="unisex">€100 - €150</label>
-                    </fieldset>
-                    <fieldset>
+                        <label for="100-150"><span>€100 - €150</span></label>
+                    
                         <input type="checkbox" id="150+" name="150+" value="150+">
-                        <label for="unisex">€150+</label>
-                    </fieldset>
-                </section>
+                        <label for="150+"><span>€150+</span></label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="size">
+                    <legend>Size</legend>
+
+                    <div>
+                        <input type="checkbox" id="size-38" name="size-38" value="38">
+                        <label for="size-38"><span>38</span></label>
+    
+                        <input type="checkbox" id="size-40" name="size-40" value="40">
+                        <label for="size-40"><span>40</span></label>
+    
+                        <input type="checkbox" id="size-41" name="size-41" value="41">
+                        <label for="size-41"><span>41</span></label>
+    
+                        <input type="checkbox" id="size-42" name="size-42" value="42">
+                        <label for="size-42"><span>42</span></label>
+    
+                        <input type="checkbox" id="size-43" name="size-43" value="43">
+                        <label for="size-43"><span>43</span></label>
+    
+                        <input type="checkbox" id="size-44" name="size-44" value="44">
+                        <label for="size-44"><span>44</span></label>
+    
+                        <input type="checkbox" id="size-45" name="size-45" value="45">
+                        <label for="size-45"><span>45</span></label>
+    
+                        <input type="checkbox" id="size-46" name="size-46" value="46">
+                        <label for="size-46"><span>46</span></label>
+    
+                        <input type="checkbox" id="size-47" name="size-47" value="47">
+                        <label for="size-47"><span>47</span></label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="color">
+                    <legend>Color</legend>
+
+                    <div>
+                        <input type="checkbox" id="color-1" name="color-1" value="black">
+                        <label for="color-1"><span>Black</span></label>
+                        
+                        <input type="checkbox" id="color-2" name="color-2" value="blue">
+                        <label for="color-2"><span>Blue</span></label>
+                        
+                        <input type="checkbox" id="color-3" name="color-3" value="green">
+                        <label for="color-3"><span>Green</span></label>
+
+                        <input type="checkbox" id="color-4" name="color-4" value="brown">
+                        <label for="color-4"><span>Brown</span></label>
+                        
+                        <input type="checkbox" id="color-5" name="color-5" value="grey">
+                        <label for="color-5"><span>Grey</span></label>
+
+                        <input type="checkbox" id="color-6" name="color-6" value="pink">
+                        <label for="color-6"><span>Pink</span></label>
+
+                        <input type="checkbox" id="color-7" name="color-7" value="white">
+                        <label for="color-7"><span>White</span></label>
+                    </div>
+                </fieldset>
             </form>
+
             <section>
                 <button>Clear(<span>1</span>)</button>
                 <button>Apply</button>
