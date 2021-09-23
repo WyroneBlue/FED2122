@@ -61,7 +61,6 @@ blurSection.addEventListener('click', toggleMobileMenu);
 filterOpenButton.addEventListener('click', toggleFilterMenu);
 filterCloseButton.addEventListener('click', toggleFilterMenu);
 window.addEventListener('scroll', (e) => {
-    console.log(e);
     let inView = isInView(banner);
     if(!inView){
         title.classList.add('sticky')
