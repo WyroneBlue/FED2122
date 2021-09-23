@@ -159,6 +159,7 @@ samen met je groepje opstellen
 | ---            |
 | Wanneer kan je beter grid gebruiken dan flex  |
 | Beste manier om grid te gebruiken in een layout |
+| Het maken van een carousel |
 | ...            |
 
 
