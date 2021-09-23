@@ -1168,6 +1168,14 @@ footer ul {
   list-style-type: none;
 }
 
+@media screen and (max-width: 639px){
+  
+  footer > ul > li{
+    display: block;
+    width: 100%;
+  }
+}
+
 footer ul li span{
   font-weight: 700;
   color: white;
