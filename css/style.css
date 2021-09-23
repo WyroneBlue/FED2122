@@ -1087,13 +1087,42 @@ button.colorrood {
   background-color: red;
 }
 
-.mainsneakers {
+.shoe-overview {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
 }
 
-.mainsneakers img {
+@media screen and (min-width: 1024px) {
+  
+  main > div{
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap:20px
+  }
+  
+  #filter-options{
+    position: relative;
+    width: auto;
+    height: min-content;
+    max-height: 434px;
+    visibility: visible;
+    padding-top: 0;
+    z-index: 0;
+  }
+
+
+  #filter-options > section:last-of-type,
+  #filter-options > section:first-of-type > button{
+    display: none;
+  }
+  
+  #overview article a {
+    height: auto !important;
+  }
+}
+
+.shoe-overview img {
   height: auto;
   width: 100%;
 }

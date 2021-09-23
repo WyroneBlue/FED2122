@@ -1,6 +1,6 @@
 console.log('Overview js');
 
-var shoeContainer = document.querySelector('.mainsneakers');
+var shoeContainer = document.querySelector('.shoe-overview');
 var filterContainer = document.querySelector('.filter');
 var sizeButtons = document.querySelectorAll('.size button');
 var colorButtons = document.querySelectorAll('.kleur button');
