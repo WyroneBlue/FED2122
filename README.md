@@ -144,17 +144,22 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 <summary>uitwerken voor 2e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Het maken van de mobile menu inclusief logica bij het uitklappen en laten sliden van de zijkant ging wel goed. 
+Dit heb ik ook toegepast voor de filter menu alleen komt deze van de onderkant ipv de zijkant.
+
+| Mobile menu     | Filter menu          |
+| ---            | ---                |
+| <img src="images/screenshots/mobile-menu.jpg" alt="Mobile menu">  | <img src="images/screenshots/filter-menu.jpg" alt="Filter menu">             |
 
 
 ### Agenda voor meeting
 samen met je groepje opstellen
 
-| student 1      | student 2          | student 3    | student 4        |
-| ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
+| student 1      |
+| ---            |
+| Wanneer kan je beter grid gebruiken dan flex  |
+| Beste manier om grid te gebruiken in een layout |
+| ...            |
 
 
 ### Verslag van meeting
