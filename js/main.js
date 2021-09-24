@@ -2,6 +2,8 @@ console.log('Hello World');
 
 var shoeSizes;
 var shoeColors;
+var body = document.body;
+
 var banner = document.querySelector('#announcement-banner');
 var title = document.querySelector('#shoe-title');
 var hamburger = document.querySelector('#hamburger > img:last-of-type');
