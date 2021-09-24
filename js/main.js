@@ -6,6 +6,10 @@ var body = document.body;
 
 var banner = document.querySelector('#announcement-banner');
 var title = document.querySelector('#shoe-title');
+
+var filterOpenButton = document.querySelector('section#shoe-title > section > button:first-of-type');
+var filterOpenButtonSpan = document.querySelector('section#shoe-title > section > button:first-of-type span');
+var filterClosed = false;
 var hamburger = document.querySelector('#hamburger > img:last-of-type');
 var filterOpenButton = document.querySelector('#filter-buttons > button');
 var filterCloseButton = document.querySelector('#filter-options > section:first-of-type > button');
