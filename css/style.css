@@ -15,6 +15,23 @@
   --section-color: #f7f7f7;
   --border-light: #ccc;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  height: 20px;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; 
 }
 
 html, body, section, figure, button{
