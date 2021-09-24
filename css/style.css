@@ -1248,8 +1248,7 @@ button.colorrood {
   }
   
   body.filter-closed #filter-options{
-    position: fixed;
-    visibility: visible;
+    display: none;
   }
   
   main > section.shoe-type,
