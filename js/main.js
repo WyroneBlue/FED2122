@@ -16,12 +16,24 @@ var sortByOpenButtonSpan = document.querySelector('section#shoe-title > section 
 var sortByOpenChevron = document.querySelector('section#shoe-title > section > button:last-of-type i');
 var sortByOptions = document.querySelectorAll('section#shoe-title > section > div span');
 var sortByOpen = false;
+
+
+var mobileFilterOpenButton = document.querySelector('#filter-buttons-mobile > button');
+var mobileFilterCloseButton = document.querySelector('#filter-options > section:first-of-type > button');
+
 var hamburger = document.querySelector('#hamburger > img:last-of-type');
-var filterOpenButton = document.querySelector('#filter-buttons > button');
-var filterCloseButton = document.querySelector('#filter-options > section:first-of-type > button');
-var body = document.body;
 var blurSection = document.querySelector('body > section');
 var menuOpen = false;
+
+const toggleFilterMenu = function(){
+    body.classList.toggle('filter-closed');
+    filterClosed = !filterClosed;
+    if(filterClosed){
+        filterOpenButtonSpan.textContent = "Show" 
+    } else {
+        filterOpenButtonSpan.textContent = "Hide" 
+    }
+}
 
 const toggleSortByMenu = function(){
     body.classList.toggle('sortby-open');
@@ -45,13 +57,14 @@ const resetSortBy = function(){
         option.classList.remove('active');
     });
 }
+
+const toggleMobileFilterMenu = function(){
+    body.classList.toggle('mobile-filter-open');
+}
+
 const toggleMobileMenu = function(){
     body.classList.toggle('menu-open');
     menuOpen = !menuOpen;
-}
-
-const toggleFilterMenu = function(){
-    body.classList.toggle('filter-open');
 }
 
 const deactivateAllSizes = function(){
@@ -92,12 +105,16 @@ const isInView = (el) => {
 
 hamburger.addEventListener('click', toggleMobileMenu);
 blurSection.addEventListener('click', toggleMobileMenu);
+
 filterOpenButton.addEventListener('click', toggleFilterMenu);
-filterCloseButton.addEventListener('click', toggleFilterMenu);
 sortByOpenButton.addEventListener('click', toggleSortByMenu);
 sortByOptions.forEach(option => {
     option.addEventListener('click', setSortBy);
 });
+
+mobileFilterOpenButton.addEventListener('click', toggleMobileFilterMenu);
+mobileFilterCloseButton.addEventListener('click', toggleMobileFilterMenu);
+
 window.addEventListener('scroll', (e) => {
     let inView = isInView(banner);
     if(!inView){
@@ -111,7 +128,7 @@ window.addEventListener('DOMContentLoaded', function(){
     
     shoeSizes = document.querySelectorAll("#shoe-sizes > button");
     shoeColors = document.querySelectorAll("#shoe-colors a");
-
+    
     shoeSizes.forEach(button => {
         button.addEventListener('click', setSizeActive);
     });
