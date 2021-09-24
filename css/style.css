@@ -16,22 +16,25 @@
   --border-light: #ccc;
 }
 
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #888; 
-  height: 20px;
-  border-radius: 20px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555; 
-}
-
-::-webkit-scrollbar-track {
-  background: transparent; 
+@media screen and (min-width:1024px){
+  
+  #filter-options::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  #filter-options::-webkit-scrollbar-thumb {
+    background: #888; 
+    height: 20px;
+    border-radius: 20px;
+  }
+  
+  #filter-options::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  
+  #filter-options::-webkit-scrollbar-track {
+    background: transparent; 
+  }
 }
 
 html, body, section, figure, button{
