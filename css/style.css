@@ -11,7 +11,10 @@
   --not-available-bg: rgb(247, 247, 247);
   --not-available-text: rgb(221, 221, 221);
   --announcement-color: #FA5900;
-  --section-color: #E5E5E5;
+  /* --section-color: #E5E5E5; */
+  --section-color: #f7f7f7;
+  --border-light: #ccc;
+}
 }
 
 html, body, section, figure, button{
