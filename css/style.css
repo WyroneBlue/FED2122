@@ -918,6 +918,7 @@ body.mobile-filter-open #filter-options{
 }
 
 #filter-options > form fieldset i{
+  display: none;
   position: absolute;
   top: -18px;
   right: 5px;
@@ -1268,6 +1269,10 @@ button.colorrood {
   
   body.filter-closed #filter-options{
     display: none;
+  }
+  
+  #filter-options > form fieldset i{
+    display: block;
   }
   
   main > section.shoe-type,
