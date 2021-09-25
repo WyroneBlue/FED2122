@@ -663,7 +663,9 @@ header nav#hamburger{
 }
 
 
-header nav#hamburger img, header nav#search img{
+header nav#hamburger img, 
+header nav#search img,
+header nav#search-results img{
   width: 35px;
   height: auto;
   background-color: transparent;
@@ -681,7 +683,8 @@ header nav#search div{
   cursor: text;
 }
 
-header nav#search div input{
+header nav#search div input,
+header nav#search-results div input{
   width: 180px;
   height: 40px;
   padding: 8px 48px;
@@ -691,12 +694,78 @@ header nav#search div input{
   border-radius: 100px;
   font-weight: 500;
   cursor: text;
+  outline: 0;
 }
 
-header nav#search div img{
+header nav#search div input:hover,
+header nav#search-results div input:hover{
+  background-color: var(--border-light);
+}
+
+header nav#search div input::-webkit-input-placeholder,
+header nav#search-results div input::-webkit-input-placeholder{
+  font-size: 1.25em;
+}
+
+header nav#search div img,
+header nav#search-results div img{
+
   position: absolute;
   left: 5px;
 }
+
+header nav#search-results{
+  display: none;
+  z-index: -1;
+}
+
+body.search-open header nav#search-results{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: 1fr 3fr;
+  align-items: center;
+  gap: 50px;
+  height: 312px;
+  width: 100vw;
+  margin: 0;
+  padding: 10px;
+  background-color: #fff;
+  z-index: 9999;
+}
+
+body.search-open header nav#search-results a{
+  text-align: center;
+}
+
+body.search-open header nav#search-results a img{
+  width: 60px;
+}
+
+body.search-open header nav#search-results div{
+  position: relative;
+} 
+
+body.search-open header nav#search-results div input{
+  width: 100%;
+}
+
+body.search-open header nav#search-results button{
+  justify-self: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--section-color);
+  border-radius: 50%;
+}
+
+body.search-open header nav#search-results > section{
+  grid-column: 2;
+  align-self: baseline;
+}
+
 
 @media screen and (min-width: 1024px) {
   header nav#hamburger{
@@ -1270,7 +1339,7 @@ button.colorrood {
   body.filter-closed #filter-options{
     display: none;
   }
-  
+
   #filter-options > form fieldset i{
     display: block;
   }
