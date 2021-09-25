@@ -7,6 +7,10 @@ var body = document.body;
 var banner = document.querySelector('#announcement-banner');
 var title = document.querySelector('#shoe-title');
 
+var searchBar = document.querySelector('header input[type=search]');
+var searchIcon = document.querySelector('header nav#hamburger img:nth-of-type(2)');
+var searchBarCloser = document.querySelector('header nav#search-results button');
+
 var filterOpenButton = document.querySelector('section#shoe-title > section > button:first-of-type');
 var filterOpenButtonSpan = document.querySelector('section#shoe-title > section > button:first-of-type span');
 var filterClosed = false;
@@ -17,7 +21,6 @@ var sortByOpenChevron = document.querySelector('section#shoe-title > section > b
 var sortByOptions = document.querySelectorAll('section#shoe-title > section > div span');
 var sortByOpen = false;
 
-
 var filterToggles = document.querySelectorAll('#filter-options > form fieldset i');
 
 var mobileFilterOpenButton = document.querySelector('#filter-buttons-mobile > button');
@@ -25,6 +28,11 @@ var mobileFilterCloseButton = document.querySelector('#filter-options > section:
 var hamburger = document.querySelector('#hamburger > img:last-of-type');
 var blurSection = document.querySelector('body > section');
 var menuOpen = false;
+
+const toggleSearchBar = function(e){
+    console.log(e.target.parentNode);
+    body.classList.toggle('search-open');
+}
 
 const toggleFilterMenu = function(){
     body.classList.toggle('filter-closed');
@@ -113,6 +121,10 @@ const isInView = (el) => {
     const box = el.getBoundingClientRect();
     return box.top < window.innerHeight && box.bottom >= 0;
 }
+
+searchBar.addEventListener('click', toggleSearchBar);
+searchIcon.addEventListener('click', toggleSearchBar);
+searchBarCloser.addEventListener('click', toggleSearchBar);
 
 hamburger.addEventListener('click', toggleMobileMenu);
 blurSection.addEventListener('click', toggleMobileMenu);
