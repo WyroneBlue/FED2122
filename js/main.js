@@ -18,9 +18,10 @@ var sortByOptions = document.querySelectorAll('section#shoe-title > section > di
 var sortByOpen = false;
 
 
+var filterToggles = document.querySelectorAll('#filter-options > form fieldset i');
+
 var mobileFilterOpenButton = document.querySelector('#filter-buttons-mobile > button');
 var mobileFilterCloseButton = document.querySelector('#filter-options > section:first-of-type > button');
-
 var hamburger = document.querySelector('#hamburger > img:last-of-type');
 var blurSection = document.querySelector('body > section');
 var menuOpen = false;
@@ -56,6 +57,16 @@ const resetSortBy = function(){
     sortByOptions.forEach(option => {
         option.classList.remove('active');
     });
+}
+
+const toggleFilter = function(e){
+    if(e.target.classList.contains('fa-chevron-down')){
+        e.target.classList = 'fas fa-chevron-up';
+    } else {
+        e.target.classList = 'fas fa-chevron-down';
+    }
+    let filter = e.target.parentNode.querySelector('div');
+    filter.classList.toggle('closed');
 }
 
 const toggleMobileFilterMenu = function(){
@@ -110,6 +121,10 @@ filterOpenButton.addEventListener('click', toggleFilterMenu);
 sortByOpenButton.addEventListener('click', toggleSortByMenu);
 sortByOptions.forEach(option => {
     option.addEventListener('click', setSortBy);
+});
+
+filterToggles.forEach(filter => {
+    filter.addEventListener('click', toggleFilter);
 });
 
 mobileFilterOpenButton.addEventListener('click', toggleMobileFilterMenu);

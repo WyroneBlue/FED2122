@@ -797,8 +797,15 @@ body.sortby-open section#shoe-title > section > div{
   -webkit-transition: height .25s, visibility 100ms;
   transition: height .25s, visibility 100ms;
 }
+
 @media screen and (max-width:1023px){
   section#shoe-title > section{
+    display: none;
+  }
+}
+
+@media screen and (min-width:1024px){
+  .sort-by{
     display: none;
   }
 }
@@ -904,9 +911,16 @@ body.mobile-filter-open #filter-options{
 }
 
 #filter-options > form fieldset{
-  padding: 10px  0 30px;
+  position: relative;
+  padding: 10px  0;
   margin: 30px 0 0;
   border-bottom: 1px solid var(--section-color);
+}
+
+#filter-options > form fieldset i{
+  position: absolute;
+  top: -18px;
+  right: 5px;
 }
 
 #filter-options > form fieldset div{
@@ -914,6 +928,11 @@ body.mobile-filter-open #filter-options{
   grid-template-columns: 1fr;
   column-gap: .5em;
   row-gap: .75em;
+  margin-bottom: 20px;
+}
+
+#filter-options > form fieldset div.closed{
+  display: none !important;
 }
 
 #filter-options > form fieldset div input{
@@ -1239,7 +1258,7 @@ button.colorrood {
     position: relative;
     width: auto;
     height: min-content;
-    max-height: 100vh;
+    max-height: 100%;
     visibility: visible;
     -webkit-transition: width .25s, visibility 100ms;
     transition: width .25s, visibility 100ms;
