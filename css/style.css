@@ -983,14 +983,24 @@ body.mobile-filter-open #filter-options{
   position: relative;
   padding: 10px  0;
   margin: 30px 0 0;
+  max-height: 480px;
+  height: auto;
   border-bottom: 1px solid var(--section-color);
+  
+  transition: max-height 0.4s;
+  overflow: hidden;
 
   -webkit-user-select: none;    /* Safari */
   -webkit-touch-callout: none;  /* iOS Safari */
   -khtml-user-select: none;     /* Konqueror HTML */
   -ms-user-select: none;        /* Internet Explorer/Edge */
   -moz-user-select: none;       /* Old versions of Firefox */
-  user-select: none; 
+  user-select: none;
+  
+}
+
+#filter-options > form fieldset.closed{
+  max-height: 0;
 }
 
 #filter-options > form fieldset legend{
@@ -1013,21 +1023,21 @@ body.mobile-filter-open #filter-options{
 #filter-options > form fieldset legend::before{
   right:calc(1.5em - 1px);
   transform-origin:calc(1em - 1px) 1px;
-	transform:translatey(.3em) rotate(45deg);
+  transform:translatey(-.3em) rotate(-45deg);
 }
 
 #filter-options > form fieldset legend::after{
   right:calc(.5em + 1px);	
   transform-origin:1px 1px;
-	transform:translatey(.3em) rotate(-45deg);
+  transform:translatey(-.3em) rotate(45deg);
 }
 
 #filter-options > form fieldset.closed legend::before {
-	transform:translatey(-.3em) rotate(-45deg);
+  transform:translatey(.3em) rotate(45deg);
 }
 
 #filter-options > form fieldset.closed legend::after {
-	transform:translatey(-.3em) rotate(45deg);
+  transform:translatey(.3em) rotate(-45deg);
 }
 
 #filter-options > form fieldset i{
@@ -1043,10 +1053,6 @@ body.mobile-filter-open #filter-options{
   column-gap: .5em;
   row-gap: .75em;
   margin: 20px 0;
-}
-
-#filter-options > form fieldset.closed div{
-  display: none !important;
 }
 
 #filter-options > form fieldset div input{
