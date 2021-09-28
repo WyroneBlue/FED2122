@@ -984,6 +984,50 @@ body.mobile-filter-open #filter-options{
   padding: 10px  0;
   margin: 30px 0 0;
   border-bottom: 1px solid var(--section-color);
+
+  -webkit-user-select: none;    /* Safari */
+  -webkit-touch-callout: none;  /* iOS Safari */
+  -khtml-user-select: none;     /* Konqueror HTML */
+  -ms-user-select: none;        /* Internet Explorer/Edge */
+  -moz-user-select: none;       /* Old versions of Firefox */
+  user-select: none; 
+}
+
+#filter-options > form fieldset legend{
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+
+#filter-options > form fieldset legend::before,
+#filter-options > form fieldset legend::after{
+	content:"";
+	position:absolute;
+  top:10px;
+	width:1em;
+	height:2px;
+	background-color:black;
+	transition:.3s;
+}
+
+#filter-options > form fieldset legend::before{
+  right:calc(1.5em - 1px);
+  transform-origin:calc(1em - 1px) 1px;
+	transform:translatey(.3em) rotate(45deg);
+}
+
+#filter-options > form fieldset legend::after{
+  right:calc(.5em + 1px);	
+  transform-origin:1px 1px;
+	transform:translatey(.3em) rotate(-45deg);
+}
+
+#filter-options > form fieldset.closed legend::before {
+	transform:translatey(-.3em) rotate(-45deg);
+}
+
+#filter-options > form fieldset.closed legend::after {
+	transform:translatey(-.3em) rotate(45deg);
 }
 
 #filter-options > form fieldset i{
@@ -998,10 +1042,10 @@ body.mobile-filter-open #filter-options{
   grid-template-columns: 1fr;
   column-gap: .5em;
   row-gap: .75em;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
-#filter-options > form fieldset div.closed{
+#filter-options > form fieldset.closed div{
   display: none !important;
 }
 
@@ -1308,7 +1352,7 @@ button.colorrood {
 .shoe-overview {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 10px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -1380,6 +1424,10 @@ button.colorrood {
 @media screen and (min-width: 960px) {
   #overview article {
     width: calc(100% / 3 - 5px);
+  }
+
+  .shoe-overview{
+    gap: 7px;
   }
 }
 
