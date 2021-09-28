@@ -1,5 +1,20 @@
 console.log('Overview js');
 
+var filterOpenButton = document.querySelector('section#shoe-title > section > button:first-of-type');
+var filterOpenButtonSpan = document.querySelector('section#shoe-title > section > button:first-of-type span');
+var filterClosed = false;
+
+var sortByOpenButton = document.querySelector('section#shoe-title > section > button:last-of-type');
+var sortByOpenButtonSpan = document.querySelector('section#shoe-title > section > button:last-of-type span');
+var sortByOpenChevron = document.querySelector('section#shoe-title > section > button:last-of-type i');
+var sortByOptions = document.querySelectorAll('section#shoe-title > section > div span');
+var sortByOpen = false;
+
+var filterToggles = document.querySelectorAll('#filter-options > form fieldset legend');
+
+var mobileFilterOpenButton = document.querySelector('#filter-buttons-mobile > button');
+var mobileFilterCloseButton = document.querySelector('#filter-options > section:first-of-type > button');
+
 var shoeContainer = document.querySelector('.shoe-overview');
 var filterContainer = document.querySelector('.filter');
 var sizeButtons = document.querySelectorAll('.size button');
@@ -12,6 +27,48 @@ var filters = {
     price: [],
     size: [],
     color: [],
+}
+
+const toggleFilterMenu = function(){
+    body.classList.toggle('filter-closed');
+    filterClosed = !filterClosed;
+    if(filterClosed){
+        filterOpenButtonSpan.textContent = "Show" 
+    } else {
+        filterOpenButtonSpan.textContent = "Hide" 
+    }
+}
+
+const toggleSortByMenu = function(){
+    body.classList.toggle('sortby-open');
+    sortByOpen = !sortByOpen;
+    if(sortByOpen){
+        sortByOpenChevron.classList = 'fas fa-chevron-down';
+    } else {
+        sortByOpenChevron.classList = 'fas fa-chevron-up';
+    }
+}
+
+const setSortBy = function(e){
+    resetSortBy();
+    e.target.classList.add('active');
+    let sort = e.target.textContent;
+    sortByOpenButtonSpan.textContent = `: ${sort}`
+}
+
+const resetSortBy = function(){
+    sortByOptions.forEach(option => {
+        option.classList.remove('active');
+    });
+}
+
+const toggleFilter = function(e){
+    let filter = e.target.parentNode;
+    filter.classList.toggle('closed');
+}
+
+const toggleMobileFilterMenu = function(){
+    body.classList.toggle('mobile-filter-open');
 }
 
 const activateButton = function(e){
@@ -159,6 +216,19 @@ const loadShoes = function(e){
 // filterContainer.addEventListener('change', loadShoes);
 window.addEventListener('DOMContentLoaded', loadShoes);
 
+filterOpenButton.addEventListener('click', toggleFilterMenu);
+sortByOpenButton.addEventListener('click', toggleSortByMenu);
+sortByOptions.forEach(option => {
+    option.addEventListener('click', setSortBy);
+});
+
+filterToggles.forEach(filter => {
+    filter.addEventListener('click', toggleFilter);
+});
+
+mobileFilterOpenButton.addEventListener('click', toggleMobileFilterMenu);
+mobileFilterCloseButton.addEventListener('click', toggleMobileFilterMenu);
+
 sizeButtons.forEach(btn => {
     btn.addEventListener('click', activateButton);
     btn.addEventListener('click', loadShoes);
@@ -169,3 +239,11 @@ colorButtons.forEach(btn => {
     btn.addEventListener('click', loadShoes);
 });
 
+window.addEventListener('scroll', (e) => {
+    let inView = isInView(banner);
+    if(!inView){
+        title.classList.add('sticky')
+    } else {
+        title.classList.remove('sticky')
+    }
+});
