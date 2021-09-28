@@ -74,24 +74,24 @@ p{
   line-height: 1.2;
 }
 
-#detail main {
+#detail main > section#shoe-info{
   display: flex;
   flex-wrap: wrap;
   max-width: 1440px;
   margin: 20px auto;
 }
 
-#detail main > section:first-of-type{
+#detail main > section#shoe-info > section:first-of-type{
   width: calc(100% - 500px);
   margin-right: 20px;
 }
 
-#detail main > section:first-of-type > div{
+#detail main > section#shoe-info > section:first-of-type > div{
   display: flex;
   flex-wrap: wrap;
 }
 
-#detail main > section:first-of-type > div > figure{
+#detail main > section#shoe-info > section:first-of-type > div > figure{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -100,79 +100,79 @@ p{
   width: 50%;
 }
 
-#detail main > section:first-of-type > div > figure > img{
+#detail main > section#shoe-info > section:first-of-type > div > figure > img{
   display: block;
   float: left;
   flex: 0 0 auto;
   width: 100%;
 }
 
-#detail main > section:nth-of-type(2){
+#detail main > section#shoe-info > section:nth-of-type(2){
   padding: 0 10px 10px;
   margin-left: 20px;
   width: 456px;
 }
 
-#detail main > section:nth-of-type(2) > section:first-child{
+#detail main > section#shoe-info > section:nth-of-type(2) > section:first-child{
   display: flex;
   justify-content: space-between;
 }
 
-#detail main > section:nth-of-type(2) > section{
+#detail main > section#shoe-info > section:nth-of-type(2) > section{
   margin-bottom: 30px;
   gap: 10px;
 }
 
-#detail main > section:nth-of-type(2) > section:nth-of-type(2) span{
+#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(2) span{
   display: block;
   margin: 30px 0 10px;
 }
 
-#detail main > section:nth-of-type(2) > section > div{
+#detail main > section#shoe-info > section:nth-of-type(2) > section > div{
   display: flex;
   margin-bottom: 30px;
   gap: 10px;
 }
 
-#detail main > section:nth-of-type(2) > section:first-of-type > section:first-child{
+#detail main > section#shoe-info > section:nth-of-type(2) > section:first-of-type > section:first-child{
   max-width: 300px;
 }
 
-#detail main > section:nth-of-type(2) > section:first-of-type > section:last-child{
+#detail main > section#shoe-info > section:nth-of-type(2) > section:first-of-type > section:last-child{
   margin-top: 20px;
 }
 
-#detail main > section:nth-of-type(2) > section:nth-of-type(2) a{
+#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(2) a{
   width: auto;
 }
 
-#detail main > section:nth-of-type(2) > section:nth-of-type(2) a img{
+#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(2) a img{
   width: 100%;
   height: auto;
   border-radius: 10px;
 }
 
-#detail main > section:nth-of-type(2) > section:nth-of-type(2) a img.empty{
+#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(2) a img.empty{
   cursor: initial;
   filter: contrast(0.5);
 }
 
-#detail main > section:nth-of-type(2) > section:nth-of-type(2) a.active img{
+#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(2) a.active img{
   border: 1px solid black;
 }
 
-#detail main > section:nth-of-type(2) > section:nth-of-type(3){
+#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(3){
   display: block;
 }
 
-#detail main > section:nth-of-type(2) > section:nth-of-type(3) > div{
+#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(3) > div{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 7px;
   margin-top: 10px;
 }
 
-#detail main > section:nth-of-type(2) > section:nth-of-type(3) > div > button{
+#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(3) > div > button{
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -187,22 +187,22 @@ p{
   font-size: 16px;
 }
 
-#detail main > section:nth-of-type(2) > section:nth-of-type(3) > div > button.empty{
+#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(3) > div > button.empty{
   cursor: initial;
   background-color: var(--not-available-bg);
   color: var(--not-available-text);
 }
 
-#detail main > section:nth-of-type(2) > section:nth-of-type(3) > div > button.active{
+#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(3) > div > button.active{
   border: 1px solid black;
 }
 
-#detail main > section:nth-of-type(2) > section:nth-of-type(4){
+#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4){
   display: block;
   text-align: center;
 }
 
-#detail main > section:nth-of-type(2) > section:nth-of-type(4) > button{
+#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4) > button{
   width: 80%;
   margin-bottom: 10px;
   padding: 18px 24px;
@@ -212,36 +212,36 @@ p{
   box-shadow: rgb(229 229 229) 0px 0px 0px 1px;
 }
 
-#detail main > section:nth-of-type(2) > section:nth-of-type(4) > button.primary{
+#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4) > button.primary{
   width: 100%;
   font-size: 16px;
   background-color: black;
   color: white;
 }
 
-#detail main > section:nth-of-type(3)::-webkit-scrollbar{
+#detail main > section#shoe-info > section:nth-of-type(3)::-webkit-scrollbar{
   display: none;
 }
 
-#detail main > section:nth-of-type(3){
+#detail main > section#shoe-info > section:nth-of-type(3){
   position: relative;
   margin-top: 30px;
   padding: 0 10px;
   overflow-x: scroll;
 }
 
-#detail main > section:nth-of-type(3) > div::-webkit-scrollbar{
+#detail main > section#shoe-info > section:nth-of-type(3) > div::-webkit-scrollbar{
   display: none;
 }
 
-#detail main > section:nth-of-type(3) > div{
+#detail main > section#shoe-info > section:nth-of-type(3) > div{
   display: flex;
   flex-wrap: nowrap;
   overflow-x: scroll;
   cursor: grab;
 }
 
-#detail main > section:nth-of-type(3) > div > figure{
+#detail main > section#shoe-info > section:nth-of-type(3) > div > figure{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -250,22 +250,22 @@ p{
   width: 300px;
 }
 
-#detail main > section:nth-of-type(3) > div > figure > img{
+#detail main > section#shoe-info > section:nth-of-type(3) > div > figure > img{
   display: block;
   float: left;
   flex: 0 0 auto;
   width: 300px;
 }
 
-#detail main > section:nth-of-type(3) > div > figure > section{
+#detail main > section#shoe-info > section:nth-of-type(3) > div > figure > section{
   margin: 10px 0 20px; 
 }
 
-#detail main > section:nth-of-type(3) > div > figure > section > span{
+#detail main > section#shoe-info > section:nth-of-type(3) > div > figure > section > span{
   margin: 10px 0; 
 }
 
-#detail main > section:nth-of-type(3) > div > figure > section > span:last-child{
+#detail main > section#shoe-info > section:nth-of-type(3) > div > figure > section > span:last-child{
   color: var(--filters-color);
 }
 
@@ -386,44 +386,44 @@ aside#cart-popup > section.buttons > button.primary{
     display: none !important;
   }
 
-  #detail main{
+  #detail main > section#shoe-info{
     padding: 10px;
   }
 
-  #detail main > section:nth-of-type(2){
+  #detail main > section#shoe-info > section:nth-of-type(2){
     width: 100%;
     margin: 0;
   }
 
-  #detail main {
+  #detail main > section#shoe-info {
     display: block;
   }
   
-  #detail main > section:first-of-type{
+  #detail main > section#shoe-info > section:first-of-type{
     position: relative;
     flex-wrap: nowrap;
     overflow-x: scroll;
     width: 100%;
   }
 
-  #detail main > section:first-of-type > figure > img{
+  #detail main > section#shoe-info > section:first-of-type > figure > img{
     width: 100%;
   }
 
-  #detail main > section:first-of-type > div > figure > img{
+  #detail main > section#shoe-info > section:first-of-type > div > figure > img{
     width: 100%;
   }
 }
 
 @media screen and (max-width: 424px){
 
-  #detail main > section:first-of-type > div{
+  #detail main > section#shoe-info > section:first-of-type > div{
     display: flex;
     flex-wrap: nowrap;
     overflow-x: scroll;
   }
   
-  #detail main > section:first-of-type > div > figure{
+  #detail main > section#shoe-info > section:first-of-type > div > figure{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -432,14 +432,14 @@ aside#cart-popup > section.buttons > button.primary{
     margin-right: 20px;
   }
 
-  #detail main > section:first-of-type > div > figure > img{
+  #detail main > section#shoe-info > section:first-of-type > div > figure > img{
     display: block;
     float: left;
     width: 100%;
   }
 
-  #detail main > section:nth-of-type(3) > div > figure, 
-  #detail main > section:nth-of-type(3) > div > figure > img{
+  #detail main > section#shoe-info > section:nth-of-type(3) > div > figure, 
+  #detail main > section#shoe-info > section:nth-of-type(3) > div > figure > img{
     width: 100%;
     flex-shrink: 0;
   }
