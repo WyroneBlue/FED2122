@@ -1011,23 +1011,24 @@ body.mobile-filter-open #filter-options{
 
 #filter-options > form fieldset legend::before,
 #filter-options > form fieldset legend::after{
-	content:"";
-	position:absolute;
-  top:10px;
-	width:1em;
-	height:2px;
-	background-color:black;
-	transition:.3s;
+	content: "";
+	position: absolute;
+  top: 10px;
+	width: .65em;
+	height: 2px;
+	background-color: black;
+  border-radius: 20px;
+	transition: .3s;
 }
 
 #filter-options > form fieldset legend::before{
-  right:calc(1.5em - 1px);
-  transform-origin:calc(1em - 1px) 1px;
+  right:calc(1em - 1px);
+  transform-origin:calc(.65em - 1px) 1px;
   transform:translatey(-.3em) rotate(-45deg);
 }
 
 #filter-options > form fieldset legend::after{
-  right:calc(.5em + 1px);	
+  right:calc(.325em + 1px);	
   transform-origin:1px 1px;
   transform:translatey(-.3em) rotate(45deg);
 }
