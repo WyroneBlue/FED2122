@@ -2,7 +2,7 @@ console.log('Detail js');
 
 var url = new URL(window.location);
 var shoe_id = url.searchParams.get("shoe_id");
-var currentShoe = shoelist[shoe_id];
+var currentShoe = shoeList[shoe_id];
 var names = document.querySelectorAll(".heading h1");
 var forWho = document.querySelectorAll(".heading h2");
 var prices = document.querySelectorAll(".heading span");
@@ -80,7 +80,7 @@ const scrollForYou = function(e){
 
 const loadForYouShoes = function(e){
 
-    shoelist.forEach(shoe => {
+    shoeList.forEach(shoe => {
         
         forYouHtml += `
         <figure onclick="goToDetail(this)" data-id="${shoe.id}">

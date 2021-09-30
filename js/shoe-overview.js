@@ -185,7 +185,7 @@ const checkFilters = function(e){
 const filterShoes = function(e){
 
     shoeHtml = '';
-    filteredShoes = shoelist;
+    filteredShoes = shoeList;
     // checkFilters();
     // filterSex();
     // filterPrice();

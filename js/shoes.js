@@ -1,4 +1,4 @@
-var shoelist = [
+var shoeList = [
     {
         id: 0,
         name: 'Nike Air Zoom Pegasus 38',
@@ -769,4 +769,3 @@ var shoelist = [
         },
     },
 ];
-
