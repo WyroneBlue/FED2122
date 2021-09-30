@@ -646,7 +646,7 @@ body.menu-open, body.mobile-filter-open{
   overflow: hidden;
 }
 
-body.menu-open > section{
+body.menu-open > section, body.search-open > section{
   position: fixed;
   top: 0;
   width: 100vw;

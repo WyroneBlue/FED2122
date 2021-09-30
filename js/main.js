@@ -15,14 +15,22 @@ var hamburger = document.querySelector('#hamburger > img:last-of-type');
 var blurSection = document.querySelector('body > section');
 var menuOpen = false;
 
-const toggleSearchBar = function(e){
-    console.log(e.target.parentNode);
+const toggleSearchBar = function(){
     body.classList.toggle('search-open');
 }
 
 const toggleMobileMenu = function(){
     body.classList.toggle('menu-open');
     menuOpen = !menuOpen;
+}
+
+const blurSectionClicked = function(type){
+    console.log(type);
+    if(body.classList.contains('menu-open')){
+        toggleMobileMenu();
+    } else {
+        toggleSearchBar();
+    }
 }
 
 const deactivateAllSizes = function(){
@@ -66,7 +74,7 @@ searchIcon.addEventListener('click', toggleSearchBar);
 searchBarCloser.addEventListener('click', toggleSearchBar);
 
 hamburger.addEventListener('click', toggleMobileMenu);
-blurSection.addEventListener('click', toggleMobileMenu);
+blurSection.addEventListener('click', blurSectionClicked);
 
 window.addEventListener('DOMContentLoaded', function(){
     
