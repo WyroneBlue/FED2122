@@ -720,10 +720,10 @@ header nav#search-results{
   top: 0;
   right: 0;
   display: grid;
-  grid-template-columns: 5fr 1fr;
+  grid-template-columns: 5fr 0fr;
   grid-template-rows: 1fr 3fr;
   align-items: center;
-  gap: 50px;
+  gap: 1em;
   width: 0;
   height: 0;
   padding: 0;
@@ -732,19 +732,19 @@ header nav#search-results{
   z-index: -1;
   overflow: hidden;
   transition:  width .3s, height 1.3s ease-in;
-  z-index: 9999;
+  z-index: 999999;
 }
 
 body.search-open header nav#search-results{
   width: 100%;
   height: 100vh;
-  padding: 10px;
+  padding: 0 4em;
   transition-timing-function: ease-out;
 }
 
 body.search-open header nav#search-results a{
   display: none;
-  text-align: center;
+  text-align: left;
 }
 
 body.search-open header nav#search-results a img{
@@ -760,7 +760,7 @@ body.search-open header nav#search-results div input{
 }
 
 body.search-open header nav#search-results button{
-  justify-self: center;
+  justify-self: end;
   width: 40px;
   height: 40px;
   background-color: var(--section-color);
@@ -772,11 +772,29 @@ body.search-open header nav#search-results > section{
   align-self: baseline;
 }
 
+body.search-open header nav#search-results > section > h3{
+  color: var(--filters-color);
+  font-size: 1em;
+  font-weight: 400;
+  margin: 0 0 1.25em;
+}
+
+body.search-open header nav#search-results > section > ul{
+  display: flex;
+  flex-direction: column;
+  gap: 1.25em;
+  list-style: none;
+}
+
+body.search-open header nav#search-results > section > ul li{
+  font-size: 1.25em;
+}
+
 
 @media screen and (min-width: 1024px) {
 
   body.search-open header nav#search-results{
-    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-columns: 2fr 5fr 2fr;
     grid-template-rows: 1fr 3fr;
     height: 312px;
   }
