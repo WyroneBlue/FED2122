@@ -731,7 +731,7 @@ header nav#search-results{
   background-color: #fff;
   z-index: -1;
   overflow: hidden;
-  transition:  width .3s, height 1.3s ease-in;
+  transition:  width .3s, height 0.5s ease-in;
   z-index: 999999;
 }
 
