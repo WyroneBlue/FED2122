@@ -738,7 +738,7 @@ header nav#search-results{
 body.search-open header nav#search-results{
   width: 100%;
   height: 100vh;
-  padding: 0 4em;
+  padding: .5em 4em;
   transition-timing-function: ease-out;
 }
 
@@ -770,6 +770,14 @@ body.search-open header nav#search-results button{
 body.search-open header nav#search-results > section{
   grid-column: 1;
   align-self: baseline;
+  grid-template-columns: 1fr min-content;
+}
+
+body.search-open header nav#search-results > section.searching{
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 2fr 7fr;
+  column-gap: 1.5em;
 }
 
 body.search-open header nav#search-results > section > h3{
@@ -779,6 +787,11 @@ body.search-open header nav#search-results > section > h3{
   margin: 0 0 1.25em;
 }
 
+body.search-open header nav#search-results > section.searching > h3{ 
+  grid-column: 1/-1;
+  position: absolute;
+}
+
 body.search-open header nav#search-results > section > ul{
   display: flex;
   flex-direction: column;
@@ -786,17 +799,48 @@ body.search-open header nav#search-results > section > ul{
   list-style: none;
 }
 
+body.search-open header nav#search-results > section.searching > ul{
+  grid-column: 1;
+  margin-top: 30px;
+}
+
 body.search-open header nav#search-results > section > ul li{
   font-size: 1.25em;
 }
 
+body.search-open header nav#search-results > section > section.list{
+  display: none;
+  gap: .5em;
+  overflow-x: auto;
+}
+
+body.search-open header nav#search-results > section.searching > section.list{
+  display: flex;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+body.search-open header nav#search-results > section > section.list article a{
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+  width: 150px;
+}
+
+body.search-open header nav#search-results > section > section.list article a img{
+  order: -1;
+  width: 100%;
+}
 
 @media screen and (min-width: 1024px) {
 
   body.search-open header nav#search-results{
     grid-template-columns: 2fr 5fr 2fr;
     grid-template-rows: 1fr 3fr;
-    height: 312px;
+    height: min-content;
   }
 
   body.search-open header nav#search-results a{
@@ -1460,7 +1504,7 @@ button.colorrood {
   width: 100%;
 }
 
-#overview article {
+#overview #shoe-overview article {
   position: relative;
   text-align: left;
   width: calc(100% / 2 - 5px);
@@ -1468,7 +1512,7 @@ button.colorrood {
 }
 
 @media screen and (min-width: 960px) {
-  #overview article {
+  #overview #shoe-overview article {
     width: calc(100% / 3 - 5px);
   }
 
