@@ -7,7 +7,7 @@ var body = document.body;
 var banner = document.querySelector('#announcement-banner');
 var title = document.querySelector('#shoe-title');
 
-var searchBar = document.querySelector('header input[type=search]');
+var searchBar = document.querySelector('header nav#search div input');
 var searchIcon = document.querySelector('header nav#hamburger img:nth-of-type(2)');
 var searchBarCloser = document.querySelector('header nav#search-results button');
 
