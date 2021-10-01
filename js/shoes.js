@@ -1,3 +1,4 @@
+const shoePage = 'shoe.html?shoe_id=';
 var shoeList = [
     {
         id: 0,
@@ -72,6 +73,15 @@ var shoeList = [
             2:'images/sneakers/air-zoom-pegasus-38-hardloopschoen-heren-jRRc9F.jpg',
             3:'images/sneakers/air-zoom-pegasus-38-hardloopschoen-heren-jRRc9F.jpg'
         },
+        get href(){
+            return shoePage + this.id;
+        },
+        get image(){
+            return this.images[0];
+        },
+        get formatPrice(){
+            return '€ '+ this.price;
+        },
     },
     {
         id: 1,
@@ -140,6 +150,15 @@ var shoeList = [
             1:'images/sneakers/nike-air-force-1-acronym.jpg',
             2:'images/sneakers/nike-air-force-1-acronym.jpg',
             3:'images/sneakers/nike-air-force-1-acronym.jpg'
+        },
+        get href(){
+            return shoePage + this.id;
+        },
+        get image(){
+            return this.images[0];
+        },
+        get formatPrice(){
+            return '€ '+ this.price;
         },
     },
     {
@@ -210,6 +229,15 @@ var shoeList = [
             2:'images/sneakers/dunk-high-x-ambush-black.jpg',
             3:'images/sneakers/dunk-high-x-ambush-black.jpg'
         },
+        get href(){
+            return shoePage + this.id;
+        },
+        get image(){
+            return this.images[0];
+        },
+        get formatPrice(){
+            return '€ '+ this.price;
+        },
     },
     {
         id: 3,
@@ -278,6 +306,15 @@ var shoeList = [
             1:'images/sneakers/air-force-1-lxx-shoe-Q4pP8V.png.jpeg',
             2:'images/sneakers/air-force-1-lxx-shoe-Q4pP8V.png.jpeg',
             3:'images/sneakers/air-force-1-lxx-shoe-Q4pP8V.png.jpeg'
+        },
+        get href(){
+            return shoePage + this.id;
+        },
+        get image(){
+            return this.images[0];
+        },
+        get formatPrice(){
+            return '€ '+ this.price;
         },
     },
     {
@@ -348,6 +385,15 @@ var shoeList = [
             2:'images/sneakers/air-zoom-pegasus-38-running-shoe-GVlNV5.png.jpeg',
             3:'images/sneakers/air-zoom-pegasus-38-running-shoe-GVlNV5.png.jpeg'
         },
+        get href(){
+            return shoePage + this.id;
+        },
+        get image(){
+            return this.images[0];
+        },
+        get formatPrice(){
+            return '€ '+ this.price;
+        },
     },
     {
         id: 5,
@@ -416,6 +462,15 @@ var shoeList = [
             1:'images/sneakers/air-force-1-low-shoe-gvG9vB.png.jpeg',
             2:'images/sneakers/air-force-1-low-shoe-gvG9vB.png.jpeg',
             3:'images/sneakers/air-force-1-low-shoe-gvG9vB.png.jpeg'
+        },
+        get href(){
+            return shoePage + this.id;
+        },
+        get image(){
+            return this.images[0];
+        },
+        get formatPrice(){
+            return '€ '+ this.price;
         },
     },
     {
@@ -486,6 +541,15 @@ var shoeList = [
             2:'images/sneakers/air-max-90-g-golf-shoe-zCm8W1.png.jpeg',
             3:'images/sneakers/air-max-90-g-golf-shoe-zCm8W1.png.jpeg'
         },
+        get href(){
+            return shoePage + this.id;
+        },
+        get image(){
+            return this.images[0];
+        },
+        get formatPrice(){
+            return '€ '+ this.price;
+        },
     },
     {
         id: 7,
@@ -554,6 +618,15 @@ var shoeList = [
             1:'images/sneakers/women-s-air-force-1-pastel-reveal-release-date.jpg',
             2:'images/sneakers/women-s-air-force-1-pastel-reveal-release-date.jpg',
             3:'images/sneakers/women-s-air-force-1-pastel-reveal-release-date.jpg'
+        },
+        get href(){
+            return shoePage + this.id;
+        },
+        get image(){
+            return this.images[0];
+        },
+        get formatPrice(){
+            return '€ '+ this.price;
         },
     },
     {
@@ -624,6 +697,15 @@ var shoeList = [
             2:'images/sneakers/air-max-95-shoe-s1vKMc.png.jpeg',
             3:'images/sneakers/air-max-95-shoe-s1vKMc.png.jpeg'
         },
+        get href(){
+            return shoePage + this.id;
+        },
+        get image(){
+            return this.images[0];
+        },
+        get formatPrice(){
+            return '€ '+ this.price;
+        },
     },
     {
         id: 9,
@@ -692,6 +774,15 @@ var shoeList = [
             1:'images/sneakers/air-jordan-1-hi-flyease-shoe-7J4Sf9.png.jpeg',
             2:'images/sneakers/air-jordan-1-hi-flyease-shoe-7J4Sf9.png.jpeg',
             3:'images/sneakers/air-jordan-1-hi-flyease-shoe-7J4Sf9.png.jpeg'
+        },
+        get href(){
+            return shoePage + this.id;
+        },
+        get image(){
+            return this.images[0];
+        },
+        get formatPrice(){
+            return '€ '+ this.price;
         },
     },
     {
@@ -766,6 +857,15 @@ var shoeList = [
             1:'images/sneakers/air-jordan-1-low-to-my-first-coach-release-date.jpg',
             2:'images/sneakers/air-jordan-1-low-to-my-first-coach-release-date.jpg',
             3:'images/sneakers/air-jordan-1-low-to-my-first-coach-release-date.jpg'
+        },
+        get href(){
+            return shoePage + this.id;
+        },
+        get image(){
+            return this.images[0];
+        },
+        get formatPrice(){
+            return '€ '+ this.price;
         },
     },
 ];
