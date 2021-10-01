@@ -16,7 +16,7 @@ var mobileFilterOpenButton = document.querySelector('#filter-buttons-mobile > bu
 var mobileFilterCloseButton = document.querySelector('#filter-options > section:first-of-type > button');
 
 var shoeContainer = document.querySelector('#shoe-overview');
-var filterContainer = document.querySelector('.filter');
+var filterContainer = document.querySelector('#filter-options form');
 var sizeButtons = document.querySelectorAll('.size button');
 var colorButtons = document.querySelectorAll('.kleur button');
 let shoeHtml = '';
