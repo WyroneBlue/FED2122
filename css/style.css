@@ -1395,7 +1395,7 @@ button.colorrood {
   background-color: red;
 }
 
-.shoe-overview {
+#shoe-overview {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -1455,7 +1455,7 @@ button.colorrood {
   }
 }
 
-.shoe-overview img {
+#shoe-overview img {
   height: auto;
   width: 100%;
 }
@@ -1472,7 +1472,7 @@ button.colorrood {
     width: calc(100% / 3 - 5px);
   }
 
-  .shoe-overview{
+  #shoe-overview{
     gap: 7px;
   }
 }
