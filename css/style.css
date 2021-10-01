@@ -835,6 +835,16 @@ body.search-open header nav#search-results > section > section.list article a im
   width: 100%;
 }
 
+body.search-open header nav#search-results div.no-results{
+  display: none;
+}
+
+body.search-open header nav#search-results div.no-results.show{
+  display:block;
+  grid-column: 2;
+  grid-row: 1;
+}
+
 @media screen and (min-width: 1024px) {
 
   body.search-open header nav#search-results{

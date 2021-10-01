@@ -4,6 +4,7 @@ var popularTermsSectionHtml = '';
 var popularTermsSection = document.querySelector('#search-results > section > ul');
 var searchBarVal = document.querySelector('header nav#search-results div input');
 var results = document.querySelector('header nav#search-results .list');
+var msg = document.querySelector('header nav#search-results .no-results');
 
 let searchHtml = '';
 
