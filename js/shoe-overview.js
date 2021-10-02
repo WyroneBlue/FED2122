@@ -1,4 +1,4 @@
-console.log('Overview js');
+
 
 var filterOpenButton = document.querySelector('section#shoe-title > section > button:first-of-type');
 var filterOpenButtonSpan = document.querySelector('section#shoe-title > section > button:first-of-type span');
@@ -14,6 +14,8 @@ var filterToggles = document.querySelectorAll('#filter-options > form fieldset l
 
 var mobileFilterOpenButton = document.querySelector('#filter-buttons-mobile > button');
 var mobileFilterCloseButton = document.querySelector('#filter-options > section:first-of-type > button');
+var mobileFilterClearButton = document.querySelector('#filter-options > section:last-of-type button:first-of-type');
+var mobileFilterApplyButton = document.querySelector('#filter-options > section:last-of-type button:last-of-type');
 
 var shoeContainer = document.querySelector('#shoe-overview');
 var filterContainer = document.querySelector('#filter-options form');
@@ -21,12 +23,17 @@ var sizeButtons = document.querySelectorAll('.size button');
 var colorButtons = document.querySelectorAll('.kleur button');
 let shoeHtml = '';
 let filteredShoes = [];
-
 var filters = {
     sex: [],
     price: [],
     size: [],
     color: [],
+}
+
+const clearFilters = function(){
+    filterContainer.reset();
+    loadShoes();
+    toggleMobileFilterMenu();
 }
 
 const toggleFilterMenu = function(){
@@ -82,11 +89,11 @@ const goToDetail = function(e){
 }
 
 const filterSex = function(){
-
+    
     let sexfilters = Object.keys(filters.sex).map(function(key, index) {
         return filters.sex[key].value;
     });
-
+    
     if(sexfilters.length > 0){
 
         let shoes = [];
@@ -105,7 +112,7 @@ const filterPrice = function(){
     let pricefilters = Object.keys(filters.price).map(function(key, index) {
         return filters.price[key].value;
     });
-
+    
     if(pricefilters.length > 0){
         
         pricefilters = Object.values(pricefilters).map(function(key, index) {
@@ -121,7 +128,7 @@ const filterPrice = function(){
                 Object.values(filteredShoes).filter(function(key, index) {
                     
                     if((filter[0] < filteredShoes[index].price && filter[1] > filteredShoes[index].price) || pricefilters.length == 0 ){            
-                        // console.log(filteredShoes[index]);
+                        
                         return shoes.push(filteredShoes[index]);
                     }
                 });
@@ -140,62 +147,86 @@ const filterPrice = function(){
     }
 }
 
-// const filterSize = function(){
+const filterSize = function(){
     
-//     let sizeFilters = Object.keys(filters.size).map(function(key, index) {
-//         return parseInt(filters.size[key].textContent);
-//     });
-
-//     if(sizeFilters.length > 0){
+    let sizeFilters = Object.keys(filters.size).map(function(key, index) {
+        return parseInt(filters.size[key].value);
+    });
+    
+    if(sizeFilters.length > 0){
         
-//         let shoes = []; 
-//         sizeFilters.filter((filter) => {
+        let shoes = []; 
+        sizeFilters.filter((filter) => {
 
-//             Object.values(filteredShoes).filter(function(key, index) {
+            Object.values(filteredShoes).filter(function(key, index) {
                 
-//                 let found = false;
-//                 let sizes = filteredShoes[index].sizes;
-//                 Object.values(sizes).filter(function(key_2, index_2) {
+                let found = false;
+                let sizes = filteredShoes[index].sizes;
+                Object.values(sizes).filter(function(key_2, index_2) {
                     
-//                     let size = key_2.size;
-//                     if(sizeFilters.includes(size) && found == false){
-//                         found = true;
-//                         return shoes.push(filteredShoes[index]);
-//                     }
-//                 });
-//             });
-//         });
+                    let size = key_2.size;
+                    if(sizeFilters.includes(size) && found == false){
+                        found = true;
+                        return shoes.push(filteredShoes[index]);
+                    }
+                });
+            });
+        });
         
-//         filteredShoes = shoes
-//     }
-// }
+        filteredShoes = shoes
+    }
+}
 
-// const filterColor = function(e){
-//     return e.price > 115
-// }
+const filterColor = function(e){
+
+    let colorFilters = Object.keys(filters.color).map(function(key, index) {
+        return filters.color[key].value;
+    });
+    
+    if(colorFilters.length > 0){
+        let shoes = [];
+        colorFilters.filter(() => {
+            Object.values(filteredShoes).filter(function(key, index) {
+                
+                let found = false;
+                let colors = filteredShoes[index].color_list;
+                Object.values(colors).filter(function(key_2, index_2) {
+                    let color = key_2;
+                    
+                    if(colorFilters.includes(color) && found == false){
+                        found = true;
+                        return shoes.push(filteredShoes[index]);
+                    }
+                });
+            });
+        });
+
+        filteredShoes = shoes
+    }
+}
 
 const checkFilters = function(e){
-
-    filters.sex = document.querySelectorAll('.geslacht input:checked');
-    filters.price = document.querySelectorAll('.prijs input:checked');
-    filters.size = document.querySelectorAll('.size button.active');
-    filters.color = document.querySelectorAll('.kleur input.active');
+    filters.type = document.querySelectorAll('#filter-options form fieldset.shoe-type input:checked');
+    filters.sort = document.querySelectorAll('#filter-options form fieldset.sort-by input:checked');
+    filters.sex = document.querySelectorAll('#filter-options form fieldset.sex input:checked');
+    filters.price = document.querySelectorAll('#filter-options form fieldset.price input:checked');
+    filters.size = document.querySelectorAll('#filter-options form fieldset.size input:checked');
+    filters.color = document.querySelectorAll('#filter-options form fieldset.color input:checked');
 }
 
 const filterShoes = function(e){
 
     shoeHtml = '';
     filteredShoes = shoeList;
-    // checkFilters();
-    // filterSex();
-    // filterPrice();
-    // filterSize();
-    // filterColor();
+    checkFilters();
+    filterSex();
+    filterPrice();
+    filterSize();
+    filterColor();
     return filteredShoes;
 }
 
 const loadShoes = function(e){
-
     filterShoes();
     filteredShoes.forEach(shoe => {
         
@@ -213,7 +244,7 @@ const loadShoes = function(e){
     shoeContainer.innerHTML = shoeHtml;
 }
 
-// filterContainer.addEventListener('change', loadShoes);
+filterContainer.addEventListener('input', loadShoes);
 window.addEventListener('DOMContentLoaded', loadShoes);
 
 filterOpenButton.addEventListener('click', toggleFilterMenu);
@@ -228,6 +259,8 @@ filterToggles.forEach(filter => {
 
 mobileFilterOpenButton.addEventListener('click', toggleMobileFilterMenu);
 mobileFilterCloseButton.addEventListener('click', toggleMobileFilterMenu);
+mobileFilterClearButton.addEventListener('click', clearFilters);
+mobileFilterApplyButton.addEventListener('click', toggleMobileFilterMenu);
 
 sizeButtons.forEach(btn => {
     btn.addEventListener('click', activateButton);
@@ -239,11 +272,13 @@ colorButtons.forEach(btn => {
     btn.addEventListener('click', loadShoes);
 });
 
-window.addEventListener('scroll', (e) => {
-    let inView = isInView(banner);
-    if(!inView){
-        title.classList.add('sticky')
-    } else {
-        title.classList.remove('sticky')
-    }
+window.addEventListener('DOMContentLoaded', function(){
+    window.addEventListener('scroll', () => {
+        let inView = isInView(banner);
+        if(!inView){
+            title.classList.add('sticky')
+        } else {
+            title.classList.remove('sticky')
+        }
+    });
 });

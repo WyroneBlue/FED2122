@@ -6,7 +6,7 @@ var shoeList = [
         for: 'Hardloopschoen voor heren',
         price: 119.99,
         description: '',
-        sex: 'heren',
+        sex: 'men',
         msg: 'Promo Exclusion',
         colors: {
             0: {
@@ -31,9 +31,9 @@ var shoeList = [
             }
         },
         color_list:[
-            'zwart',
-            'blauw',
-            'wit',
+            'black',
+            'blue',
+            'white',
         ],
         sizes: [
             {
@@ -89,7 +89,7 @@ var shoeList = [
         for: 'Hardloopschoen voor heren',
         price: 200.00,
         description: '',
-        sex: 'dames',
+        sex: 'women',
         msg: 'Coming Soon',
         colors: {
             0: {
@@ -109,9 +109,8 @@ var shoeList = [
             },
         },
         color_list:[
-            'zwart',
-            'rood',
-            'oranje',
+            'black',
+            'red',
         ],
         sizes: [
             {
@@ -187,9 +186,9 @@ var shoeList = [
             },
         },
         color_list:[
-            'bruin',
-            'grijs',
-            'zwart',
+            'brown',
+            'grey',
+            'black',
         ],
         sizes: [
             {
@@ -245,7 +244,7 @@ var shoeList = [
         for: 'Hardloopschoen voor heren',
         price: 109.99,
         description: '',
-        sex: 'heren',
+        sex: 'men',
         msg: 'Just In',
         colors: {
             0: {
@@ -265,9 +264,9 @@ var shoeList = [
             },
         },
         color_list:[
-            'bruin',
-            'grijs',
-            'zwart',
+            'brown',
+            'grey',
+            'black',
         ],
         sizes: [
             {
@@ -323,7 +322,7 @@ var shoeList = [
         for: 'Hardloopschoen voor heren',
         price: 119.99,
         description: '',
-        sex: 'heren',
+        sex: 'men',
         msg: 'Promo Exclusion',
         colors: {
             0: {
@@ -343,9 +342,9 @@ var shoeList = [
             },
         },
         color_list:[
-            'bruin',
-            'grijs',
-            'zwart',
+            'brown',
+            'grey',
+            'black',
         ],
         sizes: [
             {
@@ -401,7 +400,7 @@ var shoeList = [
         for: 'Hardloopschoen voor heren',
         price: 109.99,
         description: '',
-        sex: 'heren',
+        sex: 'men',
         msg: 'Promo Exclusion',
         colors: {
             0: {
@@ -421,9 +420,9 @@ var shoeList = [
             },
         },
         color_list:[
-            'bruin',
-            'grijs',
-            'zwart',
+            'brown',
+            'grey',
+            'black',
         ],
         sizes: [
             {
@@ -479,7 +478,7 @@ var shoeList = [
         for: 'Hardloopschoen voor heren',
         price: 139.99,
         description: '',
-        sex: 'heren',
+        sex: 'men',
         msg: 'Just In',
         colors: {
             0: {
@@ -499,9 +498,9 @@ var shoeList = [
             },
         },
         color_list:[
-            'bruin',
-            'grijs',
-            'zwart',
+            'brown',
+            'grey',
+            'black',
         ],
         sizes: [
             {
@@ -577,9 +576,9 @@ var shoeList = [
             },
         },
         color_list:[
-            'bruin',
-            'grijs',
-            'zwart',
+            'brown',
+            'grey',
+            'black',
         ],
         sizes: [
             {
@@ -655,9 +654,9 @@ var shoeList = [
             },
         },
         color_list:[
-            'bruin',
-            'grijs',
-            'zwart',
+            'brown',
+            'green',
+            'black',
         ],
         sizes: [
             {
@@ -733,9 +732,9 @@ var shoeList = [
             },
         },
         color_list:[
-            'bruin',
-            'grijs',
-            'zwart',
+            'brown',
+            'grey',
+            'black',
         ],
         sizes: [
             {
@@ -816,9 +815,9 @@ var shoeList = [
             },
         },
         color_list:[
-            'bruin',
-            'grijs',
-            'zwart',
+            'brown',
+            'grey',
+            'black',
         ],
         sizes: [
             {
