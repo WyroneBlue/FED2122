@@ -1523,10 +1523,12 @@ input[type=radio]{
 @media screen and (min-width: 960px) {
   #overview #shoe-overview article {
     width: calc(100% / 3 - 5px);
+    height: min-content;
   }
 
   #shoe-overview{
     gap: 7px;
+    align-content: flex-start;
   }
 }
 
