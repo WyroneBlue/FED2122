@@ -6,6 +6,7 @@ var searchBarVal = document.querySelector('header nav#search-results div input')
 var results = document.querySelector('header nav#search-results .list');
 var msg = document.querySelector('header nav#search-results .no-results');
 
+var shoeSearchable;
 let searchHtml = '';
 
 var popularShoeIds = [
@@ -13,7 +14,6 @@ var popularShoeIds = [
 ]
 
 const loadFilterShoes = function(e){
-	console.log(shoeList);
 	shoeList.forEach(shoe => {
 		searchHtml += `
 		<article>
@@ -27,10 +27,10 @@ const loadFilterShoes = function(e){
 		`;
 	});
 
-	loadSearchable();
+	loadSearchableResults();
 }
 
-const loadSearchable = function () {
+const loadSearchableResults = function () {
 	
 	var options = {
 		valueNames: [ 
@@ -43,15 +43,14 @@ const loadSearchable = function () {
 		item: searchHtml
 	};
 
-	var shoeResults = new List('search-results', options, shoeList);
-
-	shoeResults.filter(function(item) {
-		if (item.values().id > 6) {
-		   return true;
+	shoeSearchable = new List('search-results', options, shoeList);
+	shoeSearchable.on('updated', function(list) {
+		if(list.matchingItems.length > 1){
+			msg.classList.remove('show');
 		} else {
-		   return false;
+			msg.classList.add('show');
 		}
-	}); 
+	})
 }
 
 const loadPopularTerms = function(e){
