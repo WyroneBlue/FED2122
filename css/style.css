@@ -1416,63 +1416,35 @@ input[type=radio]{
 }
 
 #filter-options > form fieldset.color div input#color-3 + label{
-  background-color: green;
+  background-color: red;
 }
 
 #filter-options > form fieldset.color div input#color-4 + label{
-  background-color: brown;
+  background-color: green;
 }
 
 #filter-options > form fieldset.color div input#color-5 + label{
-  background-color: grey;
+  background-color: brown;
 }
 
 #filter-options > form fieldset.color div input#color-6 + label{
-  background-color: pink;
+  background-color: grey;
 }
 
 #filter-options > form fieldset.color div input#color-7 + label{
+  background-color: pink;
+}
+
+#filter-options > form fieldset.color div input#color-8 + label{
   background-color: white;
 }
 
-#filter-options > form fieldset.color div input#color-7 + label::after{
+#filter-options > form fieldset.color div input#color-8 + label::after{
   color: black;
 }
 
 .color button.active{
   box-shadow: black 0px 0px 1px 3px;
-}
-
-button.colorzwart {
-  background-color: black;
-}
-
-button.colorzwart.active {
-  box-shadow: grey 0px 0px 1px 3px;
-}
-
-button.colorgroen {
-  background-color: green;
-}
-
-button.colorblauw {
-  background-color: blue;
-}
-
-button.colorbruin {
-  background-color: brown;
-}
-
-button.colorgrijs {
-  background-color: grey;
-}
-
-button.colororanje {
-  background-color: orange;
-}
-
-button.colorrood {
-  background-color: red;
 }
 
 #shoe-overview {
