@@ -721,7 +721,7 @@ header nav#search-results{
   right: 0;
   display: grid;
   grid-template-columns: 5fr 0fr;
-  grid-template-rows: 1fr 3fr;
+  grid-template-rows: 1fr 5fr;
   align-items: center;
   gap: 1em;
   width: 0;
@@ -730,15 +730,15 @@ header nav#search-results{
   margin: 0;
   background-color: #fff;
   z-index: -1;
-  overflow: hidden;
+  overflow: auto;
   transition:  width .3s, height 0.5s ease-in;
   z-index: 999999;
 }
 
 body.search-open header nav#search-results{
   width: 100%;
-  height: 100vh;
-  padding: .5em 4em;
+  height: 100%;
+  padding: .5em 1em;
   transition-timing-function: ease-out;
 }
 
@@ -775,9 +775,13 @@ body.search-open header nav#search-results > section{
 
 body.search-open header nav#search-results > section.searching{
   grid-column: 1/-1;
-  display: grid;
-  grid-template-columns: 2fr 7fr;
-  column-gap: 1.5em;
+  /* display: grid; */
+  /* grid-template-columns: 2fr 7fr; */
+  /* column-gap: 1.5em; */
+  margin: 2em 0;
+  display: flex;
+  flex-direction:column;
+  gap: 2em;
 }
 
 body.search-open header nav#search-results > section > h3{
@@ -815,9 +819,11 @@ body.search-open header nav#search-results > section > section.list{
 }
 
 body.search-open header nav#search-results > section.searching > section.list{
-  display: flex;
+  /* display: flex; */
   grid-column: 2;
   grid-row: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 body.search-open header nav#search-results > section > section.list article a{
@@ -827,7 +833,8 @@ body.search-open header nav#search-results > section > section.list article a{
   flex-direction: column;
   justify-content: space-between;
   gap: 5px;
-  width: 150px;
+  /* width: 150px; */
+  width: auto;
 }
 
 body.search-open header nav#search-results > section > section.list article a img{
@@ -847,20 +854,39 @@ body.search-open header nav#search-results div.no-results.show{
 
 @media screen and (min-width: 1024px) {
 
+  header nav#search-results{
+    grid-template-rows: 1fr 3fr;
+    overflow: hidden;
+  }
+  
   body.search-open header nav#search-results{
     grid-template-columns: 2fr 5fr 2fr;
     grid-template-rows: 1fr 3fr;
     height: min-content;
   }
-
+  
   body.search-open header nav#search-results a{
     display: block;
   }
-
+  
   body.search-open header nav#search-results > section{
     grid-column: 2;
   }
+  
+  body.search-open header nav#search-results > section.searching{
+    display: grid;
+    grid-template-columns: 2fr 7fr;
+    column-gap: 1.5em;
+  }
 
+  body.search-open header nav#search-results > section.searching > section.list{
+    display: flex;
+  }
+
+  body.search-open header nav#search-results > section > section.list article a{
+    width: 150px;
+  }
+  
   header nav#hamburger{
     display: none;
   }
