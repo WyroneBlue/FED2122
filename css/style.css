@@ -844,6 +844,7 @@ body.search-open header nav#search-results > section > section.list article a im
 
 body.search-open header nav#search-results div.no-results{
   display: none;
+  color: red;
 }
 
 body.search-open header nav#search-results div.no-results.show{
