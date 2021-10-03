@@ -1630,7 +1630,8 @@ footer ul {
 }
 
 footer ul li span{
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 14px;
   color: white;
 }
 
@@ -1640,16 +1641,63 @@ footer ul li ul{
   flex-direction: column;
 }
 
-
 footer > ul {
   display: flex;
   gap: 20px;
 }
 
 footer > ul:first-of-type {
+  width: 75%;
   flex-wrap: wrap;
+  justify-content: space-between;
   gap: 40px;
 }
+
+footer > ul:last-of-type{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  font-size: 10px;
+  margin-top: 1.5em;
+  border-top: 1px solid #222;
+}
+
+footer > ul:last-of-type p{
+  font-size: 10px;
+}
+
+footer > ul:last-of-type > li:first-of-type{
+  grid-row: 2;
+}
+
+footer > ul:last-of-type > li:first-of-type ul{
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+footer > ul:last-of-type > li:first-of-type ul li:first-of-type{
+  display: flex;
+  gap: 0.8em;
+}
+
+footer > ul:last-of-type > li:last-of-type{
+  grid-row: span 2;
+  align-self: end;
+}
+
+footer > ul:last-of-type > li:last-of-type ul{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+footer > ul:last-of-type > li:last-of-type ul li a{
+  color: #919191
+}
+
 
 footer a {
   color: white;
@@ -1671,22 +1719,51 @@ footer a {
   padding: .5em;
 }
 
+@media screen and (max-width:639px){
+
+  footer > ul:first-of-type{
+    width: 100%;
+  }
+
+  footer > ul:first-of-type > li:nth-of-type(2), 
+  footer > ul:first-of-type > li:last-of-type{
+    border-top: 1px solid #222;
+    padding: 1.5em 0 0;
+  }
+
+  footer > ul:last-of-type{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    border: 0;
+  }
+
+  footer > ul:last-of-type > li:first-of-type ul{
+    flex-direction: column;
+    align-items: baseline;
+    margin-bottom: 1.5em;
+  }
+
+  footer > ul:last-of-type > li:last-of-type ul{
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
 @media screen and (max-width:800px){
 
   footer{
-      height: auto;
+    height: auto;
   }
 
   #customer-service{
-      width: 100%;
+    width: 100%;
   }
 
   footer div{
-      display: block;
-      width: 100%;
-      flex-direction: column;
-      position: relative;
-      height: 250px;
+    display: block;
+    width: 100%;
+    flex-direction: column;
+    position: relative;
+    height: 250px;
   }
-
 }
