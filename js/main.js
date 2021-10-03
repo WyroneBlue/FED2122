@@ -4,6 +4,7 @@ var shoeSizes;
 var shoeColors;
 var body = document.body;
 
+var bannerScolling;
 var banner = document.querySelector('#announcement-banner section');
 var bannerButtons = document.querySelectorAll('#announcement-banner div button');
 var bannerHtml = '';
@@ -11,9 +12,9 @@ var bannerContent = [
     '<p id="banner-1">We’ve extended our returns period to 60 days<br /><a href="#">Learn more</a></p>',
     '<p id="banner-2">STUDENTS NOW GET 10% OFF<br /><a href="#">Learn more</a></p>',
     '<p id="banner-3">COVID-19: Information about Nike stores and deliveries.<br /><a href="#">Learn more</a></p>',
-]
-var title = document.querySelector('#shoe-title');
+];
 
+var title = document.querySelector('#shoe-title');
 var searchBar = document.querySelector('header nav#search div input');
 var searchIcon = document.querySelector('header nav#hamburger img:nth-of-type(2)');
 var searchBarCloser = document.querySelector('header nav#search-results button');
@@ -76,10 +77,11 @@ const loadBanners = () => {
     bannerContent.forEach(banner => {
         bannerHtml += banner;
     });
-    banner.innerHTML = bannerHtml
+    banner.innerHTML = bannerHtml;
 }
 
 const scrollBanner = () => {
+    console.log('banner scrolling');
     
     if(isInView(document.getElementById("banner-1"))){
         document.getElementById("banner-2").scrollIntoView({behavior: "smooth", block: "end"})
@@ -89,6 +91,14 @@ const scrollBanner = () => {
         document.getElementById("banner-1").scrollIntoView({behavior: "smooth", block: "end"})
     }
 }
+
+const startBannerScroll = () => {
+    bannerScolling = setInterval(scrollBanner, 1000);
+}
+
+const stopBannerScroll = () => {
+    bannerScolling = clearInterval(bannerScolling);
+};
 
 // https://stackoverflow.com/questions/123999/how-can-i-tell-if-a-dom-element-is-visible-in-the-current-viewport
 const isInView = (el) => {
@@ -113,6 +123,8 @@ bannerButtons.forEach(button => {
 
 window.addEventListener('DOMContentLoaded', function(){
     loadBanners();
+    startBannerScroll();
+
     shoeSizes = document.querySelectorAll("#shoe-sizes > button");
     shoeColors = document.querySelectorAll("#shoe-colors a");
     
@@ -123,6 +135,4 @@ window.addEventListener('DOMContentLoaded', function(){
     shoeColors.forEach(img => {
         img.addEventListener('click', setColorActive);
     });
-
-    setInterval(scrollBanner, 5000);
 });

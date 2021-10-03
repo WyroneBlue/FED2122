@@ -115,6 +115,11 @@ const toggleFilter = function(e){
 
 const toggleMobileFilterMenu = function(){
     body.classList.toggle('mobile-filter-open');
+    if(body.classList.contains('mobile-filter-open')){
+        stopBannerScroll();
+    } else {
+        startBannerScroll();
+    }
 }
 
 const activateButton = function(e){
