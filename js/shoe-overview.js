@@ -18,6 +18,13 @@ var mobileFilterApplyButton = document.querySelector('#filter-options > section:
 
 var shoeContainer = document.querySelector('#shoe-overview');
 var filterContainer = document.querySelector('#filter-options form');
+
+var sexFilterCount = document.querySelector('.sex legend > span');
+var priceFilterCount = document.querySelector('.price legend > span');
+var sizeFilterCount = document.querySelector('.size legend > span');
+var colorFilterCount = document.querySelector('.color legend > span');
+var allFiltersCount = mobileFilterClearButton.querySelector('span');
+
 let shoeHtml = '';
 let filteredShoes = [];
 var filters = {
@@ -25,16 +32,48 @@ var filters = {
         mobile: false,
         normal: false,
     },
-    sex: [],
-    price: [],
-    size: [],
-    color: [],
+    sex: {
+        data: [],
+        get count(){
+            return this.data.length
+        }
+    },
+    price: {
+        data: [],
+        get count(){
+            return this.data.length
+        }
+    },
+    size: {
+        data: [],
+        get count(){
+            return this.data.length
+        }
+    },
+    color: {
+        data: [],
+        get count(){
+            return this.data.length
+        }
+    },
+    get count(){
+        return this.sex.count + this.price.count + this.size.count + this.color.count
+    }
+
 }
 
 const clearFilters = function(){
     filterContainer.reset();
     loadShoes();
     toggleMobileFilterMenu();
+}
+
+const updateFilterCount = function(){
+    sexFilterCount.innerHTML = `(${filters.sex.count})`;
+    priceFilterCount.innerHTML = `(${filters.price.count})`;
+    sizeFilterCount.innerHTML = `(${filters.size.count})`;
+    colorFilterCount.innerHTML = `(${filters.color.count})`;
+    allFiltersCount.innerHTML = `(${filters.count})`;
 }
 
 const toggleFilterMenu = function(){
@@ -91,8 +130,8 @@ const goToDetail = function(e){
 
 const filterSex = function(){
     
-    let sexfilters = Object.keys(filters.sex).map(function(key, index) {
-        return filters.sex[key].value;
+    let sexfilters = Object.keys(filters.sex.data).map(function(key, index) {
+        return filters.sex.data[key].value;
     });
     
     if(sexfilters.length > 0){
@@ -110,8 +149,8 @@ const filterSex = function(){
 
 const filterPrice = function(){
 
-    let pricefilters = Object.keys(filters.price).map(function(key, index) {
-        return filters.price[key].value;
+    let pricefilters = Object.keys(filters.price.data).map(function(key, index) {
+        return filters.price.data[key].value;
     });
     
     if(pricefilters.length > 0){
@@ -150,8 +189,8 @@ const filterPrice = function(){
 
 const filterSize = function(){
     
-    let sizeFilters = Object.keys(filters.size).map(function(key, index) {
-        return parseInt(filters.size[key].value);
+    let sizeFilters = Object.keys(filters.size.data).map(function(key, index) {
+        return parseInt(filters.size.data[key].value);
     });
     
     if(sizeFilters.length > 0){
@@ -180,8 +219,8 @@ const filterSize = function(){
 
 const filterColor = function(e){
 
-    let colorFilters = Object.keys(filters.color).map(function(key, index) {
-        return filters.color[key].value;
+    let colorFilters = Object.keys(filters.color.data).map(function(key, index) {
+        return filters.color.data[key].value;
     });
     
     if(colorFilters.length > 0){
@@ -237,10 +276,10 @@ const checkFilters = function(e){
     filters.type = document.querySelectorAll('#filter-options form fieldset.shoe-type input:checked');
     filters.sort.normal = document.querySelector('section#shoe-title > section > div input:checked');
     filters.sort.mobile = document.querySelector('#filter-options form fieldset.sort-by input:checked');
-    filters.sex = document.querySelectorAll('#filter-options form fieldset.sex input:checked');
-    filters.price = document.querySelectorAll('#filter-options form fieldset.price input:checked');
-    filters.size = document.querySelectorAll('#filter-options form fieldset.size input:checked');
-    filters.color = document.querySelectorAll('#filter-options form fieldset.color input:checked');
+    filters.sex.data = document.querySelectorAll('#filter-options form fieldset.sex input:checked');
+    filters.price.data = document.querySelectorAll('#filter-options form fieldset.price input:checked');
+    filters.size.data = document.querySelectorAll('#filter-options form fieldset.size input:checked');
+    filters.color.data = document.querySelectorAll('#filter-options form fieldset.color input:checked');
 }
 
 const filterShoes = function(e){
@@ -257,6 +296,7 @@ const filterShoes = function(e){
 
 const loadShoes = function(e){
     filterShoes();
+    updateFilterCount();
     filteredShoes.forEach(shoe => {
         
         shoeHtml += `
