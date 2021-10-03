@@ -1195,7 +1195,6 @@ main > section.shoe-type span.active{
 }
 
 body.mobile-filter-open #filter-options{
-  position: fixed;
   height: 100vh;
   visibility: visible;
 }
@@ -1215,6 +1214,7 @@ body.mobile-filter-open #filter-options{
   right: 20px;
   font-size: 32px;
   background-color: #0000;
+  z-index: 99999;
 }
 
 #filter-options > form{
