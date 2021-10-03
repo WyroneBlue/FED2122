@@ -203,7 +203,7 @@ p{
 }
 
 #detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4) > button{
-  width: 80%;
+  width: 100%;
   margin-bottom: 10px;
   padding: 18px 24px;
   border-radius: 30px;
@@ -212,8 +212,25 @@ p{
   box-shadow: rgb(229 229 229) 0px 0px 0px 1px;
 }
 
+#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4) > button .red{
+  color: red;
+}
+
+#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4) > button.add-to-cart.sticky{
+  position:fixed;
+  display: block;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  border-radius: 0;
+  z-index: 99999;
+}
+
+#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4) > button.add-to-cart-mobile{
+  display: none;
+}
+
 #detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4) > button.primary{
-  width: 100%;
   font-size: 16px;
   background-color: black;
   color: white;
@@ -404,6 +421,14 @@ aside#cart-popup > section.buttons > button.primary{
     flex-wrap: nowrap;
     overflow-x: scroll;
     width: 100%;
+  }
+
+  #detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4) > button.add-to-cart{
+    display: none;
+  }
+  
+  #detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4) > button.add-to-cart-mobile{
+    display: block;
   }
 
   #detail main > section#shoe-info > section:first-of-type > figure > img{

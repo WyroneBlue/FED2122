@@ -9,6 +9,12 @@ var prices = document.querySelectorAll(".heading span");
 var images = document.querySelector(".images div");
 var colors = document.querySelector("#shoe-colors div");
 
+var addToCartButton = document.querySelector("#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4) > button.add-to-cart");
+var addToCartButtonMobile = document.querySelector("#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4) > button.add-to-cart-mobile");
+var addToFavourite = document.querySelector("#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4) > button:last-of-type");
+var addToFavouriteSpan = document.querySelector("#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4) > button:last-of-type span");
+var addToFavouriteHeart = document.querySelector("#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4) > button:last-of-type i");
+
 var controls = document.querySelectorAll("#controls > span");
 var forYou = document.querySelector("#for-you div");
 let forYouHtml = '';
@@ -128,11 +134,33 @@ let getCurrentShoe = function(e) {
     colors.innerHTML += html.colors;
 }
 
+const setFavourite = (e) => {
+    if(addToFavouriteHeart.classList.contains('fas')){
+        addToFavouriteHeart.classList = 'far fa-heart';
+        addToFavouriteSpan.textContent = 'Favourite';
+    } else {
+        addToFavouriteHeart.classList = 'fas fa-heart red';
+        addToFavouriteSpan.textContent = 'Remove from Favourite';
+    }
+}
+
 window.addEventListener('DOMContentLoaded', getCurrentShoe);
 window.addEventListener('DOMContentLoaded', loadForYouShoes);
+addToFavourite.addEventListener('click', setFavourite);
 
 forYou.addEventListener('mousedown', mouseDownHandler);
 
 controls.forEach(span => {
     span.addEventListener('click', scrollForYou);
+});
+
+window.addEventListener('DOMContentLoaded', function(){
+    window.addEventListener('scroll', () => {
+        let inView = isInView(addToCartButtonMobile);
+        if(!inView){
+            addToCartButton.classList.add('sticky')
+        } else {
+            addToCartButton.classList.remove('sticky')
+        }
+    });
 });
