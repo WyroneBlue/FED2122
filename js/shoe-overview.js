@@ -3,7 +3,7 @@ var filterOpenButtonSpan = document.querySelector('section#shoe-title > section 
 var filterClosed = false;
 
 var sortByOpenButton = document.querySelector('section#shoe-title > section > button:last-of-type');
-var sortByOpenButtonSpan = document.querySelector('section#shoe-title > section > button:last-of-type span');
+var sortByOpenButtonSpan = document.querySelector('section#shoe-title > section > button:last-of-type span:first-of-type');
 var sortByOpenChevron = document.querySelector('section#shoe-title > section > button:last-of-type i');
 var sortBySection = document.querySelector('section#shoe-title > section > div');
 var sortByOptions = document.querySelectorAll('section#shoe-title > section > div label');
@@ -89,11 +89,6 @@ const toggleFilterMenu = function(){
 const toggleSortByMenu = function(){
     body.classList.toggle('sortby-open');
     sortByOpen = !sortByOpen;
-    if(sortByOpen){
-        sortByOpenChevron.classList = 'fas fa-chevron-down';
-    } else {
-        sortByOpenChevron.classList = 'fas fa-chevron-up';
-    }
 }
 
 const setSortBy = function(e){
