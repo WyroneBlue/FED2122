@@ -70,9 +70,9 @@ const clearFilters = function(){
     toggleMobileFilterMenu();
 }
 
-const updateFilterCount = function(){
-    resultsCount.innerHTML = `(${filteredShoes.length})`;
-    resultsCountMobile.innerHTML = filteredShoes.length;
+const updateFilterCount = function(shoes){
+    resultsCount.innerHTML = `(${shoes.length})`;
+    resultsCountMobile.innerHTML = shoes.length;
     sexFilterCount.innerHTML = `(${filters.sex.count})`;
     priceFilterCount.innerHTML = `(${filters.price.count})`;
     sizeFilterCount.innerHTML = `(${filters.size.count})`;
@@ -295,13 +295,18 @@ const filterShoes = function(e){
     filterSize();
     filterColor();
     sortShoes();
-    return filteredShoes;
+    
+    // https://stackoverflow.com/questions/2218999/how-to-remove-all-duplicates-from-an-array-of-objects
+    const ids = filteredShoes.map(o => o.id)
+    let shoes = filteredShoes.filter(({id}, index) => !ids.includes(id, index + 1));
+    return shoes;
 }
 
 const loadShoes = function(e){
-    filterShoes();
-    updateFilterCount();
-    filteredShoes.forEach(shoe => {
+    let shoes = filterShoes();
+    updateFilterCount(shoes);
+    // console.log(filteredShoes);
+    shoes.forEach(shoe => {
         
         shoeHtml += `
         <article>
