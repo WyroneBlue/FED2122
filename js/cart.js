@@ -1,5 +1,3 @@
-console.log('Shoppingcart');
-
 var addToCart = document.querySelectorAll(".add-to-cart");
 var popup = document.querySelector("#cart-popup");
 var popupCloser = document.querySelector("#cart-popup .close");

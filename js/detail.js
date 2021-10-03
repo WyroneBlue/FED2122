@@ -1,5 +1,3 @@
-console.log('Detail js');
-
 var url = new URL(window.location);
 var shoe_id = url.searchParams.get("shoe_id");
 var currentShoe = shoeList[shoe_id];

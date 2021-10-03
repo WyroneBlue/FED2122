@@ -1,5 +1,3 @@
-console.log('Hello World');
-
 var shoeSizes;
 var shoeColors;
 var body = document.body;
@@ -33,7 +31,6 @@ const toggleMobileMenu = function(){
 }
 
 const blurSectionClicked = function(type){
-    console.log(type);
     if(body.classList.contains('menu-open')){
         toggleMobileMenu();
     } else {
@@ -80,9 +77,7 @@ const loadBanners = () => {
     banner.innerHTML = bannerHtml;
 }
 
-const scrollBanner = () => {
-    console.log('banner scrolling');
-    
+const scrollBanner = () => {    
     if(isInView(document.getElementById("banner-1"))){
         document.getElementById("banner-2").scrollIntoView({behavior: "smooth", block: "end"})
     } else if(isInView(document.getElementById("banner-2"))){

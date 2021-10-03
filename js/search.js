@@ -1,5 +1,3 @@
-console.log('search');
-
 var popularTermsSectionHtml = '';
 var popularTermsSection = document.querySelector('#search-results > section > ul');
 var searchBarVal = document.querySelector('header nav#search-results div input');
