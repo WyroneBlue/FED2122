@@ -4,7 +4,14 @@ var shoeSizes;
 var shoeColors;
 var body = document.body;
 
-var banner = document.querySelector('#announcement-banner');
+var banner = document.querySelector('#announcement-banner section');
+var bannerButtons = document.querySelectorAll('#announcement-banner div button');
+var bannerHtml = '';
+var bannerContent = [
+    '<p id="banner-1">We’ve extended our returns period to 60 days<br /><a href="#">Learn more</a></p>',
+    '<p id="banner-2">STUDENTS NOW GET 10% OFF<br /><a href="#">Learn more</a></p>',
+    '<p id="banner-3">COVID-19: Information about Nike stores and deliveries.<br /><a href="#">Learn more</a></p>',
+]
 var title = document.querySelector('#shoe-title');
 
 var searchBar = document.querySelector('header nav#search div input');
@@ -64,9 +71,34 @@ const setColorActive = function(e){
     }
 }
 
+const loadBanners = () => {
+
+    bannerContent.forEach(banner => {
+        bannerHtml += banner;
+    });
+    banner.innerHTML = bannerHtml
+}
+
+const scrollBanner = () => {
+    
+    if(isInView(document.getElementById("banner-1"))){
+        document.getElementById("banner-2").scrollIntoView({behavior: "smooth", block: "end"})
+    } else if(isInView(document.getElementById("banner-2"))){
+        document.getElementById("banner-3").scrollIntoView({behavior: "smooth", block: "end"})
+    } else if(isInView(document.getElementById("banner-3"))){
+        document.getElementById("banner-1").scrollIntoView({behavior: "smooth", block: "end"})
+    }
+}
+
+// https://stackoverflow.com/questions/123999/how-can-i-tell-if-a-dom-element-is-visible-in-the-current-viewport
 const isInView = (el) => {
     const box = el.getBoundingClientRect();
-    return box.top < window.innerHeight && box.bottom >= 0;
+    return (
+        box.top >= 0 &&
+        box.left >= 0 &&
+        box.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        box.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
 }
 
 searchBar.addEventListener('click', toggleSearchBar);
@@ -75,9 +107,12 @@ searchBarCloser.addEventListener('click', toggleSearchBar);
 
 hamburger.addEventListener('click', toggleMobileMenu);
 blurSection.addEventListener('click', blurSectionClicked);
+bannerButtons.forEach(button => {
+    button.addEventListener('click', scrollBanner);
+});
 
 window.addEventListener('DOMContentLoaded', function(){
-    
+    loadBanners();
     shoeSizes = document.querySelectorAll("#shoe-sizes > button");
     shoeColors = document.querySelectorAll("#shoe-colors a");
     
@@ -88,4 +123,6 @@ window.addEventListener('DOMContentLoaded', function(){
     shoeColors.forEach(img => {
         img.addEventListener('click', setColorActive);
     });
+
+    setInterval(scrollBanner, 5000);
 });
