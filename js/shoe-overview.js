@@ -1,5 +1,3 @@
-
-
 var filterOpenButton = document.querySelector('section#shoe-title > section > button:first-of-type');
 var filterOpenButtonSpan = document.querySelector('section#shoe-title > section > button:first-of-type span');
 var filterClosed = false;
@@ -7,7 +5,8 @@ var filterClosed = false;
 var sortByOpenButton = document.querySelector('section#shoe-title > section > button:last-of-type');
 var sortByOpenButtonSpan = document.querySelector('section#shoe-title > section > button:last-of-type span');
 var sortByOpenChevron = document.querySelector('section#shoe-title > section > button:last-of-type i');
-var sortByOptions = document.querySelectorAll('section#shoe-title > section > div span');
+var sortBySection = document.querySelector('section#shoe-title > section > div');
+var sortByOptions = document.querySelectorAll('section#shoe-title > section > div label');
 var sortByOpen = false;
 
 var filterToggles = document.querySelectorAll('#filter-options > form fieldset legend');
@@ -24,6 +23,10 @@ var colorButtons = document.querySelectorAll('.kleur button');
 let shoeHtml = '';
 let filteredShoes = [];
 var filters = {
+    sort: {
+        mobile: false,
+        normal: false,
+    },
     sex: [],
     price: [],
     size: [],
@@ -205,9 +208,37 @@ const filterColor = function(e){
     }
 }
 
+const sortShoes = function(e){
+
+    if(filters.sort.normal !== null || filters.sort.mobile !== null){
+
+        let shoes = [];
+        let sortType;
+
+        if(filters.sort.normal !== null){
+            sortType = filters.sort.normal.value;
+        } else {
+            sortType = filters.sort.mobile.value;
+        }
+
+        if(sortType == 'name-az'){
+            shoes = filteredShoes.sort((a, b) => a.name > b.name && 1 || -1);
+        } else if(sortType == 'name-za'){
+            shoes = filteredShoes.sort((a, b) => b.name > a.name && 1 || -1);
+        } else if(sortType == 'p-hl'){
+            shoes = filteredShoes.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
+        } else if(sortType == 'p-lh'){
+            shoes = filteredShoes.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+        }
+
+        filteredShoes = shoes
+    }
+}
+
 const checkFilters = function(e){
     filters.type = document.querySelectorAll('#filter-options form fieldset.shoe-type input:checked');
-    filters.sort = document.querySelectorAll('#filter-options form fieldset.sort-by input:checked');
+    filters.sort.normal = document.querySelector('section#shoe-title > section > div input:checked');
+    filters.sort.mobile = document.querySelector('#filter-options form fieldset.sort-by input:checked');
     filters.sex = document.querySelectorAll('#filter-options form fieldset.sex input:checked');
     filters.price = document.querySelectorAll('#filter-options form fieldset.price input:checked');
     filters.size = document.querySelectorAll('#filter-options form fieldset.size input:checked');
@@ -215,7 +246,6 @@ const checkFilters = function(e){
 }
 
 const filterShoes = function(e){
-
     shoeHtml = '';
     filteredShoes = shoeList;
     checkFilters();
@@ -223,6 +253,7 @@ const filterShoes = function(e){
     filterPrice();
     filterSize();
     filterColor();
+    sortShoes();
     return filteredShoes;
 }
 
@@ -245,12 +276,14 @@ const loadShoes = function(e){
 }
 
 filterContainer.addEventListener('input', loadShoes);
+sortBySection.addEventListener('input', loadShoes);
 window.addEventListener('DOMContentLoaded', loadShoes);
 
 filterOpenButton.addEventListener('click', toggleFilterMenu);
 sortByOpenButton.addEventListener('click', toggleSortByMenu);
 sortByOptions.forEach(option => {
     option.addEventListener('click', setSortBy);
+    option.addEventListener('input', loadShoes);
 });
 
 filterToggles.forEach(filter => {
@@ -264,12 +297,10 @@ mobileFilterApplyButton.addEventListener('click', toggleMobileFilterMenu);
 
 sizeButtons.forEach(btn => {
     btn.addEventListener('click', activateButton);
-    btn.addEventListener('click', loadShoes);
 });
 
 colorButtons.forEach(btn => {
     btn.addEventListener('click', activateButton);
-    btn.addEventListener('click', loadShoes);
 });
 
 window.addEventListener('DOMContentLoaded', function(){
