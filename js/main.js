@@ -93,7 +93,7 @@ const scrollBanner = () => {
 }
 
 const startBannerScroll = () => {
-    bannerScolling = setInterval(scrollBanner, 1000);
+    bannerScolling = setInterval(scrollBanner, 5000);
 }
 
 const stopBannerScroll = () => {
