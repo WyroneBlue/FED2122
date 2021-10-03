@@ -19,6 +19,8 @@ var mobileFilterApplyButton = document.querySelector('#filter-options > section:
 var shoeContainer = document.querySelector('#shoe-overview');
 var filterContainer = document.querySelector('#filter-options form');
 
+var resultsCount = document.querySelector('section#shoe-title > h1 > span');
+var resultsCountMobile = document.querySelector('#filter-buttons-mobile p span');
 var sexFilterCount = document.querySelector('.sex legend > span');
 var priceFilterCount = document.querySelector('.price legend > span');
 var sizeFilterCount = document.querySelector('.size legend > span');
@@ -69,6 +71,8 @@ const clearFilters = function(){
 }
 
 const updateFilterCount = function(){
+    resultsCount.innerHTML = `(${filteredShoes.length})`;
+    resultsCountMobile.innerHTML = filteredShoes.length;
     sexFilterCount.innerHTML = `(${filters.sex.count})`;
     priceFilterCount.innerHTML = `(${filters.price.count})`;
     sizeFilterCount.innerHTML = `(${filters.size.count})`;
