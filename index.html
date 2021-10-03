@@ -213,11 +213,18 @@
             <section>
                 <button><span>Hide</span> Filters <i class="fas fa-sliders-h"></i></button>
                 <button>Sort By<span></span> <i class="fas fa-chevron-down"></i></button>
-                <div>
-                    <span>Featured</span>
-                    <span>Newest</span>
-                    <span>Price: High-Low</span>
-                    <span>Price: Low-High</span>
+                <div class="sort-by">
+                    <input type="radio" id="name-az" name="sort-by" value="name-az">
+                    <label for="name-az">Name A-Z</label>
+                    
+                    <input type="radio" id="name-za" name="sort-by" value="name-za">
+                    <label for="name-za">Name Z-A</label>
+
+                    <input type="radio" id="p-hl" name="sort-by" value="p-hl">
+                    <label for="p-hl">Price: High-Low</label>
+
+                    <input type="radio" id="p-lh" name="sort-by" value="p-lh">
+                    <label for="p-lh">Price: Low-High</label>           
                 </div>
             </section>
         </section>
@@ -276,20 +283,20 @@
                         </div>
                     </fieldset>
 
-                    <fieldset class="sort-by">
+                    <fieldset class="sort-by mobile">
                         <legend>Sort By</legend>
                         <div>
-                            <input type="radio" id="featured" name="sort-by" value="featured">
-                            <label for="featured"><span>Featured</span></label>
+                            <input type="radio" id="name-az-mobile" name="sort-by" value="name-az">
+                            <label for="name-az-mobile"><span>Name: A-Z</span></label>
                             
-                            <input type="radio" id="newest" name="sort-by" value="newest">
-                            <label for="newest"><span>Newest</span></label>
+                            <input type="radio" id="name-za-mobile" name="sort-by" value="name-za">
+                            <label for="name-za-mobile"><span>Name: Z-A</span></label>
 
-                            <input type="radio" id="p-hl" name="sort-by" value="p-hl">
-                            <label for="p-hl"><span>Price: High-Low</span></label>
+                            <input type="radio" id="p-hl-mobile" name="sort-by" value="p-hl">
+                            <label for="p-hl-mobile"><span>Price: High-Low</span></label>
 
-                            <input type="radio" id="p-lh" name="sort-by" value="p-lh">
-                            <label for="p-lh"><span>Price: Low-High</span></label>
+                            <input type="radio" id="p-lh-mobile" name="sort-by" value="p-lh">
+                            <label for="p-lh-mobile"><span>Price: Low-High</span></label>
                         </div>
                     </fieldset>
 
