@@ -1183,7 +1183,7 @@ main > section.shoe-type span.active{
 
 /* filter */
 #filter-options{
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   height: 0;
