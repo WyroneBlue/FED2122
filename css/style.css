@@ -1201,6 +1201,7 @@ main > section.shoe-type span.active{
 body.mobile-filter-open #filter-options{
   height: 100vh;
   visibility: visible;
+  padding-top: 60px;
 }
 
 #filter-options > section:first-of-type{
