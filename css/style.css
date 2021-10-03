@@ -1118,6 +1118,10 @@ body.sortby-open section#shoe-title > section > div label{
     display: none;
   }
 
+  #announcement-banner section{
+    width: 100%;
+  }
+
   #announcement-banner div{
     display: none;
   }
