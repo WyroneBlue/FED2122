@@ -949,13 +949,50 @@ section#shoe-title h1 > span{
 section#shoe-title > section{
   position: relative;
   display: flex;
-  gap: 1.5em;
 }
 
 section#shoe-title > section > button{
   background-color: transparent;
   font-size: 1em;
   cursor: pointer;
+  margin-right: 2em;
+}
+
+section#shoe-title > section > button:last-of-type span:last-of-type::before,
+section#shoe-title > section > button:last-of-type span:last-of-type::after{
+	content: "";
+	position: absolute;
+  top: 7px;
+	width: .65em;
+	height: 2px;
+	background-color: black;
+  border-radius: 20px;
+	transition: .3s;
+}
+
+section#shoe-title > section > button:last-of-type span:last-of-type::before{
+  right:calc(1em - 1px);
+  transform-origin:calc(.65em - 1px) 1px;
+  transform:translatey(.3em) rotate(45deg);
+}
+
+section#shoe-title > section > button:last-of-type span:last-of-type::after{
+  right:calc(.325em + 1px);	
+  transform-origin:1px 1px;
+  transform:translatey(.3em) rotate(-45deg);
+}
+
+.sortby-open section#shoe-title > section > button:last-of-type span:last-of-type::after,
+.sortby-open section#shoe-title > section > button:last-of-type span:last-of-type::before {
+  top: 10px;
+}
+
+.sortby-open section#shoe-title > section > button:last-of-type span:last-of-type::before {
+  transform:translatey(-.3em) rotate(-45deg);
+}
+
+.sortby-open section#shoe-title > section > button:last-of-type span:last-of-type::after{
+  transform:translatey(-.3em) rotate(45deg);
 }
 
 section#shoe-title > section > div{
@@ -1174,13 +1211,6 @@ body.mobile-filter-open #filter-options{
 
 #filter-options > form fieldset.closed legend::after {
   transform:translatey(.3em) rotate(-45deg);
-}
-
-#filter-options > form fieldset i{
-  display: none;
-  position: absolute;
-  top: -18px;
-  right: 5px;
 }
 
 #filter-options > form fieldset div{
