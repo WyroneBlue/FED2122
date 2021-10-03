@@ -1201,7 +1201,6 @@ main > section.shoe-type span.active{
 body.mobile-filter-open #filter-options{
   height: 100%;
   visibility: visible;
-  /* padding-top:80px; */
 }
 
 #filter-options > section:first-of-type{
@@ -1594,11 +1593,7 @@ body.mobile-filter-open #filter-options{
     padding-top: 0;
     z-index: 0;
   }
-  
-  /* body.mobile-filter-open #filter-options{
-    padding-top: 0;
-  } */
-  
+    
   body.filter-closed #filter-options{
     display: none;
   }
