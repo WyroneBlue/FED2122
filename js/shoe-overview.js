@@ -18,8 +18,6 @@ var mobileFilterApplyButton = document.querySelector('#filter-options > section:
 
 var shoeContainer = document.querySelector('#shoe-overview');
 var filterContainer = document.querySelector('#filter-options form');
-var sizeButtons = document.querySelectorAll('.size button');
-var colorButtons = document.querySelectorAll('.kleur button');
 let shoeHtml = '';
 let filteredShoes = [];
 var filters = {
@@ -294,14 +292,6 @@ mobileFilterOpenButton.addEventListener('click', toggleMobileFilterMenu);
 mobileFilterCloseButton.addEventListener('click', toggleMobileFilterMenu);
 mobileFilterClearButton.addEventListener('click', clearFilters);
 mobileFilterApplyButton.addEventListener('click', toggleMobileFilterMenu);
-
-sizeButtons.forEach(btn => {
-    btn.addEventListener('click', activateButton);
-});
-
-colorButtons.forEach(btn => {
-    btn.addEventListener('click', activateButton);
-});
 
 window.addEventListener('DOMContentLoaded', function(){
     window.addEventListener('scroll', () => {
