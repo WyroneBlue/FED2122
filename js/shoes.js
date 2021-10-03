@@ -556,7 +556,7 @@ var shoeList = [
         for: 'Hardloopschoen voor heren',
         price: 119.99,
         description: '',
-        sex: 'Dames',
+        sex: 'women',
         msg: 'Launching in SNKRS',
         colors: {
             0: {
@@ -634,7 +634,7 @@ var shoeList = [
         for: 'Hardloopschoen voor heren',
         price: 169.99,
         description: '',
-        sex: 'Dames',
+        sex: 'women',
         msg: 'Coming Soon',
         colors: {
             0: {
@@ -712,7 +712,7 @@ var shoeList = [
         for: 'Hardloopschoen voor heren',
         price: 159.99,
         description: '',
-        sex: 'Heren',
+        sex: 'men',
         msg: 'Promo Exclusion',
         colors: {
             0: {
@@ -790,7 +790,7 @@ var shoeList = [
         for: 'Hardloopschoen voor heren',
         price: 129.99,
         description: '',
-        sex: 'Heren',
+        sex: 'men',
         msg: 'Launching in SNKRS',
         colors: {
             0: {
