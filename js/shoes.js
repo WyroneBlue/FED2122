@@ -32,8 +32,9 @@ var shoeList = [
         },
         color_list:[
             'black',
-            'blue',
             'white',
+            'grey',
+            'red',
         ],
         sizes: [
             {
@@ -109,8 +110,7 @@ var shoeList = [
             },
         },
         color_list:[
-            'black',
-            'red',
+            'white',
         ],
         sizes: [
             {
@@ -186,9 +186,8 @@ var shoeList = [
             },
         },
         color_list:[
-            'brown',
-            'grey',
             'black',
+            'white',
         ],
         sizes: [
             {
@@ -264,9 +263,8 @@ var shoeList = [
             },
         },
         color_list:[
-            'brown',
-            'grey',
-            'black',
+            'white',
+            'blue',
         ],
         sizes: [
             {
@@ -342,9 +340,9 @@ var shoeList = [
             },
         },
         color_list:[
-            'brown',
-            'grey',
             'black',
+            'white',
+            'red',
         ],
         sizes: [
             {
@@ -420,9 +418,9 @@ var shoeList = [
             },
         },
         color_list:[
-            'brown',
-            'grey',
             'black',
+            'white',
+            'green',
         ],
         sizes: [
             {
@@ -498,9 +496,11 @@ var shoeList = [
             },
         },
         color_list:[
-            'brown',
-            'grey',
             'black',
+            'white',
+            'grey',
+            'blue',
+            'pink',
         ],
         sizes: [
             {
@@ -576,9 +576,7 @@ var shoeList = [
             },
         },
         color_list:[
-            'brown',
-            'grey',
-            'black',
+            'white',
         ],
         sizes: [
             {
@@ -654,9 +652,8 @@ var shoeList = [
             },
         },
         color_list:[
-            'brown',
-            'green',
-            'black',
+            'white',
+            'pink',
         ],
         sizes: [
             {
@@ -732,9 +729,8 @@ var shoeList = [
             },
         },
         color_list:[
-            'brown',
+            'white',
             'grey',
-            'black',
         ],
         sizes: [
             {
@@ -815,9 +811,9 @@ var shoeList = [
             },
         },
         color_list:[
-            'brown',
-            'grey',
-            'black',
+            'white',
+            'blue',
+            'pink',
         ],
         sizes: [
             {
