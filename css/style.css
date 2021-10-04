@@ -237,18 +237,23 @@ p{
   position: relative;
   margin-top: 30px;
   padding: 0 10px;
-  overflow-x: scroll;
-}
-
-#detail main > section#shoe-info > section:nth-of-type(3) > div::-webkit-scrollbar{
-  display: none;
+  overflow-x: auto;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 #detail main > section#shoe-info > section:nth-of-type(3) > div{
   display: flex;
   flex-wrap: nowrap;
-  overflow-x: scroll;
+  overflow-x: auto;
   cursor: grab;
+
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+#detail main > section#shoe-info > section:nth-of-type(3) > div::-webkit-scrollbar{
+  display: none;
 }
 
 #detail main > section#shoe-info > section:nth-of-type(3) > div > figure{
@@ -925,6 +930,24 @@ body.search-open header nav#search-results div.no-results.show{
     display: flex;
   }
 
+  body.search-open header nav#search-results > section.searching > section.list::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  body.search-open header nav#search-results > section.searching > section.list::-webkit-scrollbar-thumb {
+    background: #888; 
+    height: 20px;
+    border-radius: 20px;
+  }
+  
+  body.search-open header nav#search-results > section.searching > section.list::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  
+  body.search-open header nav#search-results > section.searching > section.list::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+
   body.search-open header nav#search-results > section > section.list article a{
     width: 150px;
   }
@@ -971,6 +994,8 @@ body.search-open header nav#search-results div.no-results.show{
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   z-index: 10;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 #announcement-banner section::-webkit-scrollbar {
@@ -1233,6 +1258,9 @@ main > section.shoe-type span.active{
   -webkit-transition: height .25s, visibility 100ms;
   transition: height .25s, visibility 100ms;
   z-index: 99999999;
+
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 body.mobile-filter-open #filter-options{
