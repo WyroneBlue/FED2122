@@ -1195,7 +1195,7 @@ main > section.shoe-type span.active{
   visibility: hidden;
   -webkit-transition: height .25s, visibility 100ms;
   transition: height .25s, visibility 100ms;
-  z-index: 9999999;
+  z-index: 99999999;
 }
 
 body.mobile-filter-open #filter-options{
