@@ -1,3 +1,4 @@
+// Variables initialiseren
 var popularTermsSectionHtml = '';
 var popularTermsSection = document.querySelector('#search-results > section > ul');
 var searchBarVal = document.querySelector('header nav#search-results div input');
@@ -11,6 +12,7 @@ var popularShoeIds = [
   1, 3, 7, 10
 ]
 
+// Load filter shoes
 const loadFilterShoes = function(e){
 	shoeList.forEach(shoe => {
 		searchHtml += `
@@ -28,6 +30,7 @@ const loadFilterShoes = function(e){
 	loadSearchableResults();
 }
 
+// Lists.js Initialiseren
 const loadSearchableResults = function () {
 	
 	var options = {
@@ -51,6 +54,7 @@ const loadSearchableResults = function () {
 	})
 }
 
+// Load popular terms from ids
 const loadPopularTerms = function(e){
 
   let filteredPopularTerms = [];
@@ -69,6 +73,7 @@ const loadPopularTerms = function(e){
   popularTermsSection.innerHTML = popularTermsSectionHtml;
 }
 
+// Check input from searchbar
 const checkInput = function(e){
 	let section = popularTermsSection.parentNode;
 	if(e.target.value != ''){
@@ -78,10 +83,12 @@ const checkInput = function(e){
 	}
 }
 
+// Load functions 
 const onDomLoaded = function(e){
 	loadFilterShoes();	
 	loadPopularTerms();
 }
 
+// Eventlisteners
 searchBarVal.addEventListener('input', checkInput);
 window.addEventListener('DOMContentLoaded', onDomLoaded);

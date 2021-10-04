@@ -1,7 +1,9 @@
+// Variables initialiseren
 var addToCart = document.querySelectorAll(".add-to-cart");
 var popup = document.querySelector("#cart-popup");
 var popupCloser = document.querySelector("#cart-popup .close");
 
+// cart object
 var cart = {
     msg: document.querySelector('#cart-popup > span:first-of-type'),
     image: document.querySelector('#cart-popup > section > img'),
@@ -11,6 +13,7 @@ var cart = {
     price: document.querySelector('#cart-popup > section > div > span:nth-child(4)'),
 }
 
+// Show popup
 const showCartPopup = function(e){
     
     cart.msg.innerText = '✅ Toegevoegd aan winkelmand';
@@ -34,10 +37,12 @@ const showCartPopup = function(e){
 
 }
 
+// close poppup
 const closePopup = function(e){
     popup.classList.remove('show');
 }
 
+// Evenlisteners
 addToCart.forEach(btn => {
     btn.addEventListener('click', showCartPopup);
 });

@@ -1,3 +1,4 @@
+// Variables initialiseren
 var shoeSizes;
 var shoeColors;
 var body = document.body;
@@ -21,15 +22,18 @@ var hamburger = document.querySelector('#hamburger > img:last-of-type');
 var blurSection = document.querySelector('body > section');
 var menuOpen = false;
 
+// Open/close searchbar
 const toggleSearchBar = function(){
     body.classList.toggle('search-open');
 }
 
+// Open/close menu mobile
 const toggleMobileMenu = function(){
     body.classList.toggle('menu-open');
     menuOpen = !menuOpen;
 }
 
+// Show blurred section when menu/searchbar is open
 const blurSectionClicked = function(type){
     if(body.classList.contains('menu-open')){
         toggleMobileMenu();
@@ -38,12 +42,14 @@ const blurSectionClicked = function(type){
     }
 }
 
+// remove all size from active
 const deactivateAllSizes = function(){
     shoeSizes.forEach(button => {
         button.classList.remove('active');
     }); 
 }
 
+// Set shoesize as active
 const setSizeActive = function(e){
 
     if(!e.target.classList.contains('empty')){
@@ -53,12 +59,14 @@ const setSizeActive = function(e){
     }
 }
 
+// remove all colors from active
 const deactivateAllColors = function(){
     shoeColors.forEach(img => {
         img.classList.remove('active');
     }); 
 }
 
+// Set color as active
 const setColorActive = function(e){
     e.preventDefault();
 
@@ -69,6 +77,7 @@ const setColorActive = function(e){
     }
 }
 
+// Set Load banneritems
 const loadBanners = () => {
 
     bannerContent.forEach(banner => {
@@ -77,6 +86,7 @@ const loadBanners = () => {
     banner.innerHTML = bannerHtml;
 }
 
+// Scroll in banners
 const scrollBanner = () => {    
     if(isInView(document.getElementById("banner-1"))){
         document.getElementById("banner-2").scrollIntoView({behavior: "smooth", block: "end"})
@@ -87,10 +97,12 @@ const scrollBanner = () => {
     }
 }
 
+// Start autoscroll
 const startBannerScroll = () => {
     bannerScolling = setInterval(scrollBanner, 5000);
 }
 
+// Stop autoscroll
 const stopBannerScroll = () => {
     bannerScolling = clearInterval(bannerScolling);
 };
@@ -106,6 +118,7 @@ const isInView = (el) => {
     );
 }
 
+// Eventlisteners
 searchBar.addEventListener('click', toggleSearchBar);
 searchIcon.addEventListener('click', toggleSearchBar);
 searchBarCloser.addEventListener('click', toggleSearchBar);

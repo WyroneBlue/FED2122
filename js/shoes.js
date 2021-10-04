@@ -1,3 +1,4 @@
+// Shoelist
 const shoePage = 'shoe.html?shoe_id=';
 var shoeList = [
     {

@@ -1,3 +1,4 @@
+// Variables initialiseren
 var url = new URL(window.location);
 var shoe_id = url.searchParams.get("shoe_id");
 var currentShoe = shoeList[shoe_id];
@@ -22,6 +23,7 @@ var html = {
     colors: '',
 };
 
+// Scroll for you section
 const scrollForYou = function(e){
 
     let target;
@@ -50,6 +52,7 @@ const scrollForYou = function(e){
     }
 }
 
+// Load for you section shoes
 const loadForYouShoes = function(e){
 
     shoeList.forEach(shoe => {
@@ -71,6 +74,7 @@ const loadForYouShoes = function(e){
     forYou.innerHTML = forYouHtml;
 }
 
+// Load shoe from id in browser url
 let getCurrentShoe = function(e) {
 
     names.forEach(name => {
@@ -102,6 +106,7 @@ let getCurrentShoe = function(e) {
     colors.innerHTML += html.colors;
 }
 
+// Add shoe to favourites
 const setFavourite = (e) => {
     if(addToFavouriteHeart.classList.contains('fas')){
         addToFavouriteHeart.classList = 'far fa-heart';
@@ -112,6 +117,7 @@ const setFavourite = (e) => {
     }
 }
 
+// Eventlisteners
 window.addEventListener('DOMContentLoaded', getCurrentShoe);
 window.addEventListener('DOMContentLoaded', loadForYouShoes);
 addToFavourite.addEventListener('click', setFavourite);
