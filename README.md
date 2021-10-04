@@ -166,10 +166,8 @@ samen met je groepje opstellen
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- Met grid kan je makkelijker dingen controllen
+- Met Flex geef je het stuur meer aan de browser en dus beter te gebruiken voor simpele dingen
 
 </details>
 
@@ -185,29 +183,22 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 ### Bevindingen
 Lijst met je bevindingen die in de test naar voren kwamen:
 
-#### Titel eerste bevinding
-Hier korte omschrijving (met indien nodig een afbeelding)
+#### Join us
+De voice assistant zei bij de links steeds hetzelfde woord terwijl er 3 verschillende links stonden
 
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
-
-
-#### Titel tweede bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+Ik heb dit niet op kunnen lossen
 
 
-#### Titel volgende bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
+#### Shoetype 
+Shoe type links werken niet met tab
 
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+Tab-index toevoegen
 
 
-#### Titel nog een bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
+#### firefox
+Op firefox kwam er een random scrollbar bij de filters
 
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
-
+Geen overflow:scroll gebruiken, maar overflow:auto en correcte css om ook op firefox scrollbar te verwijderen
 </details>
 
 
@@ -220,26 +211,23 @@ Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbe
 <summary>uitwerken voor 3e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Het maken van de search/results ging een beetje stroefjes omdat ik niet precies wist hoe ik dit moest implementeren(lists.js). Maar toen het uiteindlijk gelukt was, is hij er wel mooi uitgekomen. Ik wilde eerst ook de lists.js gebruiken voor het filteren, maar dit heb ik uiteindelijk toch zelf gedaan
+En naast het maken van de search heb ik ook de filters werken gemaakt inclusief counts voor welke filters actief zijn.
+
+| search     | results          |
+| ---            | ---                |
+| <img src="images/screenshots/search.jpg" alt="Mobile menu">  | <img src="images/screenshots/search-results.jpg" alt="Filter menu">             |
 
 
 ### Agenda voor meeting
-samen met je groepje opstellen
-
-| student 1      | student 2          | student 3    | student 4        |
-| ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
+Deze week niet echt vragen voor mij
 
 
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- comments plaasten
+- puntjes op de i zetten
 
 </details>
 
@@ -253,12 +241,15 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 <summary>uitwerken voor eindgesprek</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Alles was eigenlijk al af, maar het ging deze week vooral om het zetten van de puntjes op de i en comments plaatsten en een paar schoonheidsfoutjes in de css weghalen
 
 ### Screenshot(s)
 
 hier screenshot(s) van je eindresultaat
 
+| pagina 1     | pagina 2          |
+| ---            | ---                |
+| <img src="images/screenshots/pagina1.jpeg" alt="Mobile menu">  | <img src="images/screenshots/pagina2.jpeg" alt="Filter menu">             |
 </details>
 
 
@@ -272,8 +263,9 @@ hier screenshot(s) van je eindresultaat
 
 Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-1. bron 1
-2. bron 2
-3. ...
+1. https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp scrollbar verwijderen, maar functionaliteit behouden
+2. https://realfavicongenerator.net/ Favicon maken
+3. https://listjs.com/ voor het maken van de searchable shoes
+4. https://stackoverflow.com/questions/2218999/how-to-remove-all-duplicates-from-an-array-of-objects verwijderen van dubbele items in een object
 
 </details>
