@@ -343,10 +343,11 @@ aside#cart-popup{
   border: 1px solid black;
   background-color: white;
   transition: top .3s ease-out, opacity .3s ease-out;
-  z-index: 99999;
+  z-index: -1;
 }
 
 aside#cart-popup.show{
+  z-index: 99999;
   opacity: 1;
   transition: top .3s ease-out, opacity .3s ease-out;
 }
