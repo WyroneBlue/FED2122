@@ -22,10 +22,13 @@
 
 <body id="overview">
 
+    <!-- Blur section(Menu/filter open) -->
     <section></section>
 
+    <!-- Header -->
     <header>
 
+        <!-- Upper header section(Join us) -->
         <nav id="joinus">
             <ul>
                 <li>
@@ -46,12 +49,17 @@
             </ul>
         </nav>
         
+        <!-- Logo -->
         <nav class="logo">
+            
+            <!-- Gaat naar /FED2122/ zodat deze werkt op github pages -->
             <a href="/FED2122/">
                 <img src="images/nike-logo.svg" alt="Logo van de website">
             </a>
         </nav>
-        
+        <!-- Einde Logo -->
+
+        <!-- Nav links -->
         <ul class="links">
             <li>
                 <a href="#">
@@ -79,7 +87,9 @@
                 </a>
             </li>
         </ul>
-        
+        <!-- Einde Links -->
+
+        <!-- Nav links mobile -->
         <nav class="mobile-links">
             <ul>
                 <li>
@@ -169,13 +179,16 @@
                 </li>
             </ul>
         </nav>
+        <!-- Einde Nav links -->
 
+        <!-- Hamburger section -->
         <nav id="hamburger">
             <img src="images/icons/shoppingbag-icon.svg" alt="shopping-bag-icon" title="Shopping icoon">
             <img src="images/icons/search-icon.svg" alt="Search icoon">
             <img src="images/icons/hamburger.png" alt="Hamburger icoon">
         </nav>
 
+        <!-- Search -->
         <nav id="search">
             <div>
                 <input type="search" placeholder="Search">
@@ -185,6 +198,7 @@
             <img src="images/icons/shoppingbag-icon.svg" alt="shopping-bag-icon" title="Shopping icoon">
         </nav>
 
+        <!-- Search Results -->
         <nav id="search-results">
             <a href="/FED2122/">
                 <img src="images/nike-logo.svg" alt="Logo van de website">
@@ -207,9 +221,14 @@
                 <div class="no-results">No Result</div>
             </section>
         </nav>
+        <!-- Einde Search Results -->
     </header>
-
+    <!-- Einde Header -->
+    
+    <!-- Main -->
     <main>
+
+        <!-- Banner -->
         <section id="announcement-banner">
             <section></section>
             <div>
@@ -222,6 +241,7 @@
             </div>
         </section>
 
+        <!-- Shoe title/sort -->
         <section id="shoe-title">
             <h1>Men's Shoes <span>(618)</span></h1>
 
@@ -268,8 +288,12 @@
             </p>
             <button>Filter <i class="fas fa-sliders-h"></i></button>
         </section>
-
+        <!-- Einde Shoe title/sort -->
+        
+        <!-- Filters/shoe-overview -->
         <div>
+
+            <!-- Filters -->
             <section id="filter-options">
                 <section>
                     <span>Filter</span>
@@ -417,40 +441,44 @@
                     <button>Apply</button>
                 </section>
             </section>
+            <!-- Einde Filters -->
             
+            <!-- Shoesection(shoes loaded with js) -->
             <section id="shoe-overview"></section> 
         </div> 
     </main>
+    <!-- Einde Main -->
 
+    <!-- Footer -->
     <footer>
         <ul>
             <li>
                 <ul>
-                    <li><span>GIFT CARDS</span></li>
-                    <li><span>FIND A STORE</span></li>
-                    <li><span>SIGN UP FOR EMAIL</span></li>
-                    <li><span>BECOME A MEMBER</span></li>
-                    <li><span>STUDENT DISCOUNT</span></li>
-                    <li><span>FEEDBACK</span></li>
+                    <li><a href="#"><span>GIFT CARDS</span></a></li>
+                    <li><a href="#"><span>FIND A STORE</span></a></li>
+                    <li><a href="#"><span>SIGN UP FOR EMAIL</span></a></li>
+                    <li><a href="#"><span>BECOME A MEMBER</span></a></li>
+                    <li><a href="#"><span>STUDENT DISCOUNT</span></a></li>
+                    <li><a href="#"><span>FEEDBACK</span></a></li>
                 </ul>
             </li>
             <li>
                 <ul>
                     <li><span>GET HELP</span></li>
-                    <li>Order Status</li>
-                    <li>Shipping and Delivery</li>
-                    <li>Returns</li>
-                    <li>Payment Options</li>
-                    <li>Contact Us</li>
+                    <li><a href="#">Order Status</a></li>
+                    <li><a href="#">Shipping and Delivery</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Payment Options</a></li>
+                    <li><a href="#">Contact Us</a></li>
                 </ul>
             </li>
             <li>
                 <ul>
-                    <li><span>About Nike</span></li>
-                    <li>News</li>
-                    <li>Careers</li>
-                    <li>Investors</li>
-                    <li>Sustainability</li>
+                    <li><a href="#"><span>About Nike</span></a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Investors</a></li>
+                    <li><a href="#">Sustainability</a></li>
                 </ul>
             </li>
         </ul>
@@ -473,7 +501,9 @@
             </li>
         </ul>
     </footer>
+    <!-- Einde Footer -->
     
+    <!-- Scripts -->
     <script src="js/shoes.js"></script>
     <script src="js/search.js"></script>
     <script src="js/shoe-overview.js"></script>
