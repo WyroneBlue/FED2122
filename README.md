@@ -241,7 +241,8 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 <summary>uitwerken voor eindgesprek</summary>
 
 ### Stand van zaken
-Alles was eigenlijk al af, maar het ging deze week vooral om het zetten van de puntjes op de i en comments plaatsten en een paar schoonheidsfoutjes in de css weghalen
+Alles was eigenlijk al af, maar het ging deze week vooral om het zetten van de puntjes op de i en comments plaatsten en een paar schoonheidsfoutjes in de css weghalen.
+En daarnaast ook het bijvullen en aanpassen van het shoelist object
 
 ### Screenshot(s)
 
@@ -267,5 +268,6 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 2. https://realfavicongenerator.net/ Favicon maken
 3. https://listjs.com/ voor het maken van de searchable shoes
 4. https://stackoverflow.com/questions/2218999/how-to-remove-all-duplicates-from-an-array-of-objects verwijderen van dubbele items in een object
+5. Nike.nl voor alle images
 
 </details>
