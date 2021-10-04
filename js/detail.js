@@ -9,7 +9,7 @@ var images = document.querySelector(".images div");
 var colors = document.querySelector("#shoe-colors div");
 
 var addToCartButton = document.querySelector("#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4) > button.add-to-cart");
-var addToCartButtonMobile = document.querySelector("#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4) > button.add-to-cart-mobile");
+var addToCartButtonMobile = document.querySelector("#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4) > button.add-to-cart.mobile");
 var addToFavourite = document.querySelector("#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4) > button:last-of-type");
 var addToFavouriteSpan = document.querySelector("#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4) > button:last-of-type span");
 var addToFavouriteHeart = document.querySelector("#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4) > button:last-of-type i");
@@ -17,11 +17,14 @@ var addToFavouriteHeart = document.querySelector("#detail main > section#shoe-in
 var controls = document.querySelectorAll("#controls > span");
 var forYou = document.querySelector("#for-you div");
 let forYouHtml = '';
-let pos = { top: 0, left: 0, x: 0, y: 0 };
 var html = {
     image: '',
     colors: '',
 };
+
+var forYouIds = [
+    6, 9, 12, 13, 18, 20, 21, 25
+]
 
 // Scroll for you section
 const scrollForYou = function(e){
@@ -55,8 +58,14 @@ const scrollForYou = function(e){
 // Load for you section shoes
 const loadForYouShoes = function(e){
 
-    shoeList.forEach(shoe => {
-        
+    let filteredPopularTerms = [];
+    for (let i = 0; i < forYouIds.length; i++) {
+      let id = forYouIds[i];
+      let shoe = shoeList[id];
+      filteredPopularTerms.push(shoe);
+    }
+
+    filteredPopularTerms.forEach(shoe => {   
         forYouHtml += `
         <figure>
             <a href="shoe.html?shoe_id=${shoe.id}">
@@ -64,9 +73,8 @@ const loadForYouShoes = function(e){
                 <section>
                     <span>${shoe.name}</span>
                     <span>${shoe.for}</span>
+                    <span>€ ${shoe.price}</span>
                 </section>
-
-                <span>€ ${shoe.price}</span>
             </a>
         </figure>
         `;
