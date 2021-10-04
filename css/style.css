@@ -245,8 +245,10 @@ p{
 #detail main > section#shoe-info > section:nth-of-type(3) > div{
   display: flex;
   flex-wrap: nowrap;
+  margin-top: 20px;
   overflow-x: auto;
-  cursor: grab;
+
+  scroll-snap-type: x mandatory;
 
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
@@ -257,6 +259,10 @@ p{
 }
 
 #detail main > section#shoe-info > section:nth-of-type(3) > div > figure{
+  scroll-snap-align: start;
+}
+
+#detail main > section#shoe-info > section:nth-of-type(3) > div > figure a{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -265,22 +271,22 @@ p{
   width: 300px;
 }
 
-#detail main > section#shoe-info > section:nth-of-type(3) > div > figure > img{
+#detail main > section#shoe-info > section:nth-of-type(3) > div > figure a > img{
   display: block;
   float: left;
   flex: 0 0 auto;
   width: 300px;
 }
 
-#detail main > section#shoe-info > section:nth-of-type(3) > div > figure > section{
+#detail main > section#shoe-info > section:nth-of-type(3) > div > figure a > section{
   margin: 10px 0 20px; 
 }
 
-#detail main > section#shoe-info > section:nth-of-type(3) > div > figure > section > span{
+#detail main > section#shoe-info > section:nth-of-type(3) > div > figure a > section > span{
   margin: 10px 0; 
 }
 
-#detail main > section#shoe-info > section:nth-of-type(3) > div > figure > section > span:last-child{
+#detail main > section#shoe-info > section:nth-of-type(3) > div > figure a > section > span:last-child{
   color: var(--filters-color);
 }
 

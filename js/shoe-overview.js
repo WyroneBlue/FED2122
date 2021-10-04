@@ -1,3 +1,4 @@
+// variablen initialiseren
 var filterOpenButton = document.querySelector('section#shoe-title > section > button:first-of-type');
 var filterOpenButtonSpan = document.querySelector('section#shoe-title > section > button:first-of-type span');
 var filterClosed = false;
@@ -61,15 +62,16 @@ var filters = {
     get count(){
         return this.sex.count + this.price.count + this.size.count + this.color.count
     }
-
 }
 
+// filters leegmaken
 const clearFilters = function(){
     filterContainer.reset();
     loadShoes();
     toggleMobileFilterMenu();
 }
 
+// filters uptodate houden
 const updateFilterCount = function(shoes){
     resultsCount.innerHTML = `(${shoes.length})`;
     resultsCountMobile.innerHTML = shoes.length;
@@ -80,6 +82,7 @@ const updateFilterCount = function(shoes){
     allFiltersCount.innerHTML = `(${filters.count})`;
 }
 
+// filtermenu openmaken (desktop)
 const toggleFilterMenu = function(){
     body.classList.toggle('filter-closed');
     filterClosed = !filterClosed;
@@ -90,11 +93,13 @@ const toggleFilterMenu = function(){
     }
 }
 
+// sortmenu open/dichtmaken (desktop)
 const toggleSortByMenu = function(){
     body.classList.toggle('sortby-open');
     sortByOpen = !sortByOpen;
 }
 
+// gekozen sort actief maken (desktop)
 const setSortBy = function(e){
     resetSortBy();
     e.target.classList.add('active');
@@ -102,17 +107,20 @@ const setSortBy = function(e){
     sortByOpenButtonSpan.textContent = `: ${sort}`
 }
 
+// Sorts resetten
 const resetSortBy = function(){
     sortByOptions.forEach(option => {
         option.classList.remove('active');
     });
 }
 
+// Filtervakje open/dichtmaken
 const toggleFilter = function(e){
     let filter = e.target.parentNode;
     filter.classList.toggle('closed');
 }
 
+// filtermenu openmaken (mobiel)
 const toggleMobileFilterMenu = function(){
     body.classList.toggle('mobile-filter-open');
     if(body.classList.contains('mobile-filter-open')){
@@ -122,10 +130,7 @@ const toggleMobileFilterMenu = function(){
     }
 }
 
-const activateButton = function(e){
-    e.target.classList.toggle('active');
-}
-
+// Filter to filter shoes based on sex
 const filterSex = function(){
     
     let sexfilters = Object.keys(filters.sex.data).map(function(key, index) {
@@ -145,6 +150,7 @@ const filterSex = function(){
     }
 }
 
+// Filter to filter shoes based on price
 const filterPrice = function(){
 
     let pricefilters = Object.keys(filters.price.data).map(function(key, index) {
@@ -185,6 +191,7 @@ const filterPrice = function(){
     }
 }
 
+// Filter to filter shoes based on size
 const filterSize = function(){
     
     let sizeFilters = Object.keys(filters.size.data).map(function(key, index) {
@@ -215,6 +222,7 @@ const filterSize = function(){
     }
 }
 
+// Filter to filter shoes based on color
 const filterColor = function(e){
 
     let colorFilters = Object.keys(filters.color.data).map(function(key, index) {
@@ -243,6 +251,7 @@ const filterColor = function(e){
     }
 }
 
+// Sort shoes based on name or price
 const sortShoes = function(e){
 
     if(filters.sort.normal !== null || filters.sort.mobile !== null){
@@ -270,6 +279,7 @@ const sortShoes = function(e){
     }
 }
 
+// Check all filters and sort from html
 const checkFilters = function(e){
     filters.type = document.querySelectorAll('#filter-options form fieldset.shoe-type input:checked');
     filters.sort.normal = document.querySelector('section#shoe-title > section > div input:checked');
@@ -280,6 +290,7 @@ const checkFilters = function(e){
     filters.color.data = document.querySelectorAll('#filter-options form fieldset.color input:checked');
 }
 
+// run all filters
 const filterShoes = function(e){
     shoeHtml = '';
     filteredShoes = shoeList;
@@ -296,6 +307,7 @@ const filterShoes = function(e){
     return shoes;
 }
 
+// create html string for shoes
 const loadShoes = function(e){
     let shoes = filterShoes();
     updateFilterCount(shoes);
@@ -315,6 +327,7 @@ const loadShoes = function(e){
     shoeContainer.innerHTML = shoeHtml;
 }
 
+// Eventlisteners
 filterContainer.addEventListener('input', loadShoes);
 sortBySection.addEventListener('input', loadShoes);
 window.addEventListener('DOMContentLoaded', loadShoes);
