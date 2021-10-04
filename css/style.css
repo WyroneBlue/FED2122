@@ -5,38 +5,25 @@
   padding: 0;
 }
 
+/* 
+  Custom Properties
+*/
 :root{
   --text-color: #111111;
   --filters-color: #757575;
   --not-available-bg: rgb(247, 247, 247);
   --not-available-text: rgb(221, 221, 221);
   --announcement-color: #FA5900;
-  /* --section-color: #E5E5E5; */
   --section-color: #f7f7f7;
   --border-light: #ccc;
 }
+/* 
+  Einde Custom Properties
+*/
 
-@media screen and (min-width:1024px){
-  
-  #filter-options::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  #filter-options::-webkit-scrollbar-thumb {
-    background: #888; 
-    height: 20px;
-    border-radius: 20px;
-  }
-  
-  #filter-options::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-  }
-  
-  #filter-options::-webkit-scrollbar-track {
-    background: transparent; 
-  }
-}
-
+/* 
+  --- Standaard css
+*/
 html, body, section, figure, button{
   font-family: Helvetica, Arial;
   color: var(--text-color);
@@ -61,7 +48,13 @@ p{
   font-size: 16px;
   line-height: 22px;
 }
+/* 
+  Einde standaard css
+*/
 
+/* 
+  --- Detailpagina
+*/
 #detail h1{
   font-size: 28px;
   font-weight: 500;
@@ -178,7 +171,6 @@ p{
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  /* width: calc(100% / 3 - 20px); */
   height: 48px;
   border-radius: 5px;
   background-color: white;
@@ -286,6 +278,13 @@ p{
   color: var(--filters-color);
 }
 
+#mobile-heading{
+  display: none;
+}
+
+/* 
+  --- For you Carousel Properties
+*/
 #controls span{
   cursor: pointer;
   position: absolute;
@@ -311,11 +310,13 @@ p{
 #controls span:last-child{
   right: -5px;
 }
+/* 
+  Einde For You carousel
+*/
 
-#mobile-heading{
-  display: none;
-}
-
+/* 
+  --- Add to Cart popup
+*/
 aside#cart-popup{
   opacity: 0;
   position: fixed;
@@ -381,8 +382,14 @@ aside#cart-popup > section.buttons > button.primary{
   background-color: black;
   color: white;
 }
+/* 
+  Einde Add to Cart popup
+*/
 
-@media screen and (max-width: 1023px) {
+/* 
+  --- Media queries detailpagina
+*/
+@media (max-width: 1023px) {
   
   #mobile-heading{
     display: flex;
@@ -440,7 +447,7 @@ aside#cart-popup > section.buttons > button.primary{
   }
 }
 
-@media screen and (max-width: 424px){
+@media (max-width: 424px){
 
   #detail main > section#shoe-info > section:first-of-type > div{
     display: flex;
@@ -469,8 +476,22 @@ aside#cart-popup > section.buttons > button.primary{
     flex-shrink: 0;
   }
 }
-/* overviewpagina */
+/* 
+  Einde Media queries detailpagina
+*/
+/* 
+  Einde detailpagina
+*/
 
+
+
+/* 
+  --- Overviewpagina
+*/
+
+/* 
+  --- Header
+*/
 a {
   color: black;
   text-decoration: none;
@@ -487,7 +508,6 @@ header nav{
 }
 
 nav#joinus {
-  /* flex: 0 0 100%; */
   grid-column: 1/ -1;
   display: flex;
   justify-content: space-between;
@@ -529,7 +549,7 @@ nav#joinus ul:last-of-type li:last-child a{
   border: 0;
 }
 
-@media screen and (max-width: 1023px){
+@media (max-width: 1023px){
   nav#joinus {
     display: none;
   }
@@ -552,7 +572,7 @@ header .links{
   gap: 24px;
 }
 
-@media screen and (max-width: 1023px){
+@media (max-width: 1023px){
   header .links{
     display: none;
   }
@@ -800,9 +820,6 @@ body.search-open header nav#search-results > section{
 
 body.search-open header nav#search-results > section.searching{
   grid-column: 1/-1;
-  /* display: grid; */
-  /* grid-template-columns: 2fr 7fr; */
-  /* column-gap: 1.5em; */
   margin: 2em 0;
   display: flex;
   flex-direction:column;
@@ -844,7 +861,6 @@ body.search-open header nav#search-results > section > section.list{
 }
 
 body.search-open header nav#search-results > section.searching > section.list{
-  /* display: flex; */
   grid-column: 2;
   grid-row: 1;
   display: grid;
@@ -858,7 +874,6 @@ body.search-open header nav#search-results > section > section.list article a{
   flex-direction: column;
   justify-content: space-between;
   gap: 5px;
-  /* width: 150px; */
   width: auto;
 }
 
@@ -878,7 +893,7 @@ body.search-open header nav#search-results div.no-results.show{
   grid-row: 1;
 }
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
 
   header nav#search-results{
     grid-template-rows: 1fr 3fr;
@@ -922,7 +937,7 @@ body.search-open header nav#search-results div.no-results.show{
   }
 }
 
-@media screen and (max-width: 374px){
+@media (max-width: 374px){
   header .mobile-links{
     padding: 25px 25px 150px;
   }
@@ -931,7 +946,13 @@ body.search-open header nav#search-results div.no-results.show{
     width: 85%;
   }
 }
+/* 
+  Einde Header
+*/
 
+/* 
+  --- Banner
+*/
 #announcement-banner{
   position: relative;
   display: flex;
@@ -997,6 +1018,22 @@ body.search-open header nav#search-results div.no-results.show{
   filter: drop-shadow(0px 0px 5px black);
 }
 
+@media (max-width:1023px){
+  #announcement-banner section{
+    width: 100%;
+  }
+
+  #announcement-banner div{
+    display: none;
+  }
+}
+/* 
+  Einde Banner
+*/
+
+/* 
+  --- Shoetitle
+*/
 section#shoe-title{
   display: flex;
   justify-content: space-between;
@@ -1013,7 +1050,6 @@ section#shoe-title.sticky{
 
 section#shoe-title h1{
   font-size: 20px;
-  /* margin-top: 10px; */
 }
 
 section#shoe-title h1 > span{
@@ -1113,26 +1149,28 @@ body.sortby-open section#shoe-title > section > div label{
   cursor: pointer;
 }
 
-@media screen and (max-width:1023px){
+@media (max-width:1023px){
   section#shoe-title > section{
-    display: none;
-  }
-
-  #announcement-banner section{
-    width: 100%;
-  }
-
-  #announcement-banner div{
     display: none;
   }
 }
 
-@media screen and (min-width:1024px){
+@media (min-width:1024px){
+  
+  section#shoe-title > h1 > span {
+    display: inline-block;
+  }
   .sort-by.mobile{
     display: none;
   }
 }
+/* 
+  Einde Shoetitle
+*/
 
+/* 
+  --- Filters
+*/
 main > section.shoe-type::-webkit-scrollbar {
   display: none;
 }
@@ -1180,8 +1218,6 @@ main > section.shoe-type span.active{
   border: 1px solid var(--text-color);
 }
 
-
-/* filter */
 #filter-options{
   position: fixed;
   bottom: 0;
@@ -1338,29 +1374,6 @@ body.mobile-filter-open #filter-options{
   color:white;
 }
 
-.categories {
-  padding-inline-start: .7em;
-}
-
-.categories li {
-  margin-bottom: 1em;
-  font-weight: 400;
-}
-
-.filter h3 {
-  font-size: 16px;
-  font-weight: 550;
-}
-
-.filter {
-  margin-left: 1em;
-  margin-right: 1em;
-}
-
-.filter ul li {
-  list-style: none;
-}
-
 #filter-options input + label{
   cursor: pointer;
 }
@@ -1448,7 +1461,7 @@ body.mobile-filter-open #filter-options{
 	padding: 0;
 	margin: -1px;
 	overflow: hidden;
-	white-space: nowrap; /* added line */
+	white-space: nowrap;
 	border: 0;
 }
 
@@ -1564,24 +1577,9 @@ body.mobile-filter-open #filter-options{
   box-shadow: black 0px 0px 1px 3px;
 }
 
-#shoe-overview {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-@media screen and (min-width: 1024px) {
+/* No scrollbar */
+@media (min-width:1024px){
   
-  main > div{
-    display: grid;
-    grid-template-columns: 260px 1fr;
-    gap:20px
-  }
-
-  body.filter-closed main > div{
-    grid-template-columns: 1fr;
-  }
-
   #filter-options{
     position: relative;
     width: auto;
@@ -1593,7 +1591,11 @@ body.mobile-filter-open #filter-options{
     padding-top: 0;
     z-index: 0;
   }
-    
+
+  body.filter-closed main > div{
+    grid-template-columns: 1fr;
+  }
+
   body.filter-closed #filter-options{
     display: none;
   }
@@ -1614,13 +1616,35 @@ body.mobile-filter-open #filter-options{
     display: block;
   }
 
-  #overview article a {
-    height: auto !important;
+  #filter-options::-webkit-scrollbar {
+    width: 10px;
   }
+  
+  #filter-options::-webkit-scrollbar-thumb {
+    background: #888; 
+    height: 20px;
+    border-radius: 20px;
+  }
+  
+  #filter-options::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  
+  #filter-options::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+}
+/* 
+  Einde Filters
+*/
 
-  section#shoe-title > h1 > span {
-    display: inline-block;
-  }
+/* 
+  --- Shoe-overview
+*/
+#shoe-overview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 #shoe-overview img {
@@ -1635,17 +1659,7 @@ body.mobile-filter-open #filter-options{
   margin-bottom: 20px;
 }
 
-@media screen and (min-width: 960px) {
-  #overview #shoe-overview article {
-    width: calc(100% / 3 - 5px);
-    height: min-content;
-  }
 
-  #shoe-overview{
-    gap: 7px;
-    align-content: flex-start;
-  }
-}
 
 #overview article a{
   display: flex;
@@ -1679,7 +1693,38 @@ body.mobile-filter-open #filter-options{
   line-height: 1.25em;
 }
 
-/* footer */
+/* Mediaqueries */
+@media (min-width: 1024px) {
+  
+  main > div{
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap:20px
+  }
+
+  #overview article a {
+    height: auto !important;
+  }
+}
+
+@media (min-width: 960px) {
+  #overview #shoe-overview article {
+    width: calc(100% / 3 - 5px);
+    height: min-content;
+  }
+
+  #shoe-overview{
+    gap: 7px;
+    align-content: flex-start;
+  }
+}
+/* 
+  Einde Shoe-overview
+*/
+
+/* 
+  --- Footer
+*/
 footer {
   position: relative;
   display: flex;
@@ -1696,7 +1741,7 @@ footer ul {
   list-style-type: none;
 }
 
-@media screen and (max-width: 639px){
+@media (max-width: 639px){
   
   footer > ul > li{
     display: block;
@@ -1794,7 +1839,7 @@ footer a {
   padding: .5em;
 }
 
-@media screen and (max-width:639px){
+@media (max-width:639px){
 
   footer > ul:first-of-type{
     width: 100%;
@@ -1824,7 +1869,7 @@ footer a {
   }
 }
 
-@media screen and (max-width:800px){
+@media (max-width:800px){
 
   footer{
     height: auto;
@@ -1842,3 +1887,12 @@ footer a {
     height: 250px;
   }
 }
+
+@media (max-width: 1023px){
+  footer{
+    margin: 50px 0;
+  }
+}
+/* 
+  Einde Footer
+*/
