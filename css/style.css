@@ -16,6 +16,7 @@
   --announcement-color: #FA5900;
   --section-color: #f7f7f7;
   --border-light: #ccc;
+  --footer-link: #919191;
 }
 /* 
   Einde Custom Properties
@@ -1820,23 +1821,10 @@ footer > ul:last-of-type > li:last-of-type ul li a{
 
 
 footer a {
-  color: white;
+  color: var(--footer-link);
   font-size: 1em;
   text-decoration: none;
   border-bottom: none;
-}
-
-.social-media{
-  margin-top: 20px;
-}
-
-.social-media li img {
-  width: 30px;
-  height: 30px;
-  background-color: var(--filters-color);
-  color: var(--text-color);
-  border-radius: 50%;
-  padding: .5em;
 }
 
 @media (max-width:639px){
@@ -1889,7 +1877,7 @@ footer a {
 }
 
 @media (max-width: 1023px){
-  footer{
+  #detail footer{
     margin: 50px 0;
   }
 }
