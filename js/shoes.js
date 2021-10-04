@@ -1646,22 +1646,22 @@ var shoeList = [
             0: {
                 in_stock: true,
                 announcement: '',
-                image: 'images/sneakers/air-force-1-07-wb-shoe-p5KgrZ.png',
+                image: 'images/sneakers/air-force-1-07-shoe-J29nBv.png',
             },
             1: {
                 in_stock: true,
                 announcement: '',
-                image: 'images/sneakers/air-force-1-07-wb-shoe-p5KgrZ.png',
+                image: 'images/sneakers/air-force-1-07-shoe-J29nBv.png',
             },
             2: {
                 in_stock: false,
                 announcement: '',
-                image: 'images/sneakers/air-force-1-07-wb-shoe-p5KgrZ.png',
+                image: 'images/sneakers/air-force-1-07-shoe-J29nBv.png',
             },
             3: {
                 in_stock: true,
                 announcement: '',
-                image: 'images/sneakers/air-force-1-07-wb-shoe-p5KgrZ.png',
+                image: 'images/sneakers/air-force-1-07-shoe-J29nBv.png',
             },
         },
         color_list:[
@@ -1680,10 +1680,10 @@ var shoeList = [
             },
         ],
         images: {
-            0:'images/sneakers/air-force-1-07-wb-shoe-p5KgrZ.png',
-            1:'images/sneakers/air-force-1-07-wb-shoe-p5KgrZ.png',
-            2:'images/sneakers/air-force-1-07-wb-shoe-p5KgrZ.png',
-            3:'images/sneakers/air-force-1-07-wb-shoe-p5KgrZ.png'
+            0:'images/sneakers/air-force-1-07-shoe-J29nBv.png',
+            1:'images/sneakers/air-force-1-07-shoe-J29nBv.png',
+            2:'images/sneakers/air-force-1-07-shoe-J29nBv.png',
+            3:'images/sneakers/air-force-1-07-shoe-J29nBv.png'
         },
         get href(){
             return shoePage + this.id;
