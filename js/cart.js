@@ -34,7 +34,6 @@ const showCartPopup = function(e){
         cart.price = '';
         cart.image = '';
     }, 8000);
-
 }
 
 // close poppup

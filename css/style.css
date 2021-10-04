@@ -219,7 +219,7 @@ p{
   z-index: 99999;
 }
 
-#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4) > button.add-to-cart-mobile{
+#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4) > button.add-to-cart.mobile{
   display: none;
 }
 
@@ -279,11 +279,14 @@ p{
 }
 
 #detail main > section#shoe-info > section:nth-of-type(3) > div > figure a > section{
+  flex-direction: column;
+  display: flex;
+  gap: 5px;
   margin: 10px 0 20px; 
 }
 
 #detail main > section#shoe-info > section:nth-of-type(3) > div > figure a > section > span{
-  margin: 10px 0; 
+  /* margin: 10px 0;  */
 }
 
 #detail main > section#shoe-info > section:nth-of-type(3) > div > figure a > section > span:last-child{
@@ -334,19 +337,18 @@ aside#cart-popup{
   position: fixed;
   top: 20px;
   right: 20px;
-  width: 300px;
+  width: 380px;
   padding: 20px;
   transition: height 1s ease-in-out;
   border: 1px solid black;
   background-color: white;
   transition: top .3s ease-out, opacity .3s ease-out;
-  z-index: -1;
+  z-index: 99999;
 }
 
 aside#cart-popup.show{
   opacity: 1;
   transition: top .3s ease-out, opacity .3s ease-out;
-  z-index: 99999;
 }
 
 aside#cart-popup > button.close{
@@ -393,6 +395,23 @@ aside#cart-popup > section.buttons > button.primary{
   font-size: 16px;
   background-color: black;
   color: white;
+}
+
+@media (max-width: 426px){
+  aside#cart-popup{
+    left: 50%;
+    width: 90%;
+    transform: translate(-50%);
+  }
+}
+
+@media (max-width: 376px){
+  aside#cart-popup > section:last-of-type{
+    flex-wrap: wrap;
+  }
+  aside#cart-popup > section.buttons > button{
+    width: 100%;
+  }
 }
 /* 
   Einde Add to Cart popup
@@ -446,7 +465,7 @@ aside#cart-popup > section.buttons > button.primary{
     display: none;
   }
   
-  #detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4) > button.add-to-cart-mobile{
+  #detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4) > button.add-to-cart.mobile{
     display: block;
   }
 
