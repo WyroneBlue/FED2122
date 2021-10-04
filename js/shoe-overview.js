@@ -126,12 +126,6 @@ const activateButton = function(e){
     e.target.classList.toggle('active');
 }
 
-const goToDetail = function(e){
-    let id = e.dataset.id;
-    let link =  'shoe.html?shoe_id=' + id;
-    location.href = link;
-}
-
 const filterSex = function(){
     
     let sexfilters = Object.keys(filters.sex.data).map(function(key, index) {
@@ -305,7 +299,6 @@ const filterShoes = function(e){
 const loadShoes = function(e){
     let shoes = filterShoes();
     updateFilterCount(shoes);
-    // console.log(filteredShoes);
     shoes.forEach(shoe => {
         
         shoeHtml += `

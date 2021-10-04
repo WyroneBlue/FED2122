@@ -22,38 +22,6 @@ var html = {
     colors: '',
 };
 
-const goToDetail = function(e){
-    let id = e.dataset.id;
-    let link =  'shoe.html?shoe_id=' + id;
-    location.href = link;
-}
-
-const mouseDownHandler = function(e) {
-    forYou.style.cursor = 'grabbing';
-    forYou.style.userSelect = 'none';
-
-    pos = {
-        left: forYou.scrollLeft,
-        x: e.clientX,
-    };
-
-    document.addEventListener('mousemove', mouseMoveHandler);
-    document.addEventListener('mouseup', mouseUpHandler);
-}
-
-const mouseMoveHandler = function(e) {
-    const dx = e.clientX - pos.x;
-    forYou.scrollLeft = pos.left - dx;
-};
-
-const mouseUpHandler = function() {
-    forYou.style.cursor = 'grab';
-    forYou.style.removeProperty('user-select');
-
-    document.removeEventListener('mousemove', mouseMoveHandler);
-    document.removeEventListener('mouseup', mouseUpHandler);
-};
-
 const scrollForYou = function(e){
 
     let target;
@@ -87,14 +55,16 @@ const loadForYouShoes = function(e){
     shoeList.forEach(shoe => {
         
         forYouHtml += `
-        <figure onclick="goToDetail(this)" data-id="${shoe.id}">
-            <img draggable="false" src="${shoe.images[0]}" alt="">
-            <section>
-                <span>${shoe.name}</span>
-                <span>${shoe.for}</span>
-            </section>
+        <figure>
+            <a href="shoe.html?shoe_id=${shoe.id}">
+                <img draggable="false" src="${shoe.images[0]}" alt="">
+                <section>
+                    <span>${shoe.name}</span>
+                    <span>${shoe.for}</span>
+                </section>
 
-            <span>€ ${shoe.price}</span>
+                <span>€ ${shoe.price}</span>
+            </a>
         </figure>
         `;
     });
@@ -145,8 +115,6 @@ const setFavourite = (e) => {
 window.addEventListener('DOMContentLoaded', getCurrentShoe);
 window.addEventListener('DOMContentLoaded', loadForYouShoes);
 addToFavourite.addEventListener('click', setFavourite);
-
-forYou.addEventListener('mousedown', mouseDownHandler);
 
 controls.forEach(span => {
     span.addEventListener('click', scrollForYou);
