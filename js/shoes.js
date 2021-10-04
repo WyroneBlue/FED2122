@@ -4,7 +4,7 @@ var shoeList = [
     {
         id: 0,
         name: 'Nike Air Zoom Pegasus 38',
-        for: 'Hardloopschoen voor heren',
+        for: "Men's Shoes",
         price: 119.99,
         description: '',
         sex: 'men',
@@ -88,7 +88,7 @@ var shoeList = [
     {
         id: 1,
         name: 'Lunar Force 1 Acronym',
-        for: 'Hardloopschoen voor heren',
+        for: "Men's Shoes",
         price: 200.00,
         description: '',
         sex: 'women',
@@ -164,7 +164,7 @@ var shoeList = [
     {
         id: 2,
         name: 'Dunk High x AMBUSH Black',
-        for: 'Hardloopschoen voor heren',
+        for: "Men's Shoes",
         price: 179.99,
         description: '',
         sex: 'unisex',
@@ -241,7 +241,7 @@ var shoeList = [
     {
         id: 3,
         name: 'Nike Air Force 1 LXX',
-        for: 'Hardloopschoen voor heren',
+        for: "Men's Shoes",
         price: 109.99,
         description: '',
         sex: 'men',
@@ -318,7 +318,7 @@ var shoeList = [
     {
         id: 4,
         name: 'Nike Air Zoom Pegasus',
-        for: 'Hardloopschoen voor heren',
+        for: "Men's Shoes",
         price: 119.99,
         description: '',
         sex: 'men',
@@ -396,7 +396,7 @@ var shoeList = [
     {
         id: 5,
         name: 'Nike Air Force 1 Low',
-        for: 'Hardloopschoen voor heren',
+        for: "Men's Shoes",
         price: 109.99,
         description: '',
         sex: 'men',
@@ -474,7 +474,7 @@ var shoeList = [
     {
         id: 6,
         name: 'Nike Air Max 90 G',
-        for: 'Hardloopschoen voor heren',
+        for: "Men's Shoes",
         price: 139.99,
         description: '',
         sex: 'men',
@@ -554,7 +554,7 @@ var shoeList = [
     {
         id: 7,
         name: 'Air Force 1 Pastel Reveal',
-        for: 'Hardloopschoen voor heren',
+        for: "Men's Shoes",
         price: 119.99,
         description: '',
         sex: 'women',
@@ -630,7 +630,7 @@ var shoeList = [
     {
         id: 8,
         name: 'Nike Air Max 95',
-        for: 'Hardloopschoen voor heren',
+        for: "Men's Shoes",
         price: 169.99,
         description: '',
         sex: 'women',
@@ -707,7 +707,7 @@ var shoeList = [
     {
         id: 9,
         name: 'Air Jordan 1 Hi FlyEasek',
-        for: 'Hardloopschoen voor heren',
+        for: "Men's Shoes",
         price: 159.99,
         description: '',
         sex: 'men',
@@ -784,7 +784,7 @@ var shoeList = [
     {
         id: 10,
         name: 'Air Jordan 1 Low',
-        for: 'Hardloopschoen voor heren',
+        for: "Men's Shoes",
         price: 129.99,
         description: '',
         sex: 'men',
@@ -867,7 +867,7 @@ var shoeList = [
     {
         id: 11,
         name: 'Nike Air Zoom Pegasus 38',
-        for: 'Hardloopschoen voor heren',
+        for: "Men's Shoes",
         price: 124.99,
         description: '',
         sex: 'men',
@@ -940,7 +940,7 @@ var shoeList = [
     {
         id: 12,
         name: 'Nike Air VaporMax 2021 FK',
-        for: 'Hardloopschoen voor heren',
+        for: "Men's Shoes",
         price: 219.99,
         description: '',
         sex: 'men',
@@ -1640,7 +1640,7 @@ var shoeList = [
         for: "Women's Shoe",
         price: 109.99,
         description: '',
-        sex: 'woman',
+        sex: 'women',
         msg: 'Bestseller',
         colors: {
             0: {
@@ -1701,7 +1701,7 @@ var shoeList = [
         for: "Women's Shoe",
         price: 129.99,
         description: '',
-        sex: 'woman',
+        sex: 'women',
         msg: 'New',
         colors: {
             0: {
@@ -1779,7 +1779,7 @@ var shoeList = [
         for: "Women's Shoe",
         price: 129.99,
         description: '',
-        sex: 'woman',
+        sex: 'women',
         msg: 'New',
         colors: {
             0: {
@@ -2026,7 +2026,7 @@ var shoeList = [
         for: "Womans's Shower Slide",
         price: 44.99,
         description: '',
-        sex: 'woman',
+        sex: 'women',
         msg: 'Trending',
         colors: {
             0: {
