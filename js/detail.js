@@ -1,33 +1,33 @@
 // Variables initialiseren
-var url = new URL(window.location);
-var shoe_id = url.searchParams.get("shoe_id");
-var currentShoe = shoeList[shoe_id];
-var names = document.querySelectorAll(".heading h1");
-var forWho = document.querySelectorAll(".heading h2");
-var prices = document.querySelectorAll(".heading span");
-var images = document.querySelector(".images div");
-var colors = document.querySelector("#shoe-colors div");
+const url = new URL(window.location);
+const shoe_id = url.searchParams.get("shoe_id");
+const currentShoe = shoeList[shoe_id];
+const names = document.querySelectorAll(".heading h1");
+const forWho = document.querySelectorAll(".heading h2");
+const prices = document.querySelectorAll(".heading span");
+const images = document.querySelector(".images div");
+const colors = document.querySelector("#shoe-colors div");
 
-var addToCartButton = document.querySelector("#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4) > button.add-to-cart");
-var addToCartButtonMobile = document.querySelector("#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4) > button.add-to-cart.mobile");
-var addToFavourite = document.querySelector("#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4) > button:last-of-type");
-var addToFavouriteSpan = document.querySelector("#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4) > button:last-of-type span");
-var addToFavouriteHeart = document.querySelector("#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4) > button:last-of-type i");
+const addToCartButton = document.querySelector("#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4) > button.add-to-cart");
+const addToCartButtonMobile = document.querySelector("#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4) > button.add-to-cart.mobile");
+const addToFavourite = document.querySelector("#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4) > button:last-of-type");
+const addToFavouriteSpan = document.querySelector("#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4) > button:last-of-type span");
+const addToFavouriteHeart = document.querySelector("#detail main > section#shoe-info > section:nth-of-type(2) > section:nth-of-type(4) > button:last-of-type i");
 
-var controls = document.querySelectorAll("#controls > span");
-var forYou = document.querySelector("#for-you div");
+const controls = document.querySelectorAll("#controls > span");
+const forYou = document.querySelector("#for-you div");
 let forYouHtml = '';
-var html = {
+let html = {
     image: '',
     colors: '',
 };
 
-var forYouIds = [
+const forYouIds = [
     6, 9, 12, 13, 18, 20, 21, 25
 ]
 
 // Scroll for you section
-const scrollForYou = function(e){
+const scrollForYou = (e) => {
 
     let target;
     let check = e.target.tagName;
@@ -56,7 +56,7 @@ const scrollForYou = function(e){
 }
 
 // Load for you section shoes
-const loadForYouShoes = function(e){
+const loadForYouShoes = () => {
 
     let filteredPopularTerms = [];
     for (let i = 0; i < forYouIds.length; i++) {
@@ -83,7 +83,7 @@ const loadForYouShoes = function(e){
 }
 
 // Load shoe from id in browser url
-let getCurrentShoe = function(e) {
+const getCurrentShoe = () => {
 
     names.forEach(name => {
         name.innerText = currentShoe.name;
@@ -115,7 +115,7 @@ let getCurrentShoe = function(e) {
 }
 
 // Add shoe to favourites
-const setFavourite = (e) => {
+const setFavourite = () => {
     if(addToFavouriteHeart.classList.contains('fas')){
         addToFavouriteHeart.classList = 'far fa-heart';
         addToFavouriteSpan.textContent = 'Favourite';
@@ -134,7 +134,7 @@ controls.forEach(span => {
     span.addEventListener('click', scrollForYou);
 });
 
-window.addEventListener('DOMContentLoaded', function(){
+window.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         let inView = isInView(addToCartButtonMobile);
         if(!inView){

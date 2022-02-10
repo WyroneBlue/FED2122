@@ -1,36 +1,36 @@
 // variablen initialiseren
-var filterOpenButton = document.querySelector('section#shoe-title > section > button:first-of-type');
-var filterOpenButtonSpan = document.querySelector('section#shoe-title > section > button:first-of-type span');
-var filterClosed = false;
+const filterOpenButton = document.querySelector('section#shoe-title > section > button:first-of-type');
+const filterOpenButtonSpan = document.querySelector('section#shoe-title > section > button:first-of-type span');
+let filterClosed = false;
 
-var sortByOpenButton = document.querySelector('section#shoe-title > section > button:last-of-type');
-var sortByOpenButtonSpan = document.querySelector('section#shoe-title > section > button:last-of-type span:first-of-type');
-var sortByOpenChevron = document.querySelector('section#shoe-title > section > button:last-of-type i');
-var sortBySection = document.querySelector('section#shoe-title > section > div');
-var sortByOptions = document.querySelectorAll('section#shoe-title > section > div label');
-var sortByOpen = false;
+const sortByOpenButton = document.querySelector('section#shoe-title > section > button:last-of-type');
+const sortByOpenButtonSpan = document.querySelector('section#shoe-title > section > button:last-of-type span:first-of-type');
+const sortByOpenChevron = document.querySelector('section#shoe-title > section > button:last-of-type i');
+const sortBySection = document.querySelector('section#shoe-title > section > div');
+const sortByOptions = document.querySelectorAll('section#shoe-title > section > div label');
+let sortByOpen = false;
 
-var filterToggles = document.querySelectorAll('#filter-options > form fieldset legend');
+const filterToggles = document.querySelectorAll('#filter-options > form fieldset legend');
 
-var mobileFilterOpenButton = document.querySelector('#filter-buttons-mobile > button');
-var mobileFilterCloseButton = document.querySelector('#filter-options > section:first-of-type > button');
-var mobileFilterClearButton = document.querySelector('#filter-options > section:last-of-type button:first-of-type');
-var mobileFilterApplyButton = document.querySelector('#filter-options > section:last-of-type button:last-of-type');
+const mobileFilterOpenButton = document.querySelector('#filter-buttons-mobile > button');
+const mobileFilterCloseButton = document.querySelector('#filter-options > section:first-of-type > button');
+const mobileFilterClearButton = document.querySelector('#filter-options > section:last-of-type button:first-of-type');
+const mobileFilterApplyButton = document.querySelector('#filter-options > section:last-of-type button:last-of-type');
 
-var shoeContainer = document.querySelector('#shoe-overview');
-var filterContainer = document.querySelector('#filter-options form');
+const shoeContainer = document.querySelector('#shoe-overview');
+const filterContainer = document.querySelector('#filter-options form');
 
-var resultsCount = document.querySelector('section#shoe-title > h1 > span');
-var resultsCountMobile = document.querySelector('#filter-buttons-mobile p span');
-var sexFilterCount = document.querySelector('.sex legend > span');
-var priceFilterCount = document.querySelector('.price legend > span');
-var sizeFilterCount = document.querySelector('.size legend > span');
-var colorFilterCount = document.querySelector('.color legend > span');
-var allFiltersCount = mobileFilterClearButton.querySelector('span');
+const resultsCount = document.querySelector('section#shoe-title > h1 > span');
+const resultsCountMobile = document.querySelector('#filter-buttons-mobile p span');
+const sexFilterCount = document.querySelector('.sex legend > span');
+const priceFilterCount = document.querySelector('.price legend > span');
+const sizeFilterCount = document.querySelector('.size legend > span');
+const colorFilterCount = document.querySelector('.color legend > span');
+const allFiltersCount = mobileFilterClearButton.querySelector('span');
 
 let shoeHtml = '';
 let filteredShoes = [];
-var filters = {
+const filters = {
     sort: {
         mobile: false,
         normal: false,
@@ -65,14 +65,14 @@ var filters = {
 }
 
 // filters leegmaken
-const clearFilters = function(){
+const clearFilters = () => {
     filterContainer.reset();
     loadShoes();
     toggleMobileFilterMenu();
 }
 
 // filters uptodate houden
-const updateFilterCount = function(shoes){
+const updateFilterCount = (shoes) => {
     resultsCount.innerHTML = `(${shoes.length})`;
     resultsCountMobile.innerHTML = shoes.length;
     sexFilterCount.innerHTML = `(${filters.sex.count})`;
@@ -83,7 +83,7 @@ const updateFilterCount = function(shoes){
 }
 
 // filtermenu openmaken (desktop)
-const toggleFilterMenu = function(){
+const toggleFilterMenu = () => {
     body.classList.toggle('filter-closed');
     filterClosed = !filterClosed;
     if(filterClosed){
@@ -94,13 +94,13 @@ const toggleFilterMenu = function(){
 }
 
 // sortmenu open/dichtmaken (desktop)
-const toggleSortByMenu = function(){
+const toggleSortByMenu = () => {
     body.classList.toggle('sortby-open');
     sortByOpen = !sortByOpen;
 }
 
 // gekozen sort actief maken (desktop)
-const setSortBy = function(e){
+const setSortBy = (e) => {
     resetSortBy();
     e.target.classList.add('active');
     let sort = e.target.textContent;
@@ -108,20 +108,20 @@ const setSortBy = function(e){
 }
 
 // Sorts resetten
-const resetSortBy = function(){
+const resetSortBy = () => {
     sortByOptions.forEach(option => {
         option.classList.remove('active');
     });
 }
 
 // Filtervakje open/dichtmaken
-const toggleFilter = function(e){
+const toggleFilter = (e) => {
     let filter = e.target.parentNode;
     filter.classList.toggle('closed');
 }
 
 // filtermenu openmaken (mobiel)
-const toggleMobileFilterMenu = function(){
+const toggleMobileFilterMenu = () => {
     body.classList.toggle('mobile-filter-open');
     if(body.classList.contains('mobile-filter-open')){
         stopBannerScroll();
@@ -131,16 +131,16 @@ const toggleMobileFilterMenu = function(){
 }
 
 // Filter to filter shoes based on sex
-const filterSex = function(){
+const filterSex = () => {
     
-    let sexfilters = Object.keys(filters.sex.data).map(function(key, index) {
+    let sexfilters = Object.keys(filters.sex.data).map((key, index) => {
         return filters.sex.data[key].value;
     });
     
     if(sexfilters.length > 0){
 
         let shoes = [];
-        Object.values(filteredShoes).filter(function(key, index) {
+        Object.values(filteredShoes).filter((key, index) => {
             if(sexfilters.includes(filteredShoes[index].sex) == true || sexfilters.length == 0){
                 return shoes.push(filteredShoes[index]);
             }
@@ -151,15 +151,15 @@ const filterSex = function(){
 }
 
 // Filter to filter shoes based on price
-const filterPrice = function(){
+const filterPrice = () => {
 
-    let pricefilters = Object.keys(filters.price.data).map(function(key, index) {
+    let pricefilters = Object.keys(filters.price.data).map((key, index) => {
         return filters.price.data[key].value;
     });
     
     if(pricefilters.length > 0){
         
-        pricefilters = Object.values(pricefilters).map(function(key, index) {
+        pricefilters = Object.values(pricefilters).map((key, index) => {
             return pricefilters[index].split("-");
         });
         
@@ -169,7 +169,7 @@ const filterPrice = function(){
 
             if(filter.length > 1){
                 
-                Object.values(filteredShoes).filter(function(key, index) {
+                Object.values(filteredShoes).filter((key, index) => {
                     
                     if((filter[0] < filteredShoes[index].price && filter[1] > filteredShoes[index].price) || pricefilters.length == 0 ){            
                         
@@ -178,7 +178,7 @@ const filterPrice = function(){
                 });
             } else {
 
-                Object.values(filteredShoes).filter(function(key, index) {
+                Object.values(filteredShoes).filter((key, index) => {
 
                     if(parseInt(filter[0]) < filteredShoes[index].price){            
                         return shoes.push(filteredShoes[index]);
@@ -192,9 +192,9 @@ const filterPrice = function(){
 }
 
 // Filter to filter shoes based on size
-const filterSize = function(){
+const filterSize = () => {
     
-    let sizeFilters = Object.keys(filters.size.data).map(function(key, index) {
+    let sizeFilters = Object.keys(filters.size.data).map((key, index) => {
         return parseInt(filters.size.data[key].value);
     });
     
@@ -203,11 +203,11 @@ const filterSize = function(){
         let shoes = []; 
         sizeFilters.filter((filter) => {
 
-            Object.values(filteredShoes).filter(function(key, index) {
+            Object.values(filteredShoes).filter((key, index) => {
                 
                 let found = false;
                 let sizes = filteredShoes[index].sizes;
-                Object.values(sizes).filter(function(key_2, index_2) {
+                Object.values(sizes).filter((key_2, index_2) => {
                     
                     let size = key_2.size;
                     if(sizeFilters.includes(size) && found == false){
@@ -223,20 +223,20 @@ const filterSize = function(){
 }
 
 // Filter to filter shoes based on color
-const filterColor = function(e){
+const filterColor = (e) => {
 
-    let colorFilters = Object.keys(filters.color.data).map(function(key, index) {
+    let colorFilters = Object.keys(filters.color.data).map((key, index) => {
         return filters.color.data[key].value;
     });
     
     if(colorFilters.length > 0){
         let shoes = [];
         colorFilters.filter(() => {
-            Object.values(filteredShoes).filter(function(key, index) {
+            Object.values(filteredShoes).filter((key, index) => {
                 
                 let found = false;
                 let colors = filteredShoes[index].color_list;
-                Object.values(colors).filter(function(key_2, index_2) {
+                Object.values(colors).filter((key_2, index_2) => {
                     let color = key_2;
                     
                     if(colorFilters.includes(color) && found == false){
@@ -252,7 +252,7 @@ const filterColor = function(e){
 }
 
 // Sort shoes based on name or price
-const sortShoes = function(e){
+const sortShoes = (e) => {
 
     if(filters.sort.normal !== null || filters.sort.mobile !== null){
 
@@ -280,7 +280,7 @@ const sortShoes = function(e){
 }
 
 // Check all filters and sort from html
-const checkFilters = function(e){
+const checkFilters = (e) => {
     filters.type = document.querySelectorAll('#filter-options form fieldset.shoe-type input:checked');
     filters.sort.normal = document.querySelector('section#shoe-title > section > div input:checked');
     filters.sort.mobile = document.querySelector('#filter-options form fieldset.sort-by input:checked');
@@ -291,7 +291,7 @@ const checkFilters = function(e){
 }
 
 // run all filters
-const filterShoes = function(e){
+const filterShoes = (e) => {
     shoeHtml = '';
     filteredShoes = shoeList;
     checkFilters();
@@ -308,8 +308,8 @@ const filterShoes = function(e){
 }
 
 // create html string for shoes
-const loadShoes = function(e){
-    let shoes = filterShoes();
+const loadShoes = (e) => {
+    const shoes = filterShoes();
     updateFilterCount(shoes);
     shoes.forEach(shoe => {
         
@@ -348,7 +348,7 @@ mobileFilterCloseButton.addEventListener('click', toggleMobileFilterMenu);
 mobileFilterClearButton.addEventListener('click', clearFilters);
 mobileFilterApplyButton.addEventListener('click', toggleMobileFilterMenu);
 
-window.addEventListener('DOMContentLoaded', function(){
+window.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         let inView = isInView(banner);
         if(!inView){

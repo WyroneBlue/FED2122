@@ -1,6 +1,6 @@
 // Shoelist
 const shoePage = 'shoe.html?shoe_id=';
-var shoeList = [
+const shoeList = [
     {
         id: 0,
         name: 'Nike Air Zoom Pegasus 38',

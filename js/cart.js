@@ -1,10 +1,10 @@
 // Variables initialiseren
-var addToCart = document.querySelectorAll(".add-to-cart");
-var popup = document.querySelector("#cart-popup");
-var popupCloser = document.querySelector("#cart-popup .close");
+const addToCart = document.querySelectorAll(".add-to-cart");
+const popup = document.querySelector("#cart-popup");
+const popupCloser = document.querySelector("#cart-popup .close");
 
 // cart object
-var cart = {
+const cart = {
     msg: document.querySelector('#cart-popup > span:first-of-type'),
     image: document.querySelector('#cart-popup > section > img'),
     name: document.querySelector('#cart-popup > section > div > span:nth-child(1)'),
@@ -14,7 +14,7 @@ var cart = {
 }
 
 // Show popup
-const showCartPopup = function(e){
+const showCartPopup = () => {
     
     cart.msg.innerText = '✅ Toegevoegd aan winkelmand';
     cart.name.innerText = 'Nike Air Zoom Pegasus 38';
@@ -37,7 +37,7 @@ const showCartPopup = function(e){
 }
 
 // close poppup
-const closePopup = function(e){
+const closePopup = () => {
     popup.classList.remove('show');
 }
 

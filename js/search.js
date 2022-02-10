@@ -1,19 +1,19 @@
 // Variables initialiseren
-var popularTermsSectionHtml = '';
-var popularTermsSection = document.querySelector('#search-results > section > ul');
-var searchBarVal = document.querySelector('header nav#search-results div input');
-var results = document.querySelector('header nav#search-results .list');
-var msg = document.querySelector('header nav#search-results .no-results');
+let popularTermsSectionHtml = '';
+const popularTermsSection = document.querySelector('#search-results > section > ul');
+const searchBarVal = document.querySelector('header nav#search-results div input');
+const results = document.querySelector('header nav#search-results .list');
+const msg = document.querySelector('header nav#search-results .no-results');
 
-var shoeSearchable;
+let shoeSearchable;
 let searchHtml = '';
 
-var popularShoeIds = [
+const popularShoeIds = [
   1, 3, 7, 10
 ]
 
 // Load filter shoes
-const loadFilterShoes = function(e){
+const loadFilterShoes = (e) => {
 	shoeList.forEach(shoe => {
 		searchHtml += `
 		<article>
@@ -31,7 +31,7 @@ const loadFilterShoes = function(e){
 }
 
 // Lists.js Initialiseren
-const loadSearchableResults = function () {
+const loadSearchableResults = () => {
 	
 	var options = {
 		valueNames: [ 
@@ -45,7 +45,7 @@ const loadSearchableResults = function () {
 	};
 
 	shoeSearchable = new List('search-results', options, shoeList);
-	shoeSearchable.on('updated', function(list) {
+	shoeSearchable.on('updated', (list) => {
 		if(list.matchingItems.length > 1){
 			msg.classList.remove('show');
 		} else {
@@ -55,7 +55,7 @@ const loadSearchableResults = function () {
 }
 
 // Load popular terms from ids
-const loadPopularTerms = function(e){
+const loadPopularTerms = (e) => {
 
   let filteredPopularTerms = [];
   for (let i = 0; i < popularShoeIds.length; i++) {
@@ -74,7 +74,7 @@ const loadPopularTerms = function(e){
 }
 
 // Check input from searchbar
-const checkInput = function(e){
+const checkInput = (e) => {
 	let section = popularTermsSection.parentNode;
 	if(e.target.value != ''){
 		section.classList.add('searching');
@@ -84,7 +84,7 @@ const checkInput = function(e){
 }
 
 // Load functions 
-const onDomLoaded = function(e){
+const onDomLoaded = () => {
 	loadFilterShoes();	
 	loadPopularTerms();
 }

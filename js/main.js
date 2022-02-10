@@ -1,40 +1,40 @@
 // Variables initialiseren
-var shoeSizes;
-var shoeColors;
-var body = document.body;
+let shoeSizes;
+let shoeColors;
+const body = document.body;
 
-var bannerScolling;
-var banner = document.querySelector('#announcement-banner section');
-var bannerButtons = document.querySelectorAll('#announcement-banner div button');
-var bannerHtml = '';
-var bannerContent = [
+let bannerScolling;
+const banner = document.querySelector('#announcement-banner section');
+const bannerButtons = document.querySelectorAll('#announcement-banner div button');
+let bannerHtml = '';
+const bannerContent = [
     '<p id="banner-1">We’ve extended our returns period to 60 days<br /><a href="#">Learn more</a></p>',
     '<p id="banner-2">STUDENTS NOW GET 10% OFF<br /><a href="#">Learn more</a></p>',
     '<p id="banner-3">COVID-19: Information about Nike stores and deliveries.<br /><a href="#">Learn more</a></p>',
 ];
 
-var title = document.querySelector('#shoe-title');
-var searchBar = document.querySelector('header nav#search div input');
-var searchIcon = document.querySelector('header nav#hamburger img:nth-of-type(2)');
-var searchBarCloser = document.querySelector('header nav#search-results button');
+const title = document.querySelector('#shoe-title');
+const searchBar = document.querySelector('header nav#search div input');
+const searchIcon = document.querySelector('header nav#hamburger img:nth-of-type(2)');
+const searchBarCloser = document.querySelector('header nav#search-results button');
 
-var hamburger = document.querySelector('#hamburger > img:last-of-type');
-var blurSection = document.querySelector('body > section');
-var menuOpen = false;
+const hamburger = document.querySelector('#hamburger > img:last-of-type');
+const blurSection = document.querySelector('body > section');
+let menuOpen = false;
 
 // Open/close searchbar
-const toggleSearchBar = function(){
+const toggleSearchBar = () => {
     body.classList.toggle('search-open');
 }
 
 // Open/close menu mobile
-const toggleMobileMenu = function(){
+const toggleMobileMenu = () => {
     body.classList.toggle('menu-open');
     menuOpen = !menuOpen;
 }
 
 // Show blurred section when menu/searchbar is open
-const blurSectionClicked = function(type){
+const blurSectionClicked = () => {
     if(body.classList.contains('menu-open')){
         toggleMobileMenu();
     } else {
@@ -43,14 +43,14 @@ const blurSectionClicked = function(type){
 }
 
 // remove all size from active
-const deactivateAllSizes = function(){
+const deactivateAllSizes = () => {
     shoeSizes.forEach(button => {
         button.classList.remove('active');
     }); 
 }
 
 // Set shoesize as active
-const setSizeActive = function(e){
+const setSizeActive = (e) => {
 
     if(!e.target.classList.contains('empty')){
         deactivateAllSizes();
@@ -60,14 +60,14 @@ const setSizeActive = function(e){
 }
 
 // remove all colors from active
-const deactivateAllColors = function(){
+const deactivateAllColors = () => {
     shoeColors.forEach(img => {
         img.classList.remove('active');
     }); 
 }
 
 // Set color as active
-const setColorActive = function(e){
+const setColorActive = (e) => {
     e.preventDefault();
 
     if(!e.target.classList.contains('empty')){
@@ -129,7 +129,7 @@ bannerButtons.forEach(button => {
     button.addEventListener('click', scrollBanner);
 });
 
-window.addEventListener('DOMContentLoaded', function(){
+window.addEventListener('DOMContentLoaded', () => {
     loadBanners();
     startBannerScroll();
 
